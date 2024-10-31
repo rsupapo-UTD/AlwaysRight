@@ -1,17 +1,17 @@
 CREATE TABLE Account (
-    AccountID INT,
+    AccountID INT NOT NULL,
     Address VARCHAR(80),
     Email VARCHAR(30),
     PhoneNumber VARCHAR(14),
-    PRIMARY KEY (AccountID)
+    PRIMARY KEY (AccountID) 
 );
 
 CREATE TABLE PaymentMethod (
     Card_Number INT,
     Cardholder_Name VARCHAR(50),
     Email VARCHAR(50),
-    FK_AccountID INT,
-    PaymentID INT,
+    FK_AccountID INT NOT NULL,
+    PaymentID INT NOT NULL,
     PRIMARY KEY (PaymentID),
     FOREIGN KEY (FK_AccountID)
         REFERENCES Account (AccountID)
@@ -20,14 +20,14 @@ CREATE TABLE PaymentMethod (
 CREATE TABLE ShoppingCart (
     AccountID INT,
     AmountOfItems INT,
-    OrderID INT,
+    OrderID INT NOT NULL,
     TotalAmount DECIMAL,
     PRIMARY KEY (OrderID)
 );
     
 CREATE TABLE Supplier (
     ContactEmail VARCHAR(30),
-    SupplierID INT,
+    SupplierID INT NOT NULL,
     SupplierName VARCHAR(30),
     PRIMARY KEY (SupplierID)
 );
@@ -35,8 +35,8 @@ CREATE TABLE Supplier (
 CREATE TABLE Product (
     `Condition` VARCHAR(30), -- KEYWORD
     `Description` VARCHAR(200), -- KEYWORD
-    FK_OrderID INT,
-    FK_SupplierID INT,
+    FK_OrderID INT NOT NULL,
+    FK_SupplierID INT NOT NULL,
     ProductID INT,
     ProductName VARCHAR(80),
     Price DECIMAL,
@@ -49,7 +49,7 @@ CREATE TABLE Product (
 );
     
 CREATE TABLE Category (
-    CategoryID INT,
+    CategoryID INT NOT NULL,
     CategoryName VARCHAR(80),
     CategoryDescription VARCHAR(200),
     PRIMARY KEY (CategoryID)
@@ -57,15 +57,15 @@ CREATE TABLE Category (
 
 CREATE TABLE ACCOUNT_ADDRESS (
     AccountAddress VARCHAR(80),
-    FK_Account_ID INT,
+    FK_Account_ID INT NOT NULL,
     PRIMARY KEY (AccountAddress , FK_Account_ID),
     FOREIGN KEY (FK_Account_ID)
         REFERENCES Account (AccountID)
 );
 
 CREATE TABLE CATEGORIZES (
-    FK_CategoryID INT,
-    FK_ProductID INT,
+    FK_CategoryID INT NOT NULL,
+    FK_ProductID INT NOT NULL,
     PRIMARY KEY (FK_CategoryID , FK_ProductID),
     FOREIGN KEY (FK_CategoryID)
         REFERENCES Category (CategoryID),
@@ -74,7 +74,7 @@ CREATE TABLE CATEGORIZES (
 );
 
 CREATE TABLE Customer (
-    AccountID INT,
+    AccountID INT NOT NULL,
     NumProductsBought INT,
     PRIMARY KEY (AccountID),
     FOREIGN KEY (AccountID)
@@ -82,7 +82,7 @@ CREATE TABLE Customer (
 );
 
 CREATE TABLE Customer_Business (
-    AccountID INT,
+    AccountID INT NOT NULL,
     BusinessName VARCHAR(50),
     ContactPerson VARCHAR(30),
     TaxID INT,
@@ -92,7 +92,7 @@ CREATE TABLE Customer_Business (
 );
 
 CREATE TABLE Customer_Person (
-    AccountID INT,
+    AccountID INT NOT NULL,
     DateOfBirth VARCHAR(10),
     PRIMARY KEY (AccountID),
     FOREIGN KEY (AccountID)
@@ -104,7 +104,7 @@ CREATE TABLE Debit_Credit (
     CardholderName VARCHAR(30),
     CVV INT,
     ExpirationDate VARCHAR(4),
-    FK_Payment_ID INT,
+    FK_Payment_ID INT NOT NULL,
     PRIMARY KEY (FK_Payment_ID),
     FOREIGN KEY (FK_Payment_ID)
         REFERENCES PaymentMethod (PaymentID)
@@ -112,7 +112,7 @@ CREATE TABLE Debit_Credit (
 
 CREATE TABLE Discounts (
     DiscountCode VARCHAR(12),
-    FK_ProductID INT,
+    FK_ProductID INT NOT NULL,
     PRIMARY KEY (FK_ProductID),
     FOREIGN KEY (FK_ProductID)
         REFERENCES ShoppingCart (OrderID)
@@ -120,7 +120,7 @@ CREATE TABLE Discounts (
 
 CREATE TABLE Orders (
     OrderDate VARCHAR(10),
-    FK_OrderID INT,
+    FK_OrderID INT NOT NULL,
     OrderStatus VARCHAR(50),
     PRIMARY KEY (FK_OrderID),
     FOREIGN KEY (FK_OrderID)
@@ -128,7 +128,7 @@ CREATE TABLE Orders (
 );
 
 CREATE TABLE Review (
-    FK_ProductID INT,
+    FK_ProductID INT NOT NULL,
     ReviewID INT,
     ReviewStar DECIMAL,
     PRIMARY KEY (ReviewID),
@@ -137,7 +137,7 @@ CREATE TABLE Review (
 );
 
 CREATE TABLE Seller (
-    AccountID INT,
+    AccountID INT NOT NULL,
     NumProductsSold INT,
     PRIMARY KEY (AccountID),
     FOREIGN KEY (AccountID)
@@ -145,7 +145,7 @@ CREATE TABLE Seller (
 );
 
 CREATE TABLE Seller_Business (
-    AccountID INT,
+    AccountID INT NOT NULL,
     BusinessName VARCHAR(50),
     ContactPerson VARCHAR(30),
     TaxID INT,
@@ -155,7 +155,7 @@ CREATE TABLE Seller_Business (
 );
 
 CREATE TABLE Seller_Person (
-    AccountID INT,
+    AccountID INT NOT NULL,
     DateOfBirth VARCHAR(10),
     FirstName VARCHAR(15),
     LastName VARCHAR(15),
@@ -165,7 +165,7 @@ CREATE TABLE Seller_Person (
 );
 
 CREATE TABLE ThirdParty (
-    FK_PaymentID INT,
+    FK_PaymentID INT NOT NULL,
     Password VARCHAR(30),
     PRIMARY KEY (FK_PaymentID),
     FOREIGN KEY (FK_PaymentID)
@@ -174,7 +174,7 @@ CREATE TABLE ThirdParty (
 
 CREATE TABLE WireTransfer (
     AccountNumber INT,
-    FK_PaymentID INT,
+    FK_PaymentID INT NOT NULL,
     PRIMARY KEY (FK_PaymentID),
     FOREIGN KEY (FK_PaymentID)
         REFERENCES PaymentMethod (PaymentID)
