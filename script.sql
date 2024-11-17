@@ -94,6 +94,8 @@ CREATE TABLE Customer_Business (
 CREATE TABLE Customer_Person (
     AccountID INT NOT NULL,
     DateOfBirth VARCHAR(10),
+    FirstName VARCHAR(15),
+    LastName VARCHAR(15),
     PRIMARY KEY (AccountID),
     FOREIGN KEY (AccountID)
         REFERENCES Account (AccountID)
