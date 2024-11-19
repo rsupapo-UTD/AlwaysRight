@@ -1,0 +1,6 @@
+LOAD DATA LOCAL INFILE '/Users/ryansupapo/Mock-Datasets/Account.csv' 
+INTO TABLE Account
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
