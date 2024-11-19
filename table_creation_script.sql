@@ -1,15 +1,12 @@
 CREATE TABLE Account (
     AccountID INT NOT NULL,
     Address VARCHAR(80),
-    Email VARCHAR(30),
+    Email VARCHAR(50),
     PhoneNumber VARCHAR(14),
     PRIMARY KEY (AccountID) 
 );
 
 CREATE TABLE PaymentMethod (
-    Card_Number INT,
-    Cardholder_Name VARCHAR(50),
-    Email VARCHAR(50),
     FK_AccountID INT NOT NULL,
     PaymentID INT NOT NULL,
     PRIMARY KEY (PaymentID),
@@ -26,7 +23,7 @@ CREATE TABLE ShoppingCart (
 );
     
 CREATE TABLE Supplier (
-    ContactEmail VARCHAR(30),
+    ContactEmail VARCHAR(50),
     SupplierID INT NOT NULL,
     SupplierName VARCHAR(30),
     PRIMARY KEY (SupplierID)
@@ -169,6 +166,7 @@ CREATE TABLE Seller_Person (
 CREATE TABLE ThirdParty (
     FK_PaymentID INT NOT NULL,
     Password VARCHAR(30),
+    Username VARCHAR(30),
     PRIMARY KEY (FK_PaymentID),
     FOREIGN KEY (FK_PaymentID)
         REFERENCES PaymentMethod (PaymentID)
@@ -176,6 +174,7 @@ CREATE TABLE ThirdParty (
 
 CREATE TABLE WireTransfer (
     AccountNumber INT,
+    RoutingNumber INT,
     FK_PaymentID INT NOT NULL,
     PRIMARY KEY (FK_PaymentID),
     FOREIGN KEY (FK_PaymentID)
