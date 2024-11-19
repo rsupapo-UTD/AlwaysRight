@@ -1,0 +1,17 @@
+Account
+1 - 100k
+
+Category 
+100k - 200k
+
+Product 
+300k - 400k
+
+Review 
+400k - 500k
+
+Shopping Cart 
+500k - 600k
+
+Supplier
+600k - 700k
