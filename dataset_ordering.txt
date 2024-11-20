@@ -1,17 +1,31 @@
 Account
-1 - 100k
+1 - 99k
 
 Category 
-100k - 200k
-
-Product 
-300k - 400k
-
-Review 
-400k - 500k
+100k - 199k
 
 Shopping Cart 
-500k - 600k
+200k - 299k
+
+Product 
+300k - 399k
+
+Review 
+400k - 499k
 
 Supplier
-600k - 700k
+500k - 599k
+
+Payment ID
+600k - 699k
+
+	Debit/Credit
+	600 - 633k
+	
+	Wire Transfer
+	633 - 666k
+	
+	Third Party
+	766 - 799k
+
+*** Payment ID’s can’t be duplicates. Disjoint entities. ***
