@@ -1,901 +1,901 @@
-ProductID,FK_OrderID,FK_SupplierID,Description,Condition,Price,Quantity,ProductName
-300000,200796,500064,High-quality leather wallet,Used - Very Good,$2238.42,11,Leather Wallet
-300001,200546,500158,Durable hiking backpack,Refurbished,$2578.15,12,Hiking Backpack
-300002,200748,500120,Noise-cancelling headphones,Open Box,$608.81,15,Noise-Cancelling Headphones
-300003,200099,500175,Soft cotton T-shirt,Open Box,$2883.09,19,Cotton T-Shirt
-300004,200230,500215,Sleek stainless steel water bottle,Refurbished,$2847.57,10,Stainless Steel Water Bottle
-300005,200567,500270,Compact Bluetooth speaker,Used - Very Good,$2008.06,5,Bluetooth Speaker
-300006,200438,500055,Lightweight travel suitcase,New,$2060.86,17,Travel Suitcase
-300007,200629,500104,Premium organic coffee beans,Used - Good,$1783.76,7,Organic Coffee Beans
-300008,200537,500119,Comfortable memory foam pillow,Certified Refurbished,$1317.47,2,Memory Foam Pillow
-300009,200762,500277,Stylish wooden sunglasses,Open Box,$421.92,5,Wooden Sunglasses
-300010,200524,500023,Portable power bank,Pre-Owned,$2258.55,20,Portable Power Bank
-300011,200164,500060,Ultra-soft bath towel,Used - Like New,$2862.31,4,Bath Towel
-300012,200220,500228,Elegant ceramic vase,Used - Acceptable,$1244.69,17,Ceramic Vase
-300013,200458,500154,Adjustable laptop stand,Refurbished,$170.71,8,Laptop Stand
-300014,200142,500173,Versatile chef’s knife,Refurbished,$2071.91,5,Chef’s Knife
-300015,200140,500220,Compact digital camera,Used - Very Good,$32.56,7,Digital Camera
-300016,200620,500018,Durable stainless steel frying pan,Used - Very Good,$870.17,4,Stainless Steel Frying Pan
-300017,200422,500178,Eco-friendly bamboo toothbrush,Used - Very Good,$685.99,5,Bamboo Toothbrush
-300018,200314,500106,High-performance gaming mouse,Open Box,$27.93,7,Gaming Mouse
-300019,200369,500155,Ergonomic office chair,Used - Acceptable,$2438.19,2,Office Chair
-300020,200500,500281,Luxurious silk bedsheets,Certified Refurbished,$2449.65,2,Silk Bedsheets
-300021,200492,500129,Heavy-duty toolbox,New,$1706.48,1,Toolbox
-300022,200479,500205,Rechargeable LED flashlight,Used - Good,$441.09,2,LED Flashlight
-300023,200595,500121,Modern minimalist watch,Used - Acceptable,$699.06,13,Minimalist Watch
-300024,200155,500244,Wireless charging pad,Refurbished,$1484.86,2,Wireless Charging Pad
-300025,200209,500291,Durable yoga mat,Open Box,$2179.00,7,Yoga Mat
-300026,200609,500248,Trendy canvas tote bag,Used - Like New,$1196.01,12,Canvas Tote Bag
-300027,200254,500016,Waterproof fitness tracker,Pre-Owned,$2474.87,7,Fitness Tracker
-300028,200211,500279,High-speed external hard drive,Pre-Owned,$1969.16,11,External Hard Drive
-300029,200026,500031,Elegant wine decanter,Used - Acceptable,$1561.56,12,Wine Decanter
-300030,200605,500230,Advanced electric toothbrush,Used - Like New,$267.98,15,Electric Toothbrush
-300031,200386,500167,Energy-efficient LED bulb,New,$276.50,8,LED Bulb
-300032,200433,500179,Double-walled coffee mug,Used - Acceptable,$2635.61,4,Coffee Mug
-300033,200334,500032,Versatile air fryer,Used - Very Good,$303.20,13,Air Fryer
-300034,200596,500185,Adjustable dumbbells set,Pre-Owned,$1335.38,9,Dumbbells
-300035,200783,500014,Classic analog wristwatch,Refurbished,$1059.81,17,Analog Watch
-300036,200316,500058,Multi-functional survival knife,Pre-Owned,$2999.58,16,Survival Knife
-300037,200137,500292,Convenient portable grill,Used - Acceptable,$2513.83,7,Portable Grill
-300038,200476,500178,Efficient vacuum cleaner,Used - Like New,$113.46,12,Vacuum Cleaner
-300039,200621,500003,Compact first aid kit,Used - Good,$2009.32,6,First Aid Kit
-300040,200016,500030,High-definition action camera,Used - Acceptable,$2716.84,14,Action Camera
-300041,200241,500071,Comfortable running shoes,New,$1851.51,4,Running Shoes
-300042,200232,500260,Foldable camping chair,Used - Like New,$915.93,5,Camping Chair
-300043,200140,500236,Noise-isolating earbuds,Refurbished,$2184.80,16,Noise-Isolating Earbuds
-300044,200710,500102,Advanced smartwatch,Used - Good,$2099.06,7,Smartwatch
-300045,200324,500195,Stylish leather journal,Used - Like New,$1564.36,4,Leather Journal
-300046,200067,500270,Durable travel mug,Certified Refurbished,$1420.98,13,Travel Mug
-300047,200655,500045,Soft plush throw blanket,Refurbished,$1090.88,5,Plush Throw Blanket
-300048,200785,500033,Elegant crystal chandelier,Used - Very Good,$2780.83,15,Crystal Chandelier
-300049,200602,500117,Portable car jump starter,Certified Refurbished,$86.51,17,Car Jump Starter
-300050,200424,500176,Heavy-duty garden hose,Used - Very Good,$2738.71,2,Garden Hose
-300051,200182,500170,Adjustable desk lamp,Open Box,$2746.58,15,Desk Lamp
-300052,200120,500031,Sophisticated perfume set,Pre-Owned,$2826.19,5,Perfume Set
-300053,200796,500157,Waterproof phone case,Used - Very Good,$1698.78,16,Phone Case
-300054,200047,500118,Ergonomic bike seat,Used - Very Good,$2130.54,11,Bike Seat
-300055,200085,500221,Minimalist wall clock,Refurbished,$2720.91,10,Wall Clock
-300056,200059,500055,Anti-theft laptop backpack,Certified Refurbished,$2152.66,10,Laptop Backpack
-300057,200117,500038,Precision kitchen scale,Used - Very Good,$2415.64,1,Kitchen Scale
-300058,200164,500231,Premium wireless earbuds,Open Box,$1862.75,11,Wireless Earbuds
-300059,200079,500039,High-speed blender,Used - Very Good,$1049.71,1,Blender
-300060,200582,500213,Versatile toolset,Pre-Owned,$2522.79,13,Toolset
-300061,200611,500296,Multi-purpose folding table,New,$498.30,11,Folding Table
-300062,200110,500178,Adjustable standing desk,Used - Very Good,$820.74,13,Standing Desk
-300063,200781,500238,Compact sewing machine,Used - Like New,$1894.78,6,Sewing Machine
-300064,200734,500274,Advanced hair straightener,Used - Good,$968.86,1,Hair Straightener
-300065,200785,500030,Multi-functional printer,New,$1142.65,2,Printer
-300066,200439,500037,Rechargeable hand warmer,Certified Refurbished,$1152.82,4,Hand Warmer
-300067,200203,500012,Collapsible pet carrier,Pre-Owned,$313.31,7,Pet Carrier
-300068,200119,500065,Digital kitchen timer,Open Box,$2427.02,5,Kitchen Timer
-300069,200385,500138,Stainless steel kitchen tongs,Used - Good,$1461.95,13,Kitchen Tongs
-300070,200795,500242,Lightweight sleeping bag,Used - Good,$814.37,10,Sleeping Bag
-300071,200415,500037,Premium cast iron skillet,Open Box,$2386.45,16,Cast Iron Skillet
-300072,200385,500140,Durable cargo pants,Refurbished,$364.54,13,Cargo Pants
-300073,200532,500084,Luxurious bathrobe,Used - Acceptable,$574.98,19,Bathrobe
-300074,200609,500062,Travel-sized toiletries kit,Pre-Owned,$564.33,3,Toiletries Kit
-300075,200393,500100,Heavy-duty bike lock,Certified Refurbished,$896.41,18,Bike Lock
-300076,200041,500249,Portable camping stove,Used - Very Good,$2561.19,1,Camping Stove
-300077,200242,500046,Advanced car vacuum cleaner,New,$2787.43,9,Car Vacuum
-300078,200246,500041,Compact coffee grinder,Pre-Owned,$2088.52,18,Coffee Grinder
-300079,200479,500030,Elegant tea set,Refurbished,$757.72,17,Tea Set
-300080,200746,500193,Modern smartphone stand,Refurbished,$1507.01,1,Smartphone Stand
-300081,200581,500270,Reusable food storage bags,Used - Acceptable,$2017.53,1,Food Storage Bags
-300082,200546,500199,Premium quality umbrella,Refurbished,$2930.62,14,Umbrella
-300083,200226,500287,Ultra-light hiking tent,New,$2186.09,3,Hiking Tent
-300084,200389,500024,Stylish beach hat,Used - Good,$437.85,19,Beach Hat
-300085,200471,500167,Durable work gloves,Open Box,$298.12,15,Work Gloves
-300086,200066,500297,Advanced video doorbell,Certified Refurbished,$2677.42,15,Video Doorbell
-300087,200647,500150,Space-saving shoe organizer,Pre-Owned,$1049.43,4,Shoe Organizer
-300088,200799,500086,Portable electric kettle,Used - Like New,$2261.28,9,Electric Kettle
-300089,200745,500234,Soft sherpa fleece blanket,Used - Good,$2247.44,18,Sherpa Fleece Blanket
-300090,200327,500047,Sophisticated whiskey glasses,Used - Good,$194.07,5,Whiskey Glasses
-300091,200371,500289,Eco-friendly reusable straws,Used - Good,$2297.34,4,Reusable Straws
-300092,200487,500095,Lightweight portable hammock,Pre-Owned,$413.56,3,Portable Hammock
-300093,200555,500071,Minimalist desk organizer,Used - Acceptable,$404.47,5,Desk Organizer
-300094,200109,500231,Advanced robotic vacuum,Used - Like New,$1805.10,10,Robotic Vacuum
-300095,200339,500062,Sturdy wall-mounted shelf,Used - Very Good,$2056.55,3,Wall Shelf
-300096,200522,500051,Portable projector,Used - Very Good,$1822.76,13,Portable Projector
-300097,200697,500287,Soft travel neck pillow,Refurbished,$1981.98,2,Travel Neck Pillow
-300098,200537,500023,Foldable picnic blanket,Used - Very Good,$2680.30,14,Picnic Blanket
-300099,200167,500104,Digital meat thermometer,Used - Very Good,$1346.15,16,Meat Thermometer
-300100,200044,500083,Rechargeable book light,Pre-Owned,$1797.10,8,Book Light
-300101,200748,500132,Elegant leather handbag,Refurbished,$2062.60,2,Leather Handbag
-300102,200409,500127,Durable hiking boots,New,$1100.29,3,Hiking Boots
-300103,200479,500117,Comfortable wool socks,Pre-Owned,$742.50,1,Wool Socks
-300104,200015,500188,Stylish denim jacket,Certified Refurbished,$2988.95,12,Denim Jacket
-300105,200630,500205,Compact photo printer,Used - Good,$622.93,18,Photo Printer
-300106,200037,500187,Adjustable resistance bands,Used - Good,$1969.49,19,Resistance Bands
-300107,200703,500217,Premium cotton duvet cover,Pre-Owned,$1217.24,19,Cotton Duvet Cover
-300108,200278,500121,Versatile multi-tool,Refurbished,$1592.61,20,Multi-Tool
-300109,200627,500289,Modern floor lamp,Used - Acceptable,$2944.60,10,Floor Lamp
-300110,200342,500291,Luxurious cashmere scarf,Pre-Owned,$375.56,6,Cashmere Scarf
-300111,200618,500056,Portable espresso machine,Used - Acceptable,$2380.70,6,Espresso Machine
-300112,200629,500293,Waterproof action camera,Used - Like New,$1974.23,17,Action Camera
-300113,200193,500258,Compact air purifier,New,$403.37,11,Air Purifier
-300114,200647,500197,Durable bike helmet,Open Box,$1337.13,13,Bike Helmet
-300115,200554,500054,Soft bamboo sheets,Used - Good,$699.83,16,Bamboo Sheets
-300116,200544,500173,High-performance gym bag,Open Box,$980.26,17,Gym Bag
-300117,200249,500136,Advanced hair dryer,Refurbished,$824.40,8,Hair Dryer
-300118,200378,500238,Energy-efficient space heater,Open Box,$676.16,11,Space Heater
-300119,200248,500286,Sophisticated cocktail shaker,Refurbished,$339.21,7,Cocktail Shaker
-300120,200419,500218,Eco-friendly laundry detergent,Pre-Owned,$338.80,4,Laundry Detergent
-300121,200040,500270,Durable BBQ grill cover,Used - Acceptable,$206.54,13,BBQ Grill Cover
-300122,200135,500142,Compact spice rack,Open Box,$107.54,3,Spice Rack
-300123,200159,500178,Stylish patio furniture,Used - Acceptable,$2959.63,2,Patio Furniture
-300124,200132,500277,Premium soundbar speaker,Open Box,$1788.92,18,Soundbar
-300125,200059,500116,Advanced pet grooming kit,New,$1622.17,6,Pet Grooming Kit
-300126,200518,500060,High-quality baby stroller,Used - Good,$28.30,17,Baby Stroller
-300127,200687,500007,Elegant dining table set,Refurbished,$447.03,11,Dining Table Set
-300128,200383,500006,Soft organic baby blanket,Used - Like New,$539.47,9,Baby Blanket
-300129,200662,500043,Lightweight power drill,Used - Like New,$2322.56,4,Power Drill
-300130,200620,500162,Heavy-duty dog leash,Pre-Owned,$879.24,11,Dog Leash
-300131,200472,500209,Minimalist table clock,New,$1994.28,15,Table Clock
-300132,200557,500148,Advanced gaming keyboard,Open Box,$1121.25,5,Gaming Keyboard
-300133,200147,500183,Foldable treadmill,Used - Acceptable,$431.57,15,Treadmill
-300134,200036,500005,Multi-functional waffle maker,New,$1634.23,19,Waffle Maker
-300135,200692,500006,Premium travel pillow,Used - Acceptable,$453.68,19,Travel Pillow
-300136,200465,500157,Durable outdoor jacket,New,$2176.34,18,Outdoor Jacket
-300137,200758,500205,Adjustable TV wall mount,Used - Acceptable,$2920.13,6,TV Wall Mount
-300138,200046,500133,Waterproof travel bag,Refurbished,$2257.88,14,Travel Bag
-300139,200623,500264,High-speed internet router,Open Box,$2745.78,1,Internet Router
-300140,200134,500248,Space-saving closet organizer,Used - Acceptable,$2313.23,11,Closet Organizer
-300141,200072,500103,Advanced sewing kit,Open Box,$1195.54,7,Sewing Kit
-300142,200118,500040,Modern ergonomic sofa,Pre-Owned,$1757.46,18,Ergonomic Sofa
-300143,200795,500086,Luxurious showerhead,Used - Good,$2728.85,1,Showerhead
-300144,200365,500070,Durable cooler bag,Used - Like New,$764.68,16,Cooler Bag
-300145,200337,500180,Elegant bathroom mirror,Used - Like New,$2585.40,6,Bathroom Mirror
-300146,200093,500177,Premium leather briefcase,Used - Like New,$1862.91,8,Leather Briefcase
-300147,200164,500238,Comfortable hiking sandals,Refurbished,$2065.79,20,Hiking Sandals
-300148,200668,500055,Soft wool blanket,Open Box,$2863.91,1,Wool Blanket
-300149,200751,500068,Portable massage gun,Used - Acceptable,$968.32,16,Massage Gun
-300150,200597,500156,Rechargeable lantern,Used - Good,$574.18,1,Lantern
-300151,200792,500037,Sophisticated wine opener,Used - Very Good,$885.72,13,Wine Opener
-300152,200342,500036,Adjustable book stand,New,$1430.90,4,Book Stand
-300153,200557,500183,Premium stainless steel straws,Refurbished,$137.06,13,Stainless Steel Straws
-300154,200296,500274,Lightweight trekking poles,New,$328.04,12,Trekking Poles
-300155,200194,500281,Versatile garment steamer,New,$1921.49,7,Garment Steamer
-300156,200721,500130,High-quality bread machine,Refurbished,$847.45,9,Bread Machine
-300157,200207,500039,Durable camping table,Pre-Owned,$710.55,4,Camping Table
-300158,200362,500173,Elegant table lamp,Used - Acceptable,$2099.90,12,Table Lamp
-300159,200176,500004,Portable laptop desk,Used - Very Good,$2511.07,3,Laptop Desk
-300160,200533,500206,Premium pet bed,Used - Very Good,$1183.80,1,Pet Bed
-300161,200256,500011,Soft weighted blanket,Used - Acceptable,$1107.93,9,Weighted Blanket
-300162,200588,500222,Compact portable fan,Used - Acceptable,$20.80,5,Portable Fan
-300163,200771,500100,Waterproof Bluetooth speaker,Refurbished,$426.04,16,Bluetooth Speaker
-300164,200796,500050,Energy-efficient air conditioner,Open Box,$1423.92,4,Air Conditioner
-300165,200755,500269,Minimalist bedside table,Used - Acceptable,$788.04,6,Bedside Table
-300166,200575,500174,Adjustable bed frame,Certified Refurbished,$1308.96,5,Bed Frame
-300167,200739,500037,Space-saving laundry basket,Used - Very Good,$1765.85,4,Laundry Basket
-300168,200674,500077,Advanced power inverter,Certified Refurbished,$886.16,20,Power Inverter
-300169,200050,500200,Heavy-duty snow shovel,Open Box,$1214.68,9,Snow Shovel
-300170,200077,500008,Comfortable sleeping pad,Open Box,$397.65,2,Sleeping Pad
-300171,200099,500192,Luxurious face moisturizer,New,$2665.02,2,Face Moisturizer
-300172,200530,500246,Versatile folding bike,Used - Acceptable,$1769.83,20,Folding Bike
-300173,200476,500093,High-quality juicer,Used - Good,$1038.01,20,Juicer
-300174,200062,500253,Stylish leather phone case,Certified Refurbished,$2196.08,13,Phone Case
-300175,200509,500285,Compact makeup mirror,Used - Like New,$70.41,4,Makeup Mirror
-300176,200388,500204,Durable hiking backpack,Used - Like New,$1974.09,5,Hiking Backpack
-300177,200516,500255,Lightweight garden pruner,New,$2624.74,6,Garden Pruner
-300178,200746,500164,Advanced home security camera,Used - Very Good,$686.46,7,Home Security Camera
-300179,200608,500193,Minimalist floating shelf,Pre-Owned,$2087.38,5,Floating Shelf
-300180,200232,500136,Premium smart thermostat,Used - Acceptable,$670.32,20,Smart Thermostat
-300181,200237,500006,Soft merino wool sweater,Refurbished,$2404.19,12,Wool Sweater
-300182,200586,500264,Portable induction cooktop,Refurbished,$1277.84,16,Induction Cooktop
-300183,200530,500104,Adjustable baby carrier,Refurbished,$2826.34,20,Baby Carrier
-300184,200392,500092,Stylish leather belt,Used - Acceptable,$539.39,15,Leather Belt
-300185,200526,500067,Rechargeable hand blender,Used - Good,$1203.25,16,Hand Blender
-300186,200446,500147,Durable running shoes,New,$1729.02,4,Running Shoes
-300187,200226,500146,Waterproof camera case,Open Box,$1589.36,19,Camera Case
-300188,200580,500121,Elegant crystal wine glasses,Used - Acceptable,$930.51,1,Crystal Wine Glasses
-300189,200778,500210,Comfortable bean bag chair,Used - Like New,$2053.34,1,Bean Bag Chair
-300190,200303,500139,Sophisticated dinnerware set,Refurbished,$2972.28,19,Dinnerware Set
-300191,200568,500116,Compact tool organizer,Open Box,$2463.16,4,Tool Organizer
-300192,200427,500087,High-speed electric scooter,Certified Refurbished,$1517.65,3,Electric Scooter
-300193,200342,500170,Advanced programmable coffee maker,Pre-Owned,$937.38,1,Coffee Maker
-300194,200023,500177,Premium glass storage containers,Refurbished,$1062.02,3,Storage Containers
-300195,200701,500205,Lightweight travel backpack,Certified Refurbished,$2642.66,15,Travel Backpack
-300196,200528,500206,Minimalist desktop clock,New,$298.83,3,Desktop Clock
-300197,200514,500024,Foldable yoga mat,Refurbished,$2149.18,1,Yoga Mat
-300198,200511,500023,Durable camping tent,Used - Very Good,$2960.54,6,Camping Tent
-300199,200012,500243,Portable solar charger,Open Box,$1600.17,18,Solar Charger
-300200,200075,500046,Soft flannel sheets,Open Box,$1120.80,13,Flannel Sheets
-300201,200095,500122,Adjustable shower caddy,Used - Good,$2578.08,13,Shower Caddy
-300202,200187,500234,Heavy-duty storage box,Used - Very Good,$2323.30,5,Storage Box
-300203,200694,500167,Stylish wool fedora,Certified Refurbished,$2998.03,20,Wool Fedora
-300204,200648,500095,High-quality garden gloves,Certified Refurbished,$388.14,15,Garden Gloves
-300205,200193,500176,Eco-friendly compost bin,Used - Acceptable,$1802.96,2,Compost Bin
-300206,200657,500219,Elegant silver bracelet,Used - Acceptable,$1041.87,14,Silver Bracelet
-300207,200662,500156,Portable handheld vacuum,Pre-Owned,$265.45,20,Handheld Vacuum
-300208,200013,500293,Waterproof bike panniers,Certified Refurbished,$372.83,15,Bike Panniers
-300209,200685,500153,Comfortable lounge chair,New,$871.33,18,Lounge Chair
-300210,200381,500032,Premium silk pillowcase,Refurbished,$192.83,13,Silk Pillowcase
-300211,200116,500001,Compact air mattress,Used - Like New,$1643.14,5,Air Mattress
-300212,200107,500299,Versatile camping lantern,Used - Good,$1424.26,18,Camping Lantern
-300213,200286,500122,Advanced fitness tracker,Used - Like New,$2996.03,8,Fitness Tracker
-300214,200273,500124,Durable garden rake,Used - Acceptable,$2224.21,4,Garden Rake
-300215,200635,500203,Modern home theater system,Used - Like New,$2933.06,1,Home Theater System
-300216,200428,500175,Lightweight utility cart,Used - Like New,$1504.67,14,Utility Cart
-300217,200630,500103,Adjustable pet gate,Open Box,$1769.56,16,Pet Gate
-300218,200232,500073,Elegant pearl necklace,Pre-Owned,$895.82,13,Pearl Necklace
-300219,200355,500078,High-speed USB hub,New,$2565.42,4,USB Hub
-300220,200638,500147,Premium Bluetooth soundbar,Pre-Owned,$2718.81,12,Bluetooth Soundbar
-300221,200472,500016,Stylish leather gloves,Used - Acceptable,$603.18,14,Leather Gloves
-300222,200634,500059,Heavy-duty extension cord,Open Box,$2378.40,14,Extension Cord
-300223,200135,500240,Portable picnic cooler,New,$626.18,16,Picnic Cooler
-300224,200531,500103,Sophisticated travel wallet,Certified Refurbished,$2928.58,14,Travel Wallet
-300225,200031,500123,Lightweight stroller,New,$807.85,10,Stroller
-300226,200647,500024,Durable pet playpen,Used - Acceptable,$329.79,20,Pet Playpen
-300227,200512,500062,Compact tool belt,Used - Very Good,$1666.73,13,Tool Belt
-300228,200218,500242,Luxurious facial cleanser,Used - Acceptable,$2320.93,11,Facial Cleanser
-300229,200724,500264,Waterproof hiking shoes,Pre-Owned,$813.16,11,Hiking Shoes
-300230,200681,500255,Space-saving drying rack,Used - Like New,$1051.57,11,Drying Rack
-300231,200584,500267,Advanced smart door lock,New,$2994.99,20,Smart Door Lock
-300232,200625,500227,Soft hypoallergenic comforter,Used - Acceptable,$2859.28,3,Comforter
-300233,200082,500018,Portable water filter,Used - Very Good,$1764.62,12,Water Filter
-300234,200317,500179,High-quality dog bed,Open Box,$733.61,5,Dog Bed
-300235,200013,500285,Modern cordless vacuum,Certified Refurbished,$1202.43,3,Cordless Vacuum
-300236,200007,500270,Comfortable walking shoes,New,$561.43,9,Walking Shoes
-300237,200242,500294,Elegant copper cookware,Pre-Owned,$2955.54,19,Copper Cookware
-300238,200691,500232,Minimalist photo frame,Pre-Owned,$611.29,10,Photo Frame
-300239,200396,500259,Durable weatherproof jacket,Used - Very Good,$2721.50,8,Weatherproof Jacket
-300240,200759,500280,Versatile multi-cooker,Used - Like New,$453.98,20,Multi-Cooker
-300241,200062,500212,Adjustable dumbbell set,Open Box,$2410.37,13,Dumbbell Set
-300242,200529,500056,Premium herbal tea sampler,Used - Very Good,$1051.05,8,Herbal Tea Sampler
-300243,200772,500169,Stylish ceramic flower pot,New,$294.08,12,Ceramic Flower Pot
-300244,200323,500161,Compact gaming monitor,Used - Acceptable,$126.80,12,Gaming Monitor
-300245,200400,500117,Lightweight workout leggings,Certified Refurbished,$1831.70,12,Workout Leggings
-300246,200311,500133,Foldable laundry hamper,Certified Refurbished,$3.38,5,Laundry Hamper
-300247,200528,500008,Advanced gaming headset,Used - Like New,$1754.98,6,Gaming Headset
-300248,200670,500031,Heavy-duty pressure washer,Used - Like New,$1336.84,4,Pressure Washer
-300249,200298,500134,Comfortable armchair,Pre-Owned,$1307.17,8,Armchair
-300250,200180,500118,Sophisticated home decor set,Used - Good,$135.74,18,Home Decor Set
-300251,200253,500245,Portable air compressor,Used - Like New,$1250.11,16,Air Compressor
-300252,200372,500251,Premium hot sauce collection,New,$1743.69,3,Hot Sauce Collection
-300253,200509,500209,Durable bike repair kit,Certified Refurbished,$2666.78,17,Bike Repair Kit
-300254,200397,500026,Modern digital picture frame,Used - Acceptable,$1818.07,5,Digital Picture Frame
-300255,200076,500068,Waterproof dry bag,Refurbished,$2105.65,16,Dry Bag
-300256,200103,500233,High-speed travel charger,Used - Like New,$2704.61,5,Travel Charger
-300257,200783,500226,Minimalist bedside organizer,Used - Good,$953.97,10,Bedside Organizer
-300258,200090,500165,Lightweight portable canopy,Used - Like New,$205.95,19,Portable Canopy
-300259,200588,500064,Adjustable storage shelving,Used - Very Good,$2461.41,18,Storage Shelving
-300260,200242,500018,Eco-friendly glass water bottle,Used - Like New,$951.59,16,Glass Water Bottle
-300261,200036,500050,Sophisticated cocktail mixer,Used - Acceptable,$1968.86,4,Cocktail Mixer
-300262,200543,500104,Compact shoe rack,Used - Like New,$2155.39,10,Shoe Rack
-300263,200455,500089,Heavy-duty power washer,Pre-Owned,$1179.63,14,Power Washer
-300264,200666,500050,Durable garden kneeler,Certified Refurbished,$1143.03,9,Garden Kneeler
-300265,200526,500084,Stylish winter coat,Used - Acceptable,$1298.29,9,Winter Coat
-300266,200339,500260,High-quality leather wallet,Certified Refurbished,$752.14,3,Leather Wallet
-300267,200261,500211,Durable hiking backpack,Used - Very Good,$1171.08,6,Hiking Backpack
-300268,200241,500115,Noise-cancelling headphones,New,$345.00,4,Noise-Cancelling Headphones
-300269,200613,500284,Soft cotton T-shirt,Used - Acceptable,$2289.76,7,Cotton T-Shirt
-300270,200678,500233,Sleek stainless steel water bottle,Pre-Owned,$1049.08,11,Stainless Steel Water Bottle
-300271,200764,500139,Compact Bluetooth speaker,Certified Refurbished,$2606.30,6,Bluetooth Speaker
-300272,200462,500012,Lightweight travel suitcase,Used - Like New,$1722.44,12,Travel Suitcase
-300273,200521,500008,Premium organic coffee beans,New,$2841.65,2,Organic Coffee Beans
-300274,200426,500223,Comfortable memory foam pillow,Used - Like New,$2610.18,13,Memory Foam Pillow
-300275,200696,500270,Stylish wooden sunglasses,New,$947.88,9,Wooden Sunglasses
-300276,200333,500153,Portable power bank,Certified Refurbished,$743.78,5,Portable Power Bank
-300277,200215,500071,Ultra-soft bath towel,Open Box,$2588.41,11,Bath Towel
-300278,200003,500214,Elegant ceramic vase,New,$945.52,10,Ceramic Vase
-300279,200268,500228,Adjustable laptop stand,Used - Very Good,$2950.14,12,Laptop Stand
-300280,200753,500057,Versatile chef’s knife,Refurbished,$2596.78,7,Chef’s Knife
-300281,200514,500184,Compact digital camera,Used - Like New,$2882.66,14,Digital Camera
-300282,200379,500246,Durable stainless steel frying pan,Refurbished,$316.14,2,Stainless Steel Frying Pan
-300283,200428,500069,Eco-friendly bamboo toothbrush,Refurbished,$1657.81,13,Bamboo Toothbrush
-300284,200614,500118,High-performance gaming mouse,Certified Refurbished,$2578.19,5,Gaming Mouse
-300285,200103,500115,Ergonomic office chair,Used - Good,$712.64,14,Office Chair
-300286,200767,500007,Luxurious silk bedsheets,Used - Good,$2310.03,10,Silk Bedsheets
-300287,200541,500289,Heavy-duty toolbox,Used - Very Good,$45.14,5,Toolbox
-300288,200084,500151,Rechargeable LED flashlight,Certified Refurbished,$636.94,4,LED Flashlight
-300289,200703,500294,Modern minimalist watch,New,$300.73,14,Minimalist Watch
-300290,200037,500236,Wireless charging pad,Used - Good,$977.76,12,Wireless Charging Pad
-300291,200102,500089,Durable yoga mat,Used - Good,$187.15,15,Yoga Mat
-300292,200213,500252,Trendy canvas tote bag,Refurbished,$1407.01,20,Canvas Tote Bag
-300293,200512,500156,Waterproof fitness tracker,Refurbished,$2561.41,8,Fitness Tracker
-300294,200399,500084,High-speed external hard drive,Used - Like New,$1508.73,14,External Hard Drive
-300295,200618,500282,Elegant wine decanter,Used - Very Good,$1574.90,14,Wine Decanter
-300296,200077,500264,Advanced electric toothbrush,New,$864.97,4,Electric Toothbrush
-300297,200381,500285,Energy-efficient LED bulb,Used - Very Good,$2445.79,1,LED Bulb
-300298,200230,500270,Double-walled coffee mug,New,$696.60,2,Coffee Mug
-300299,200776,500015,Versatile air fryer,Certified Refurbished,$644.12,20,Air Fryer
-300300,200580,500027,Adjustable dumbbells set,Open Box,$197.98,10,Dumbbells
-300301,200648,500282,Classic analog wristwatch,Used - Very Good,$404.40,17,Analog Watch
-300302,200660,500059,Multi-functional survival knife,Used - Like New,$1724.72,9,Survival Knife
-300303,200327,500047,Convenient portable grill,Certified Refurbished,$2736.31,2,Portable Grill
-300304,200276,500097,Efficient vacuum cleaner,Used - Very Good,$2902.86,4,Vacuum Cleaner
-300305,200095,500299,Compact first aid kit,New,$838.85,11,First Aid Kit
-300306,200035,500118,High-definition action camera,Refurbished,$2862.49,2,Action Camera
-300307,200602,500255,Comfortable running shoes,Pre-Owned,$510.11,20,Running Shoes
-300308,200499,500256,Foldable camping chair,Used - Like New,$2947.88,13,Camping Chair
-300309,200415,500026,Noise-isolating earbuds,Refurbished,$1794.41,2,Noise-Isolating Earbuds
-300310,200584,500041,Advanced smartwatch,Used - Acceptable,$2597.75,2,Smartwatch
-300311,200651,500072,Stylish leather journal,Used - Like New,$572.29,2,Leather Journal
-300312,200673,500027,Durable travel mug,Used - Very Good,$1852.19,20,Travel Mug
-300313,200251,500014,Soft plush throw blanket,Used - Like New,$2466.84,5,Plush Throw Blanket
-300314,200129,500168,Elegant crystal chandelier,Open Box,$2743.93,6,Crystal Chandelier
-300315,200268,500155,Portable car jump starter,Used - Very Good,$747.41,4,Car Jump Starter
-300316,200195,500159,Heavy-duty garden hose,Used - Acceptable,$700.27,20,Garden Hose
-300317,200365,500029,Adjustable desk lamp,Used - Very Good,$2178.13,13,Desk Lamp
-300318,200308,500147,Sophisticated perfume set,Used - Very Good,$1342.74,20,Perfume Set
-300319,200322,500114,Waterproof phone case,Used - Acceptable,$237.37,5,Phone Case
-300320,200365,500144,Ergonomic bike seat,Refurbished,$1945.74,16,Bike Seat
-300321,200114,500258,Minimalist wall clock,Used - Acceptable,$2277.44,12,Wall Clock
-300322,200738,500168,Anti-theft laptop backpack,Used - Acceptable,$140.52,6,Laptop Backpack
-300323,200701,500126,Precision kitchen scale,Pre-Owned,$2371.56,20,Kitchen Scale
-300324,200643,500222,Premium wireless earbuds,Open Box,$1789.22,19,Wireless Earbuds
-300325,200535,500136,High-speed blender,Certified Refurbished,$1983.91,20,Blender
-300326,200709,500113,Versatile toolset,Used - Very Good,$2821.30,16,Toolset
-300327,200004,500028,Multi-purpose folding table,Pre-Owned,$1173.01,11,Folding Table
-300328,200426,500086,Adjustable standing desk,Used - Acceptable,$1012.06,20,Standing Desk
-300329,200147,500297,Compact sewing machine,Certified Refurbished,$981.41,3,Sewing Machine
-300330,200242,500006,Advanced hair straightener,Certified Refurbished,$803.35,9,Hair Straightener
-300331,200560,500271,Multi-functional printer,Pre-Owned,$984.10,18,Printer
-300332,200123,500010,Rechargeable hand warmer,Refurbished,$1275.30,12,Hand Warmer
-300333,200596,500259,Collapsible pet carrier,Used - Good,$1258.31,12,Pet Carrier
-300334,200350,500052,Digital kitchen timer,Used - Good,$481.16,2,Kitchen Timer
-300335,200315,500162,Stainless steel kitchen tongs,Pre-Owned,$452.31,7,Kitchen Tongs
-300336,200154,500147,Lightweight sleeping bag,Used - Acceptable,$2639.61,15,Sleeping Bag
-300337,200681,500155,Premium cast iron skillet,Used - Like New,$1115.22,13,Cast Iron Skillet
-300338,200092,500242,Durable cargo pants,Open Box,$2344.76,20,Cargo Pants
-300339,200112,500160,Luxurious bathrobe,Certified Refurbished,$2989.72,4,Bathrobe
-300340,200447,500204,Travel-sized toiletries kit,Used - Like New,$1558.31,18,Toiletries Kit
-300341,200058,500172,Heavy-duty bike lock,Used - Like New,$1999.68,12,Bike Lock
-300342,200455,500026,Portable camping stove,Pre-Owned,$644.71,3,Camping Stove
-300343,200530,500040,Advanced car vacuum cleaner,Certified Refurbished,$1956.12,17,Car Vacuum
-300344,200631,500060,Compact coffee grinder,Used - Like New,$1256.11,18,Coffee Grinder
-300345,200372,500242,Elegant tea set,Refurbished,$2383.46,3,Tea Set
-300346,200005,500229,Modern smartphone stand,Used - Very Good,$2495.73,10,Smartphone Stand
-300347,200122,500146,Reusable food storage bags,Refurbished,$1053.32,5,Food Storage Bags
-300348,200341,500128,Premium quality umbrella,Certified Refurbished,$1735.28,12,Umbrella
-300349,200024,500256,Ultra-light hiking tent,New,$129.03,1,Hiking Tent
-300350,200439,500154,Stylish beach hat,Used - Very Good,$2568.32,18,Beach Hat
-300351,200022,500155,Durable work gloves,Used - Good,$1504.88,7,Work Gloves
-300352,200044,500143,Advanced video doorbell,Used - Very Good,$1177.98,15,Video Doorbell
-300353,200479,500226,Space-saving shoe organizer,Used - Like New,$243.12,8,Shoe Organizer
-300354,200162,500090,Portable electric kettle,New,$2988.31,20,Electric Kettle
-300355,200585,500029,Soft sherpa fleece blanket,Certified Refurbished,$2926.80,4,Sherpa Fleece Blanket
-300356,200060,500288,Sophisticated whiskey glasses,Used - Like New,$282.85,11,Whiskey Glasses
-300357,200795,500112,Eco-friendly reusable straws,Used - Good,$2423.89,20,Reusable Straws
-300358,200530,500045,Lightweight portable hammock,Certified Refurbished,$580.58,9,Portable Hammock
-300359,200723,500207,Minimalist desk organizer,New,$365.82,8,Desk Organizer
-300360,200496,500021,Advanced robotic vacuum,Pre-Owned,$857.83,8,Robotic Vacuum
-300361,200690,500094,Sturdy wall-mounted shelf,New,$456.67,10,Wall Shelf
-300362,200678,500016,Portable projector,Used - Very Good,$318.80,10,Portable Projector
-300363,200252,500142,Soft travel neck pillow,New,$1070.12,3,Travel Neck Pillow
-300364,200117,500277,Foldable picnic blanket,Open Box,$1303.85,13,Picnic Blanket
-300365,200502,500272,Digital meat thermometer,Pre-Owned,$864.60,19,Meat Thermometer
-300366,200149,500074,Rechargeable book light,Used - Good,$741.25,20,Book Light
-300367,200274,500065,Elegant leather handbag,Open Box,$2501.50,3,Leather Handbag
-300368,200767,500038,Durable hiking boots,Used - Very Good,$2113.93,11,Hiking Boots
-300369,200144,500183,Comfortable wool socks,Refurbished,$2814.98,20,Wool Socks
-300370,200273,500194,Stylish denim jacket,New,$1099.75,7,Denim Jacket
-300371,200709,500008,Compact photo printer,Used - Good,$2074.98,9,Photo Printer
-300372,200528,500136,Adjustable resistance bands,Used - Very Good,$2703.23,11,Resistance Bands
-300373,200375,500187,Premium cotton duvet cover,Open Box,$1064.03,4,Cotton Duvet Cover
-300374,200056,500167,Versatile multi-tool,Certified Refurbished,$1370.19,3,Multi-Tool
-300375,200599,500147,Modern floor lamp,Open Box,$2397.02,1,Floor Lamp
-300376,200571,500027,Luxurious cashmere scarf,Used - Acceptable,$830.51,2,Cashmere Scarf
-300377,200697,500055,Portable espresso machine,Used - Very Good,$2736.83,16,Espresso Machine
-300378,200615,500024,Waterproof action camera,New,$1051.59,14,Action Camera
-300379,200284,500285,Compact air purifier,Open Box,$1058.72,1,Air Purifier
-300380,200476,500285,Durable bike helmet,New,$518.72,19,Bike Helmet
-300381,200035,500218,Soft bamboo sheets,Used - Acceptable,$2728.96,18,Bamboo Sheets
-300382,200220,500288,High-performance gym bag,Pre-Owned,$2797.45,8,Gym Bag
-300383,200373,500276,Advanced hair dryer,Used - Very Good,$1731.05,18,Hair Dryer
-300384,200247,500073,Energy-efficient space heater,New,$1490.39,13,Space Heater
-300385,200049,500217,Sophisticated cocktail shaker,Used - Good,$1505.15,20,Cocktail Shaker
-300386,200546,500103,Eco-friendly laundry detergent,New,$1669.62,9,Laundry Detergent
-300387,200147,500132,Durable BBQ grill cover,Used - Good,$428.49,5,BBQ Grill Cover
-300388,200418,500126,Compact spice rack,Used - Very Good,$2843.07,16,Spice Rack
-300389,200048,500078,Stylish patio furniture,Refurbished,$2969.12,5,Patio Furniture
-300390,200238,500093,Premium soundbar speaker,Pre-Owned,$1143.67,18,Soundbar
-300391,200776,500064,Advanced pet grooming kit,Used - Good,$1597.46,7,Pet Grooming Kit
-300392,200051,500146,High-quality baby stroller,Open Box,$53.44,6,Baby Stroller
-300393,200015,500122,Elegant dining table set,Used - Very Good,$227.01,8,Dining Table Set
-300394,200500,500294,Soft organic baby blanket,Certified Refurbished,$1444.44,9,Baby Blanket
-300395,200381,500295,Lightweight power drill,Pre-Owned,$493.87,16,Power Drill
-300396,200518,500023,Heavy-duty dog leash,Refurbished,$596.35,9,Dog Leash
-300397,200680,500291,Minimalist table clock,Refurbished,$2503.10,6,Table Clock
-300398,200516,500125,Advanced gaming keyboard,Open Box,$2063.19,13,Gaming Keyboard
-300399,200189,500035,Foldable treadmill,Certified Refurbished,$725.85,2,Treadmill
-300400,200612,500087,Multi-functional waffle maker,Used - Like New,$1878.83,18,Waffle Maker
-300401,200619,500156,Premium travel pillow,Used - Acceptable,$895.16,6,Travel Pillow
-300402,200053,500200,Durable outdoor jacket,Certified Refurbished,$1388.55,19,Outdoor Jacket
-300403,200136,500205,Adjustable TV wall mount,New,$931.25,13,TV Wall Mount
-300404,200686,500228,Waterproof travel bag,Certified Refurbished,$1989.41,15,Travel Bag
-300405,200495,500011,High-speed internet router,Used - Good,$1916.76,17,Internet Router
-300406,200115,500029,Space-saving closet organizer,Open Box,$1053.71,16,Closet Organizer
-300407,200242,500114,Advanced sewing kit,Used - Acceptable,$2868.33,7,Sewing Kit
-300408,200560,500218,Modern ergonomic sofa,Used - Good,$1088.88,18,Ergonomic Sofa
-300409,200109,500219,Luxurious showerhead,Refurbished,$2194.10,4,Showerhead
-300410,200334,500241,Durable cooler bag,Open Box,$1006.80,15,Cooler Bag
-300411,200008,500225,Elegant bathroom mirror,Certified Refurbished,$1216.67,8,Bathroom Mirror
-300412,200192,500116,Premium leather briefcase,Used - Like New,$1123.93,5,Leather Briefcase
-300413,200029,500109,Comfortable hiking sandals,Open Box,$2419.26,17,Hiking Sandals
-300414,200263,500039,Soft wool blanket,Used - Acceptable,$2059.19,18,Wool Blanket
-300415,200371,500199,Portable massage gun,Used - Acceptable,$912.51,17,Massage Gun
-300416,200677,500286,Rechargeable lantern,Used - Good,$2623.65,5,Lantern
-300417,200288,500107,Sophisticated wine opener,Used - Like New,$624.55,7,Wine Opener
-300418,200272,500284,Adjustable book stand,Used - Good,$743.82,3,Book Stand
-300419,200139,500139,Premium stainless steel straws,Used - Good,$1576.08,15,Stainless Steel Straws
-300420,200538,500053,Lightweight trekking poles,Used - Acceptable,$2638.26,1,Trekking Poles
-300421,200223,500017,Versatile garment steamer,Certified Refurbished,$2235.91,14,Garment Steamer
-300422,200290,500239,High-quality bread machine,Used - Good,$1202.65,3,Bread Machine
-300423,200339,500103,Durable camping table,Used - Very Good,$1597.73,8,Camping Table
-300424,200180,500228,Elegant table lamp,Used - Good,$1552.95,5,Table Lamp
-300425,200268,500000,Portable laptop desk,Pre-Owned,$638.05,18,Laptop Desk
-300426,200643,500186,Premium pet bed,Used - Like New,$2951.83,15,Pet Bed
-300427,200069,500229,Soft weighted blanket,Certified Refurbished,$2694.18,2,Weighted Blanket
-300428,200615,500004,Compact portable fan,Used - Very Good,$323.60,15,Portable Fan
-300429,200158,500186,Waterproof Bluetooth speaker,Open Box,$2708.04,2,Bluetooth Speaker
-300430,200207,500003,Energy-efficient air conditioner,Pre-Owned,$2893.44,3,Air Conditioner
-300431,200088,500191,Minimalist bedside table,Refurbished,$126.19,20,Bedside Table
-300432,200043,500024,Adjustable bed frame,Used - Acceptable,$2842.91,2,Bed Frame
-300433,200635,500224,Space-saving laundry basket,Used - Like New,$2877.77,17,Laundry Basket
-300434,200627,500159,Advanced power inverter,New,$2640.94,4,Power Inverter
-300435,200450,500018,Heavy-duty snow shovel,Used - Acceptable,$1249.77,2,Snow Shovel
-300436,200653,500190,Comfortable sleeping pad,Used - Very Good,$1306.99,6,Sleeping Pad
-300437,200427,500201,Luxurious face moisturizer,Open Box,$309.07,17,Face Moisturizer
-300438,200510,500244,Versatile folding bike,Used - Like New,$2537.86,20,Folding Bike
-300439,200666,500030,High-quality juicer,New,$964.10,5,Juicer
-300440,200271,500261,Stylish leather phone case,Used - Very Good,$1544.77,18,Phone Case
-300441,200709,500142,Compact makeup mirror,Used - Like New,$1104.23,18,Makeup Mirror
-300442,200580,500199,Durable hiking backpack,Pre-Owned,$2002.38,9,Hiking Backpack
-300443,200530,500203,Lightweight garden pruner,Used - Good,$1743.73,17,Garden Pruner
-300444,200157,500202,Advanced home security camera,Used - Acceptable,$2170.30,1,Home Security Camera
-300445,200111,500070,Minimalist floating shelf,New,$2144.85,15,Floating Shelf
-300446,200020,500110,Premium smart thermostat,Pre-Owned,$1437.64,6,Smart Thermostat
-300447,200739,500060,Soft merino wool sweater,Used - Very Good,$412.71,18,Wool Sweater
-300448,200054,500007,Portable induction cooktop,Pre-Owned,$2222.92,15,Induction Cooktop
-300449,200502,500077,Adjustable baby carrier,Used - Acceptable,$509.14,7,Baby Carrier
-300450,200059,500051,Stylish leather belt,Used - Good,$371.39,3,Leather Belt
-300451,200018,500043,Rechargeable hand blender,Used - Acceptable,$1934.56,2,Hand Blender
-300452,200502,500245,Durable running shoes,Used - Acceptable,$2398.27,11,Running Shoes
-300453,200297,500081,Waterproof camera case,New,$2742.76,3,Camera Case
-300454,200123,500091,Elegant crystal wine glasses,Used - Good,$1945.61,14,Crystal Wine Glasses
-300455,200519,500151,Comfortable bean bag chair,New,$1408.41,16,Bean Bag Chair
-300456,200728,500254,Sophisticated dinnerware set,Used - Good,$2321.56,4,Dinnerware Set
-300457,200744,500105,Compact tool organizer,Used - Acceptable,$1247.41,14,Tool Organizer
-300458,200130,500070,High-speed electric scooter,Used - Like New,$1089.61,16,Electric Scooter
-300459,200558,500017,Advanced programmable coffee maker,Pre-Owned,$2938.80,6,Coffee Maker
-300460,200351,500285,Premium glass storage containers,New,$305.57,1,Storage Containers
-300461,200333,500012,Lightweight travel backpack,Used - Acceptable,$2460.08,7,Travel Backpack
-300462,200256,500010,Minimalist desktop clock,Pre-Owned,$2619.74,7,Desktop Clock
-300463,200643,500058,Foldable yoga mat,Used - Very Good,$1675.53,9,Yoga Mat
-300464,200262,500185,Durable camping tent,Used - Like New,$2332.99,12,Camping Tent
-300465,200147,500036,Portable solar charger,Pre-Owned,$1931.40,19,Solar Charger
-300466,200130,500164,Soft flannel sheets,Open Box,$724.46,17,Flannel Sheets
-300467,200084,500256,Adjustable shower caddy,Used - Very Good,$1368.34,16,Shower Caddy
-300468,200652,500265,Heavy-duty storage box,New,$2594.10,14,Storage Box
-300469,200278,500162,Stylish wool fedora,Open Box,$1161.92,16,Wool Fedora
-300470,200527,500106,High-quality garden gloves,Pre-Owned,$140.63,1,Garden Gloves
-300471,200213,500100,Eco-friendly compost bin,Used - Very Good,$2974.40,17,Compost Bin
-300472,200159,500198,Elegant silver bracelet,Used - Like New,$1224.70,10,Silver Bracelet
-300473,200069,500057,Portable handheld vacuum,New,$801.33,11,Handheld Vacuum
-300474,200510,500238,Waterproof bike panniers,New,$2873.63,9,Bike Panniers
-300475,200701,500112,Comfortable lounge chair,Used - Like New,$1392.04,15,Lounge Chair
-300476,200562,500268,Premium silk pillowcase,Open Box,$2066.04,20,Silk Pillowcase
-300477,200589,500258,Compact air mattress,Used - Like New,$1988.57,13,Air Mattress
-300478,200678,500013,Versatile camping lantern,Certified Refurbished,$1582.13,17,Camping Lantern
-300479,200796,500062,Advanced fitness tracker,Used - Acceptable,$1187.68,17,Fitness Tracker
-300480,200516,500198,Durable garden rake,Refurbished,$1080.56,4,Garden Rake
-300481,200217,500213,Modern home theater system,Certified Refurbished,$1396.32,2,Home Theater System
-300482,200159,500068,Lightweight utility cart,Certified Refurbished,$2318.23,11,Utility Cart
-300483,200622,500111,Adjustable pet gate,Used - Good,$285.62,17,Pet Gate
-300484,200252,500273,Elegant pearl necklace,Used - Like New,$1944.97,2,Pearl Necklace
-300485,200241,500190,High-speed USB hub,New,$1425.31,7,USB Hub
-300486,200307,500002,Premium Bluetooth soundbar,Certified Refurbished,$2008.29,15,Bluetooth Soundbar
-300487,200558,500270,Stylish leather gloves,Certified Refurbished,$53.83,9,Leather Gloves
-300488,200739,500000,Heavy-duty extension cord,Certified Refurbished,$1245.77,19,Extension Cord
-300489,200603,500214,Portable picnic cooler,New,$1073.01,5,Picnic Cooler
-300490,200627,500180,Sophisticated travel wallet,Refurbished,$1168.37,16,Travel Wallet
-300491,200671,500019,Lightweight stroller,Used - Very Good,$1083.48,12,Stroller
-300492,200028,500272,Durable pet playpen,New,$1098.10,15,Pet Playpen
-300493,200179,500282,Compact tool belt,Used - Good,$1486.77,1,Tool Belt
-300494,200168,500030,Luxurious facial cleanser,Used - Good,$2584.64,9,Facial Cleanser
-300495,200398,500171,Waterproof hiking shoes,Refurbished,$2134.78,1,Hiking Shoes
-300496,200261,500299,Space-saving drying rack,Used - Good,$1019.06,4,Drying Rack
-300497,200661,500110,Advanced smart door lock,Open Box,$1143.14,5,Smart Door Lock
-300498,200460,500098,Soft hypoallergenic comforter,Used - Very Good,$2233.21,15,Comforter
-300499,200773,500036,Portable water filter,Used - Good,$932.95,16,Water Filter
-300500,200534,500089,High-quality dog bed,Open Box,$668.95,9,Dog Bed
-300501,200550,500232,Modern cordless vacuum,Pre-Owned,$2753.49,13,Cordless Vacuum
-300502,200157,500131,Comfortable walking shoes,Refurbished,$185.99,14,Walking Shoes
-300503,200588,500060,Elegant copper cookware,Used - Like New,$2608.81,19,Copper Cookware
-300504,200361,500233,Minimalist photo frame,Open Box,$832.13,2,Photo Frame
-300505,200662,500169,Durable weatherproof jacket,New,$864.92,16,Weatherproof Jacket
-300506,200291,500144,Versatile multi-cooker,Used - Good,$2710.89,9,Multi-Cooker
-300507,200563,500074,Adjustable dumbbell set,Used - Very Good,$2134.69,5,Dumbbell Set
-300508,200057,500097,Premium herbal tea sampler,Used - Like New,$407.18,5,Herbal Tea Sampler
-300509,200716,500030,Stylish ceramic flower pot,Refurbished,$274.04,11,Ceramic Flower Pot
-300510,200596,500007,Compact gaming monitor,Used - Like New,$4.33,6,Gaming Monitor
-300511,200569,500239,Lightweight workout leggings,Open Box,$1243.78,13,Workout Leggings
-300512,200299,500226,Foldable laundry hamper,Used - Very Good,$2119.91,17,Laundry Hamper
-300513,200720,500189,Advanced gaming headset,Used - Acceptable,$1677.87,14,Gaming Headset
-300514,200763,500292,Heavy-duty pressure washer,Refurbished,$2899.39,3,Pressure Washer
-300515,200403,500152,Comfortable armchair,New,$1225.08,4,Armchair
-300516,200354,500119,Sophisticated home decor set,Open Box,$433.35,9,Home Decor Set
-300517,200228,500027,Portable air compressor,Pre-Owned,$2455.74,6,Air Compressor
-300518,200287,500100,Premium hot sauce collection,Certified Refurbished,$2494.69,5,Hot Sauce Collection
-300519,200510,500165,Durable bike repair kit,New,$2717.53,18,Bike Repair Kit
-300520,200454,500003,Modern digital picture frame,Open Box,$1850.72,20,Digital Picture Frame
-300521,200747,500226,Waterproof dry bag,Used - Good,$586.83,5,Dry Bag
-300522,200143,500146,High-speed travel charger,Open Box,$2595.96,18,Travel Charger
-300523,200720,500267,Minimalist bedside organizer,Used - Good,$722.14,8,Bedside Organizer
-300524,200522,500098,Lightweight portable canopy,Refurbished,$2440.26,12,Portable Canopy
-300525,200594,500048,Adjustable storage shelving,Used - Good,$1383.78,18,Storage Shelving
-300526,200138,500156,Eco-friendly glass water bottle,Certified Refurbished,$161.16,10,Glass Water Bottle
-300527,200702,500095,Sophisticated cocktail mixer,Pre-Owned,$431.13,8,Cocktail Mixer
-300528,200443,500087,Compact shoe rack,Pre-Owned,$2971.75,17,Shoe Rack
-300529,200371,500088,Heavy-duty power washer,Used - Like New,$1968.46,16,Power Washer
-300530,200431,500177,Durable garden kneeler,Open Box,$910.98,3,Garden Kneeler
-300531,200459,500173,Stylish winter coat,Certified Refurbished,$168.31,4,Winter Coat
-300532,200104,500050,High-quality leather wallet,New,$2257.37,9,Leather Wallet
-300533,200669,500243,Durable hiking backpack,Refurbished,$1876.94,17,Hiking Backpack
-300534,200361,500026,Noise-cancelling headphones,Used - Acceptable,$58.26,5,Noise-Cancelling Headphones
-300535,200557,500053,Soft cotton T-shirt,Open Box,$921.68,13,Cotton T-Shirt
-300536,200336,500159,Sleek stainless steel water bottle,New,$828.77,10,Stainless Steel Water Bottle
-300537,200691,500028,Compact Bluetooth speaker,Refurbished,$1348.56,5,Bluetooth Speaker
-300538,200523,500065,Lightweight travel suitcase,Used - Very Good,$1795.21,4,Travel Suitcase
-300539,200607,500227,Premium organic coffee beans,Pre-Owned,$1614.99,14,Organic Coffee Beans
-300540,200196,500209,Comfortable memory foam pillow,Pre-Owned,$471.16,20,Memory Foam Pillow
-300541,200159,500151,Stylish wooden sunglasses,Pre-Owned,$1703.25,8,Wooden Sunglasses
-300542,200514,500127,Portable power bank,Refurbished,$2449.32,2,Portable Power Bank
-300543,200675,500081,Ultra-soft bath towel,Certified Refurbished,$1740.59,13,Bath Towel
-300544,200445,500255,Elegant ceramic vase,New,$1415.43,17,Ceramic Vase
-300545,200648,500194,Adjustable laptop stand,Used - Good,$1999.98,4,Laptop Stand
-300546,200581,500140,Versatile chef’s knife,Pre-Owned,$1256.99,18,Chef’s Knife
-300547,200432,500207,Compact digital camera,Used - Very Good,$1010.73,6,Digital Camera
-300548,200344,500002,Durable stainless steel frying pan,Used - Like New,$33.41,13,Stainless Steel Frying Pan
-300549,200193,500119,Eco-friendly bamboo toothbrush,Used - Acceptable,$1969.63,17,Bamboo Toothbrush
-300550,200601,500161,High-performance gaming mouse,New,$2922.56,2,Gaming Mouse
-300551,200261,500296,Ergonomic office chair,Used - Acceptable,$1990.61,9,Office Chair
-300552,200250,500095,Luxurious silk bedsheets,Used - Like New,$2373.66,1,Silk Bedsheets
-300553,200031,500079,Heavy-duty toolbox,Used - Like New,$349.35,8,Toolbox
-300554,200078,500001,Rechargeable LED flashlight,Used - Good,$2989.53,15,LED Flashlight
-300555,200033,500011,Modern minimalist watch,Refurbished,$952.44,8,Minimalist Watch
-300556,200153,500120,Wireless charging pad,Pre-Owned,$1337.36,18,Wireless Charging Pad
-300557,200271,500142,Durable yoga mat,Pre-Owned,$139.84,15,Yoga Mat
-300558,200390,500254,Trendy canvas tote bag,Pre-Owned,$1831.87,19,Canvas Tote Bag
-300559,200006,500053,Waterproof fitness tracker,Pre-Owned,$2211.59,10,Fitness Tracker
-300560,200333,500146,High-speed external hard drive,Refurbished,$335.34,16,External Hard Drive
-300561,200343,500235,Elegant wine decanter,Open Box,$2750.47,8,Wine Decanter
-300562,200747,500027,Advanced electric toothbrush,Used - Acceptable,$2523.55,16,Electric Toothbrush
-300563,200309,500197,Energy-efficient LED bulb,Refurbished,$60.90,3,LED Bulb
-300564,200735,500012,Double-walled coffee mug,Used - Acceptable,$1362.49,5,Coffee Mug
-300565,200002,500064,Versatile air fryer,Pre-Owned,$968.68,15,Air Fryer
-300566,200678,500124,Adjustable dumbbells set,Pre-Owned,$1110.97,1,Dumbbells
-300567,200439,500212,Classic analog wristwatch,Used - Acceptable,$1510.50,10,Analog Watch
-300568,200689,500115,Multi-functional survival knife,New,$2911.06,12,Survival Knife
-300569,200794,500183,Convenient portable grill,Used - Acceptable,$2340.14,19,Portable Grill
-300570,200396,500168,Efficient vacuum cleaner,New,$2094.32,12,Vacuum Cleaner
-300571,200394,500199,Compact first aid kit,Used - Like New,$2495.04,14,First Aid Kit
-300572,200799,500232,High-definition action camera,Used - Very Good,$234.86,20,Action Camera
-300573,200002,500253,Comfortable running shoes,Used - Like New,$1536.88,9,Running Shoes
-300574,200651,500273,Foldable camping chair,Certified Refurbished,$2935.73,6,Camping Chair
-300575,200439,500120,Noise-isolating earbuds,Used - Acceptable,$52.32,19,Noise-Isolating Earbuds
-300576,200016,500029,Advanced smartwatch,Used - Very Good,$2705.14,2,Smartwatch
-300577,200039,500209,Stylish leather journal,Used - Acceptable,$128.59,5,Leather Journal
-300578,200269,500269,Durable travel mug,Used - Good,$596.97,2,Travel Mug
-300579,200748,500253,Soft plush throw blanket,Open Box,$1398.14,2,Plush Throw Blanket
-300580,200340,500193,Elegant crystal chandelier,Certified Refurbished,$1452.67,7,Crystal Chandelier
-300581,200740,500001,Portable car jump starter,Used - Like New,$1022.41,19,Car Jump Starter
-300582,200716,500146,Heavy-duty garden hose,Open Box,$1999.71,13,Garden Hose
-300583,200513,500103,Adjustable desk lamp,Certified Refurbished,$1419.38,4,Desk Lamp
-300584,200134,500163,Sophisticated perfume set,Refurbished,$307.25,2,Perfume Set
-300585,200007,500284,Waterproof phone case,Pre-Owned,$261.71,2,Phone Case
-300586,200273,500211,Ergonomic bike seat,Used - Very Good,$1579.11,1,Bike Seat
-300587,200015,500087,Minimalist wall clock,New,$785.08,4,Wall Clock
-300588,200676,500069,Anti-theft laptop backpack,Pre-Owned,$1557.90,3,Laptop Backpack
-300589,200367,500032,Precision kitchen scale,Used - Acceptable,$606.54,12,Kitchen Scale
-300590,200404,500127,Premium wireless earbuds,Certified Refurbished,$2238.69,18,Wireless Earbuds
-300591,200502,500127,High-speed blender,Refurbished,$817.66,10,Blender
-300592,200723,500122,Versatile toolset,Used - Like New,$2467.03,5,Toolset
-300593,200168,500081,Multi-purpose folding table,Open Box,$2403.09,17,Folding Table
-300594,200483,500128,Adjustable standing desk,Used - Acceptable,$2069.59,13,Standing Desk
-300595,200105,500057,Compact sewing machine,New,$1500.90,3,Sewing Machine
-300596,200492,500048,Advanced hair straightener,Open Box,$687.97,12,Hair Straightener
-300597,200180,500008,Multi-functional printer,Used - Acceptable,$2615.04,11,Printer
-300598,200794,500148,Rechargeable hand warmer,New,$2205.87,11,Hand Warmer
-300599,200513,500258,Collapsible pet carrier,New,$59.35,10,Pet Carrier
-300600,200453,500067,Digital kitchen timer,Certified Refurbished,$1027.25,17,Kitchen Timer
-300601,200576,500264,Stainless steel kitchen tongs,Used - Like New,$930.12,8,Kitchen Tongs
-300602,200087,500127,Lightweight sleeping bag,Used - Good,$2972.88,19,Sleeping Bag
-300603,200127,500255,Premium cast iron skillet,Used - Very Good,$788.81,6,Cast Iron Skillet
-300604,200235,500112,Durable cargo pants,Used - Like New,$2286.70,13,Cargo Pants
-300605,200625,500139,Luxurious bathrobe,Used - Like New,$873.67,3,Bathrobe
-300606,200261,500280,Travel-sized toiletries kit,Pre-Owned,$2808.45,18,Toiletries Kit
-300607,200439,500215,Heavy-duty bike lock,Pre-Owned,$1417.03,4,Bike Lock
-300608,200382,500001,Portable camping stove,New,$2945.76,10,Camping Stove
-300609,200508,500177,Advanced car vacuum cleaner,Refurbished,$605.11,16,Car Vacuum
-300610,200322,500223,Compact coffee grinder,New,$907.10,1,Coffee Grinder
-300611,200324,500195,Elegant tea set,Pre-Owned,$1718.20,9,Tea Set
-300612,200107,500245,Modern smartphone stand,Certified Refurbished,$1967.64,9,Smartphone Stand
-300613,200717,500265,Reusable food storage bags,Open Box,$2159.66,11,Food Storage Bags
-300614,200333,500237,Premium quality umbrella,Used - Very Good,$1002.75,12,Umbrella
-300615,200437,500038,Ultra-light hiking tent,New,$1733.01,16,Hiking Tent
-300616,200772,500174,Stylish beach hat,Open Box,$638.48,4,Beach Hat
-300617,200782,500289,Durable work gloves,Used - Good,$1154.10,2,Work Gloves
-300618,200479,500287,Advanced video doorbell,Used - Good,$1783.18,6,Video Doorbell
-300619,200476,500023,Space-saving shoe organizer,Certified Refurbished,$2536.16,6,Shoe Organizer
-300620,200671,500106,Portable electric kettle,Used - Good,$2326.95,10,Electric Kettle
-300621,200510,500194,Soft sherpa fleece blanket,Certified Refurbished,$337.65,8,Sherpa Fleece Blanket
-300622,200015,500165,Sophisticated whiskey glasses,Used - Good,$1524.00,10,Whiskey Glasses
-300623,200545,500085,Eco-friendly reusable straws,Refurbished,$2145.77,10,Reusable Straws
-300624,200598,500138,Lightweight portable hammock,Used - Like New,$2232.02,3,Portable Hammock
-300625,200620,500280,Minimalist desk organizer,Open Box,$911.03,16,Desk Organizer
-300626,200621,500225,Advanced robotic vacuum,Used - Good,$341.61,2,Robotic Vacuum
-300627,200466,500264,Sturdy wall-mounted shelf,Open Box,$2767.92,6,Wall Shelf
-300628,200686,500117,Portable projector,Open Box,$528.15,19,Portable Projector
-300629,200558,500066,Soft travel neck pillow,Used - Like New,$636.42,5,Travel Neck Pillow
-300630,200668,500069,Foldable picnic blanket,Used - Good,$1230.78,3,Picnic Blanket
-300631,200390,500204,Digital meat thermometer,Open Box,$2854.03,18,Meat Thermometer
-300632,200502,500159,Rechargeable book light,Used - Like New,$1847.18,3,Book Light
-300633,200004,500265,Elegant leather handbag,Used - Acceptable,$1502.07,7,Leather Handbag
-300634,200712,500132,Durable hiking boots,Pre-Owned,$1227.88,13,Hiking Boots
-300635,200002,500278,Comfortable wool socks,Pre-Owned,$1025.42,4,Wool Socks
-300636,200019,500083,Stylish denim jacket,Used - Acceptable,$2496.42,5,Denim Jacket
-300637,200063,500015,Compact photo printer,Used - Very Good,$2779.28,7,Photo Printer
-300638,200400,500183,Adjustable resistance bands,New,$1934.17,15,Resistance Bands
-300639,200149,500067,Premium cotton duvet cover,Used - Acceptable,$842.08,16,Cotton Duvet Cover
-300640,200281,500223,Versatile multi-tool,Refurbished,$72.97,10,Multi-Tool
-300641,200040,500113,Modern floor lamp,Open Box,$1491.03,12,Floor Lamp
-300642,200157,500009,Luxurious cashmere scarf,Open Box,$2130.30,4,Cashmere Scarf
-300643,200239,500178,Portable espresso machine,New,$2818.37,17,Espresso Machine
-300644,200069,500173,Waterproof action camera,Open Box,$1914.82,6,Action Camera
-300645,200768,500246,Compact air purifier,Refurbished,$1655.76,19,Air Purifier
-300646,200474,500257,Durable bike helmet,Used - Good,$539.91,6,Bike Helmet
-300647,200193,500072,Soft bamboo sheets,Used - Acceptable,$1495.84,2,Bamboo Sheets
-300648,200360,500292,High-performance gym bag,Certified Refurbished,$2681.08,11,Gym Bag
-300649,200642,500036,Advanced hair dryer,Pre-Owned,$2437.05,8,Hair Dryer
-300650,200673,500024,Energy-efficient space heater,Open Box,$546.61,5,Space Heater
-300651,200144,500180,Sophisticated cocktail shaker,Certified Refurbished,$826.97,15,Cocktail Shaker
-300652,200348,500088,Eco-friendly laundry detergent,Used - Like New,$2530.18,2,Laundry Detergent
-300653,200684,500185,Durable BBQ grill cover,Open Box,$1141.43,18,BBQ Grill Cover
-300654,200093,500260,Compact spice rack,Open Box,$311.59,1,Spice Rack
-300655,200043,500296,Stylish patio furniture,Used - Good,$238.67,14,Patio Furniture
-300656,200538,500017,Premium soundbar speaker,Used - Acceptable,$2225.78,12,Soundbar
-300657,200258,500171,Advanced pet grooming kit,Certified Refurbished,$2175.95,12,Pet Grooming Kit
-300658,200561,500132,High-quality baby stroller,Used - Good,$1939.65,7,Baby Stroller
-300659,200615,500145,Elegant dining table set,Used - Acceptable,$972.66,14,Dining Table Set
-300660,200511,500061,Soft organic baby blanket,Open Box,$569.47,8,Baby Blanket
-300661,200171,500183,Lightweight power drill,Certified Refurbished,$2820.57,11,Power Drill
-300662,200228,500203,Heavy-duty dog leash,Used - Like New,$2737.98,16,Dog Leash
-300663,200027,500148,Minimalist table clock,Open Box,$85.64,13,Table Clock
-300664,200589,500096,Advanced gaming keyboard,Refurbished,$1618.31,5,Gaming Keyboard
-300665,200737,500084,Foldable treadmill,Pre-Owned,$2025.90,10,Treadmill
-300666,200296,500042,Multi-functional waffle maker,Refurbished,$2597.24,13,Waffle Maker
-300667,200798,500149,Premium travel pillow,Used - Good,$750.02,16,Travel Pillow
-300668,200799,500251,Durable outdoor jacket,Pre-Owned,$82.97,17,Outdoor Jacket
-300669,200357,500189,Adjustable TV wall mount,Used - Acceptable,$1149.33,13,TV Wall Mount
-300670,200325,500254,Waterproof travel bag,Used - Good,$107.46,1,Travel Bag
-300671,200799,500098,High-speed internet router,Used - Acceptable,$865.78,4,Internet Router
-300672,200227,500255,Space-saving closet organizer,Refurbished,$1258.11,19,Closet Organizer
-300673,200791,500276,Advanced sewing kit,Refurbished,$2637.39,11,Sewing Kit
-300674,200625,500237,Modern ergonomic sofa,Refurbished,$861.64,9,Ergonomic Sofa
-300675,200718,500069,Luxurious showerhead,Certified Refurbished,$222.33,15,Showerhead
-300676,200537,500155,Durable cooler bag,Pre-Owned,$2464.23,17,Cooler Bag
-300677,200452,500003,Elegant bathroom mirror,Open Box,$456.40,14,Bathroom Mirror
-300678,200587,500289,Premium leather briefcase,Open Box,$1423.69,6,Leather Briefcase
-300679,200591,500096,Comfortable hiking sandals,Used - Like New,$1021.44,13,Hiking Sandals
-300680,200792,500114,Soft wool blanket,Certified Refurbished,$2955.19,15,Wool Blanket
-300681,200217,500113,Portable massage gun,New,$2939.68,12,Massage Gun
-300682,200642,500234,Rechargeable lantern,Used - Good,$2187.58,5,Lantern
-300683,200375,500183,Sophisticated wine opener,Used - Very Good,$2933.99,19,Wine Opener
-300684,200445,500029,Adjustable book stand,Open Box,$874.38,4,Book Stand
-300685,200092,500287,Premium stainless steel straws,Open Box,$1725.34,15,Stainless Steel Straws
-300686,200403,500125,Lightweight trekking poles,Certified Refurbished,$2098.07,11,Trekking Poles
-300687,200132,500117,Versatile garment steamer,Pre-Owned,$1177.44,1,Garment Steamer
-300688,200528,500234,High-quality bread machine,Used - Like New,$2481.01,17,Bread Machine
-300689,200247,500002,Durable camping table,Open Box,$634.49,1,Camping Table
-300690,200025,500081,Elegant table lamp,Used - Very Good,$2773.62,7,Table Lamp
-300691,200321,500153,Portable laptop desk,Used - Like New,$57.85,11,Laptop Desk
-300692,200013,500098,Premium pet bed,Used - Good,$676.08,18,Pet Bed
-300693,200187,500103,Soft weighted blanket,New,$1838.05,11,Weighted Blanket
-300694,200467,500031,Compact portable fan,New,$849.13,11,Portable Fan
-300695,200737,500103,Waterproof Bluetooth speaker,Used - Good,$1404.75,20,Bluetooth Speaker
-300696,200481,500062,Energy-efficient air conditioner,Pre-Owned,$402.35,11,Air Conditioner
-300697,200093,500010,Minimalist bedside table,Used - Like New,$2486.40,8,Bedside Table
-300698,200543,500076,Adjustable bed frame,New,$2555.27,19,Bed Frame
-300699,200035,500243,Space-saving laundry basket,Refurbished,$2035.49,13,Laundry Basket
-300700,200314,500261,Advanced power inverter,Used - Like New,$2507.01,16,Power Inverter
-300701,200448,500165,Heavy-duty snow shovel,Used - Very Good,$2776.31,14,Snow Shovel
-300702,200794,500265,Comfortable sleeping pad,Pre-Owned,$1365.09,12,Sleeping Pad
-300703,200583,500227,Luxurious face moisturizer,Used - Very Good,$2048.84,1,Face Moisturizer
-300704,200554,500187,Versatile folding bike,Used - Like New,$2793.42,12,Folding Bike
-300705,200782,500100,High-quality juicer,Certified Refurbished,$2398.10,14,Juicer
-300706,200705,500232,Stylish leather phone case,Used - Like New,$400.16,11,Phone Case
-300707,200001,500101,Compact makeup mirror,Used - Very Good,$2261.18,10,Makeup Mirror
-300708,200457,500061,Durable hiking backpack,Pre-Owned,$1356.80,2,Hiking Backpack
-300709,200368,500251,Lightweight garden pruner,Used - Good,$1401.73,8,Garden Pruner
-300710,200307,500276,Advanced home security camera,Used - Like New,$1338.50,11,Home Security Camera
-300711,200159,500292,Minimalist floating shelf,Refurbished,$696.14,13,Floating Shelf
-300712,200093,500124,Premium smart thermostat,New,$1468.09,11,Smart Thermostat
-300713,200262,500052,Soft merino wool sweater,New,$2218.94,12,Wool Sweater
-300714,200141,500082,Portable induction cooktop,Used - Very Good,$2147.54,3,Induction Cooktop
-300715,200643,500174,Adjustable baby carrier,Refurbished,$1930.10,3,Baby Carrier
-300716,200623,500032,Stylish leather belt,New,$1891.73,15,Leather Belt
-300717,200140,500099,Rechargeable hand blender,Certified Refurbished,$670.84,12,Hand Blender
-300718,200255,500063,Durable running shoes,Certified Refurbished,$1709.58,4,Running Shoes
-300719,200372,500231,Waterproof camera case,Used - Very Good,$817.61,6,Camera Case
-300720,200570,500079,Elegant crystal wine glasses,Used - Acceptable,$171.42,10,Crystal Wine Glasses
-300721,200708,500243,Comfortable bean bag chair,Used - Acceptable,$414.56,8,Bean Bag Chair
-300722,200604,500080,Sophisticated dinnerware set,Used - Good,$1386.92,6,Dinnerware Set
-300723,200327,500241,Compact tool organizer,Certified Refurbished,$570.02,1,Tool Organizer
-300724,200707,500000,High-speed electric scooter,Used - Acceptable,$2788.47,6,Electric Scooter
-300725,200064,500169,Advanced programmable coffee maker,Used - Acceptable,$2426.24,9,Coffee Maker
-300726,200651,500129,Premium glass storage containers,Open Box,$1450.11,7,Storage Containers
-300727,200363,500221,Lightweight travel backpack,Used - Very Good,$54.99,5,Travel Backpack
-300728,200584,500146,Minimalist desktop clock,New,$121.68,5,Desktop Clock
-300729,200353,500224,Foldable yoga mat,New,$2481.70,9,Yoga Mat
-300730,200167,500108,Durable camping tent,Open Box,$37.38,10,Camping Tent
-300731,200063,500258,Portable solar charger,Used - Good,$763.12,19,Solar Charger
-300732,200745,500238,Soft flannel sheets,Used - Like New,$294.48,5,Flannel Sheets
-300733,200353,500208,Adjustable shower caddy,Used - Like New,$2996.33,10,Shower Caddy
-300734,200453,500235,Heavy-duty storage box,Certified Refurbished,$916.84,8,Storage Box
-300735,200401,500252,Stylish wool fedora,Used - Acceptable,$2027.90,13,Wool Fedora
-300736,200473,500056,High-quality garden gloves,Certified Refurbished,$697.99,6,Garden Gloves
-300737,200387,500030,Eco-friendly compost bin,Used - Acceptable,$1601.81,18,Compost Bin
-300738,200646,500000,Elegant silver bracelet,Refurbished,$1313.66,17,Silver Bracelet
-300739,200192,500000,Portable handheld vacuum,Refurbished,$1412.55,11,Handheld Vacuum
-300740,200782,500211,Waterproof bike panniers,New,$1554.52,1,Bike Panniers
-300741,200284,500090,Comfortable lounge chair,Certified Refurbished,$863.95,4,Lounge Chair
-300742,200555,500111,Premium silk pillowcase,Certified Refurbished,$2994.42,10,Silk Pillowcase
-300743,200167,500008,Compact air mattress,Used - Acceptable,$614.78,17,Air Mattress
-300744,200042,500196,Versatile camping lantern,Refurbished,$2349.15,2,Camping Lantern
-300745,200335,500291,Advanced fitness tracker,Used - Good,$2982.77,4,Fitness Tracker
-300746,200442,500178,Durable garden rake,Refurbished,$1419.27,19,Garden Rake
-300747,200213,500162,Modern home theater system,New,$2469.96,14,Home Theater System
-300748,200390,500109,Lightweight utility cart,Pre-Owned,$2098.24,15,Utility Cart
-300749,200110,500157,Adjustable pet gate,Used - Acceptable,$1815.50,19,Pet Gate
-300750,200087,500264,Elegant pearl necklace,Used - Very Good,$2239.23,11,Pearl Necklace
-300751,200293,500175,High-speed USB hub,New,$1213.18,17,USB Hub
-300752,200202,500205,Premium Bluetooth soundbar,Pre-Owned,$618.04,1,Bluetooth Soundbar
-300753,200298,500132,Stylish leather gloves,Certified Refurbished,$2927.77,17,Leather Gloves
-300754,200466,500273,Heavy-duty extension cord,Used - Good,$1482.01,7,Extension Cord
-300755,200170,500132,Portable picnic cooler,Used - Acceptable,$1473.03,20,Picnic Cooler
-300756,200721,500138,Sophisticated travel wallet,Used - Good,$901.12,20,Travel Wallet
-300757,200015,500066,Lightweight stroller,Used - Acceptable,$2360.87,14,Stroller
-300758,200394,500152,Durable pet playpen,Used - Acceptable,$1553.75,13,Pet Playpen
-300759,200375,500283,Compact tool belt,Used - Like New,$2477.66,9,Tool Belt
-300760,200017,500296,Luxurious facial cleanser,New,$706.37,18,Facial Cleanser
-300761,200126,500233,Waterproof hiking shoes,Used - Like New,$2486.11,18,Hiking Shoes
-300762,200203,500171,Space-saving drying rack,New,$425.08,18,Drying Rack
-300763,200101,500240,Advanced smart door lock,Used - Acceptable,$852.99,19,Smart Door Lock
-300764,200094,500138,Soft hypoallergenic comforter,Refurbished,$826.77,18,Comforter
-300765,200783,500044,Portable water filter,Used - Like New,$176.40,17,Water Filter
-300766,200183,500180,High-quality dog bed,Used - Very Good,$2071.96,7,Dog Bed
-300767,200526,500097,Modern cordless vacuum,New,$2170.10,11,Cordless Vacuum
-300768,200038,500202,Comfortable walking shoes,Used - Very Good,$1900.36,11,Walking Shoes
-300769,200285,500041,Elegant copper cookware,Used - Good,$2179.67,15,Copper Cookware
-300770,200712,500117,Minimalist photo frame,Certified Refurbished,$1245.57,6,Photo Frame
-300771,200281,500224,Durable weatherproof jacket,Pre-Owned,$1763.65,11,Weatherproof Jacket
-300772,200031,500053,Versatile multi-cooker,Used - Like New,$2740.75,7,Multi-Cooker
-300773,200016,500214,Adjustable dumbbell set,Used - Very Good,$1423.97,20,Dumbbell Set
-300774,200592,500261,Premium herbal tea sampler,New,$1559.11,13,Herbal Tea Sampler
-300775,200741,500265,Stylish ceramic flower pot,Certified Refurbished,$1694.13,6,Ceramic Flower Pot
-300776,200190,500123,Compact gaming monitor,Refurbished,$2829.88,4,Gaming Monitor
-300777,200334,500239,Lightweight workout leggings,Used - Very Good,$655.65,10,Workout Leggings
-300778,200198,500193,Foldable laundry hamper,Refurbished,$493.34,5,Laundry Hamper
-300779,200694,500018,Advanced gaming headset,Pre-Owned,$642.31,14,Gaming Headset
-300780,200114,500182,Heavy-duty pressure washer,Used - Good,$1074.25,5,Pressure Washer
-300781,200096,500180,Comfortable armchair,New,$2218.25,18,Armchair
-300782,200690,500271,Sophisticated home decor set,Used - Very Good,$1380.32,4,Home Decor Set
-300783,200625,500157,Portable air compressor,Pre-Owned,$954.68,18,Air Compressor
-300784,200641,500126,Premium hot sauce collection,Used - Acceptable,$876.78,19,Hot Sauce Collection
-300785,200615,500282,Durable bike repair kit,Pre-Owned,$1193.13,15,Bike Repair Kit
-300786,200595,500286,Modern digital picture frame,Used - Good,$2048.19,11,Digital Picture Frame
-300787,200269,500020,Waterproof dry bag,Refurbished,$716.46,17,Dry Bag
-300788,200459,500147,High-speed travel charger,New,$1013.60,5,Travel Charger
-300789,200374,500124,Minimalist bedside organizer,New,$2995.29,1,Bedside Organizer
-300790,200604,500261,Lightweight portable canopy,Certified Refurbished,$80.38,9,Portable Canopy
-300791,200426,500082,Adjustable storage shelving,New,$272.18,1,Storage Shelving
-300792,200307,500163,Eco-friendly glass water bottle,Used - Acceptable,$2634.55,4,Glass Water Bottle
-300793,200381,500149,Sophisticated cocktail mixer,New,$2460.98,13,Cocktail Mixer
-300794,200278,500077,Compact shoe rack,Refurbished,$501.83,19,Shoe Rack
-300795,200240,500106,Heavy-duty power washer,Used - Very Good,$1633.22,20,Power Washer
-300796,200576,500024,Durable garden kneeler,Used - Good,$1438.48,17,Garden Kneeler
-300797,200444,500045,Stylish winter coat,Used - Like New,$133.99,16,Winter Coat
-300798,200646,500274,High-quality leather wallet,Used - Like New,$2734.95,6,Leather Wallet
-300799,200054,500286,Durable hiking backpack,Used - Very Good,$834.45,19,Hiking Backpack
-300800,200225,500043,Noise-cancelling headphones,Certified Refurbished,$2001.14,13,Noise-Cancelling Headphones
-300801,200147,500161,Soft cotton T-shirt,Used - Like New,$310.39,6,Cotton T-Shirt
-300802,200289,500261,Sleek stainless steel water bottle,Used - Acceptable,$1410.00,10,Stainless Steel Water Bottle
-300803,200041,500148,Compact Bluetooth speaker,Certified Refurbished,$441.19,7,Bluetooth Speaker
-300804,200240,500086,Lightweight travel suitcase,Used - Acceptable,$1777.58,10,Travel Suitcase
-300805,200084,500150,Premium organic coffee beans,Open Box,$1582.40,16,Organic Coffee Beans
-300806,200692,500223,Comfortable memory foam pillow,Certified Refurbished,$149.07,8,Memory Foam Pillow
-300807,200614,500112,Stylish wooden sunglasses,Used - Good,$807.65,10,Wooden Sunglasses
-300808,200442,500094,Portable power bank,Refurbished,$1787.46,8,Portable Power Bank
-300809,200765,500246,Ultra-soft bath towel,Used - Very Good,$2715.67,5,Bath Towel
-300810,200551,500036,Elegant ceramic vase,Used - Very Good,$1906.09,10,Ceramic Vase
-300811,200164,500180,Adjustable laptop stand,Used - Very Good,$2158.72,17,Laptop Stand
-300812,200193,500244,Versatile chef’s knife,Used - Very Good,$2875.75,13,Chef’s Knife
-300813,200426,500185,Compact digital camera,Open Box,$2093.75,4,Digital Camera
-300814,200760,500068,Durable stainless steel frying pan,Used - Very Good,$300.56,4,Stainless Steel Frying Pan
-300815,200044,500118,Eco-friendly bamboo toothbrush,New,$44.36,16,Bamboo Toothbrush
-300816,200207,500120,High-performance gaming mouse,Used - Acceptable,$1800.56,17,Gaming Mouse
-300817,200375,500243,Ergonomic office chair,Certified Refurbished,$392.62,20,Office Chair
-300818,200133,500158,Luxurious silk bedsheets,New,$1882.65,13,Silk Bedsheets
-300819,200473,500268,Heavy-duty toolbox,Open Box,$2808.74,4,Toolbox
-300820,200720,500142,Rechargeable LED flashlight,Refurbished,$252.40,9,LED Flashlight
-300821,200462,500047,Modern minimalist watch,Used - Very Good,$1129.08,8,Minimalist Watch
-300822,200746,500288,Wireless charging pad,Open Box,$446.60,2,Wireless Charging Pad
-300823,200585,500279,Durable yoga mat,Used - Like New,$1608.85,15,Yoga Mat
-300824,200426,500205,Trendy canvas tote bag,Refurbished,$2405.15,9,Canvas Tote Bag
-300825,200185,500176,Waterproof fitness tracker,Used - Very Good,$1809.11,5,Fitness Tracker
-300826,200584,500106,High-speed external hard drive,Open Box,$1200.62,20,External Hard Drive
-300827,200545,500034,Elegant wine decanter,Used - Acceptable,$1010.19,1,Wine Decanter
-300828,200343,500145,Advanced electric toothbrush,Certified Refurbished,$200.88,2,Electric Toothbrush
-300829,200660,500155,Energy-efficient LED bulb,Used - Acceptable,$822.67,6,LED Bulb
-300830,200468,500019,Double-walled coffee mug,Pre-Owned,$403.04,18,Coffee Mug
-300831,200142,500180,Versatile air fryer,Refurbished,$717.51,10,Air Fryer
-300832,200284,500048,Adjustable dumbbells set,Pre-Owned,$411.42,16,Dumbbells
-300833,200579,500161,Classic analog wristwatch,Used - Like New,$1271.72,12,Analog Watch
-300834,200103,500175,Multi-functional survival knife,New,$997.36,3,Survival Knife
-300835,200041,500114,Convenient portable grill,Used - Acceptable,$1458.07,17,Portable Grill
-300836,200033,500177,Efficient vacuum cleaner,New,$2150.17,17,Vacuum Cleaner
-300837,200442,500232,Compact first aid kit,Used - Like New,$2305.16,7,First Aid Kit
-300838,200156,500005,High-definition action camera,Used - Acceptable,$1169.69,13,Action Camera
-300839,200764,500095,Comfortable running shoes,Used - Acceptable,$887.80,15,Running Shoes
-300840,200355,500206,Foldable camping chair,Used - Acceptable,$1060.96,7,Camping Chair
-300841,200659,500245,Noise-isolating earbuds,Used - Good,$723.39,8,Noise-Isolating Earbuds
-300842,200783,500190,Advanced smartwatch,Used - Acceptable,$1396.69,9,Smartwatch
-300843,200758,500109,Stylish leather journal,Refurbished,$1041.47,10,Leather Journal
-300844,200383,500182,Durable travel mug,Used - Very Good,$2257.92,16,Travel Mug
-300845,200738,500187,Soft plush throw blanket,Certified Refurbished,$1095.93,17,Plush Throw Blanket
-300846,200736,500191,Elegant crystal chandelier,Used - Like New,$2842.19,2,Crystal Chandelier
-300847,200670,500226,Portable car jump starter,Open Box,$2156.82,17,Car Jump Starter
-300848,200348,500176,Heavy-duty garden hose,Pre-Owned,$1098.26,13,Garden Hose
-300849,200321,500201,Adjustable desk lamp,Pre-Owned,$2784.58,9,Desk Lamp
-300850,200212,500293,Sophisticated perfume set,Used - Like New,$1585.02,11,Perfume Set
-300851,200770,500080,Waterproof phone case,Used - Very Good,$2485.29,16,Phone Case
-300852,200279,500106,Ergonomic bike seat,New,$396.87,15,Bike Seat
-300853,200076,500032,Minimalist wall clock,Used - Very Good,$855.36,8,Wall Clock
-300854,200672,500222,Anti-theft laptop backpack,New,$1540.52,8,Laptop Backpack
-300855,200694,500086,Precision kitchen scale,Used - Very Good,$1508.08,13,Kitchen Scale
-300856,200063,500212,Premium wireless earbuds,New,$2115.30,4,Wireless Earbuds
-300857,200328,500037,High-speed blender,Certified Refurbished,$2062.21,15,Blender
-300858,200413,500277,Versatile toolset,Used - Good,$1781.33,9,Toolset
-300859,200202,500122,Multi-purpose folding table,Used - Acceptable,$2957.66,9,Folding Table
-300860,200200,500030,Adjustable standing desk,New,$1126.31,6,Standing Desk
-300861,200521,500205,Compact sewing machine,Open Box,$2468.89,10,Sewing Machine
-300862,200660,500103,Advanced hair straightener,Used - Acceptable,$1652.84,16,Hair Straightener
-300863,200598,500247,Multi-functional printer,New,$2940.10,5,Printer
-300864,200791,500229,Rechargeable hand warmer,Used - Good,$614.71,3,Hand Warmer
-300865,200592,500277,Collapsible pet carrier,Certified Refurbished,$2950.87,1,Pet Carrier
-300866,200376,500030,Digital kitchen timer,Refurbished,$1390.04,4,Kitchen Timer
-300867,200172,500053,Stainless steel kitchen tongs,Used - Like New,$907.03,15,Kitchen Tongs
-300868,200352,500210,Lightweight sleeping bag,Used - Like New,$1122.15,15,Sleeping Bag
-300869,200541,500132,Premium cast iron skillet,New,$2056.61,14,Cast Iron Skillet
-300870,200673,500052,Durable cargo pants,Used - Very Good,$1316.50,11,Cargo Pants
-300871,200794,500134,Luxurious bathrobe,Used - Good,$1656.89,20,Bathrobe
-300872,200041,500089,Travel-sized toiletries kit,Used - Acceptable,$2805.36,20,Toiletries Kit
-300873,200748,500288,Heavy-duty bike lock,Used - Like New,$2494.23,17,Bike Lock
-300874,200359,500170,Portable camping stove,Refurbished,$1350.40,1,Camping Stove
-300875,200211,500015,Advanced car vacuum cleaner,Pre-Owned,$273.23,19,Car Vacuum
-300876,200011,500204,Compact coffee grinder,Used - Acceptable,$2179.96,7,Coffee Grinder
-300877,200743,500177,Elegant tea set,Used - Good,$2156.39,18,Tea Set
-300878,200210,500094,Modern smartphone stand,Certified Refurbished,$270.11,20,Smartphone Stand
-300879,200715,500040,Reusable food storage bags,Certified Refurbished,$1139.27,10,Food Storage Bags
-300880,200652,500043,Premium quality umbrella,Used - Good,$324.66,4,Umbrella
-300881,200531,500195,Ultra-light hiking tent,Pre-Owned,$1870.02,15,Hiking Tent
-300882,200058,500008,Stylish beach hat,Used - Acceptable,$2987.10,6,Beach Hat
-300883,200660,500292,Durable work gloves,Certified Refurbished,$2674.04,15,Work Gloves
-300884,200552,500168,Advanced video doorbell,Used - Very Good,$1981.08,15,Video Doorbell
-300885,200765,500225,Space-saving shoe organizer,Used - Good,$2928.22,4,Shoe Organizer
-300886,200250,500043,Portable electric kettle,New,$2675.14,5,Electric Kettle
-300887,200651,500222,Soft sherpa fleece blanket,Used - Acceptable,$2801.67,12,Sherpa Fleece Blanket
-300888,200703,500275,Sophisticated whiskey glasses,Used - Like New,$1326.74,11,Whiskey Glasses
-300889,200463,500044,Eco-friendly reusable straws,New,$544.83,9,Reusable Straws
-300890,200263,500090,Lightweight portable hammock,New,$2983.22,6,Portable Hammock
-300891,200419,500022,Minimalist desk organizer,Pre-Owned,$1357.26,19,Desk Organizer
-300892,200322,500165,Advanced robotic vacuum,Open Box,$351.59,17,Robotic Vacuum
-300893,200748,500216,Sturdy wall-mounted shelf,Used - Good,$2546.90,12,Wall Shelf
-300894,200739,500298,Portable projector,Pre-Owned,$1519.87,5,Portable Projector
-300895,200414,500114,Soft travel neck pillow,Open Box,$224.56,19,Travel Neck Pillow
-300896,200294,500075,Foldable picnic blanket,Used - Good,$1980.89,15,Picnic Blanket
-300897,200240,500156,Digital meat thermometer,Used - Acceptable,$2760.01,5,Meat Thermometer
-300898,200483,500021,Rechargeable book light,Pre-Owned,$2347.79,17,Book Light
-300899,200385,500222,Elegant leather handbag,New,$13.28,13,Leather Handbag
+Condition,Description,FK_OrderID,FK_SupplierID,ProductID,ProductName,Price,Quantity
+Used - Very Good,High-quality leather wallet,200796,500064,300000,Leather Wallet,"$2,238.42 ",11
+Refurbished,Durable hiking backpack,200546,500158,300001,Hiking Backpack,"$2,578.15 ",12
+Open Box,Noise-cancelling headphones,200748,500120,300002,Noise-Cancelling Headphones,$608.81 ,15
+Open Box,Soft cotton T-shirt,200099,500175,300003,Cotton T-Shirt,"$2,883.09 ",19
+Refurbished,Sleek stainless steel water bottle,200230,500215,300004,Stainless Steel Water Bottle,"$2,847.57 ",10
+Used - Very Good,Compact Bluetooth speaker,200567,500270,300005,Bluetooth Speaker,"$2,008.06 ",5
+New,Lightweight travel suitcase,200438,500055,300006,Travel Suitcase,"$2,060.86 ",17
+Used - Good,Premium organic coffee beans,200629,500104,300007,Organic Coffee Beans,"$1,783.76 ",7
+Certified Refurbished,Comfortable memory foam pillow,200537,500119,300008,Memory Foam Pillow,"$1,317.47 ",2
+Open Box,Stylish wooden sunglasses,200762,500277,300009,Wooden Sunglasses,$421.92 ,5
+Pre-Owned,Portable power bank,200524,500023,300010,Portable Power Bank,"$2,258.55 ",20
+Used - Like New,Ultra-soft bath towel,200164,500060,300011,Bath Towel,"$2,862.31 ",4
+Used - Acceptable,Elegant ceramic vase,200220,500228,300012,Ceramic Vase,"$1,244.69 ",17
+Refurbished,Adjustable laptop stand,200458,500154,300013,Laptop Stand,$170.71 ,8
+Refurbished,Versatile chef’s knife,200142,500173,300014,Chef’s Knife,"$2,071.91 ",5
+Used - Very Good,Compact digital camera,200140,500220,300015,Digital Camera,$32.56 ,7
+Used - Very Good,Durable stainless steel frying pan,200620,500018,300016,Stainless Steel Frying Pan,$870.17 ,4
+Used - Very Good,Eco-friendly bamboo toothbrush,200422,500178,300017,Bamboo Toothbrush,$685.99 ,5
+Open Box,High-performance gaming mouse,200314,500106,300018,Gaming Mouse,$27.93 ,7
+Used - Acceptable,Ergonomic office chair,200369,500155,300019,Office Chair,"$2,438.19 ",2
+Certified Refurbished,Luxurious silk bedsheets,200500,500281,300020,Silk Bedsheets,"$2,449.65 ",2
+New,Heavy-duty toolbox,200492,500129,300021,Toolbox,"$1,706.48 ",1
+Used - Good,Rechargeable LED flashlight,200479,500205,300022,LED Flashlight,$441.09 ,2
+Used - Acceptable,Modern minimalist watch,200595,500121,300023,Minimalist Watch,$699.06 ,13
+Refurbished,Wireless charging pad,200155,500244,300024,Wireless Charging Pad,"$1,484.86 ",2
+Open Box,Durable yoga mat,200209,500291,300025,Yoga Mat,"$2,179.00 ",7
+Used - Like New,Trendy canvas tote bag,200609,500248,300026,Canvas Tote Bag,"$1,196.01 ",12
+Pre-Owned,Waterproof fitness tracker,200254,500016,300027,Fitness Tracker,"$2,474.87 ",7
+Pre-Owned,High-speed external hard drive,200211,500279,300028,External Hard Drive,"$1,969.16 ",11
+Used - Acceptable,Elegant wine decanter,200026,500031,300029,Wine Decanter,"$1,561.56 ",12
+Used - Like New,Advanced electric toothbrush,200605,500230,300030,Electric Toothbrush,$267.98 ,15
+New,Energy-efficient LED bulb,200386,500167,300031,LED Bulb,$276.50 ,8
+Used - Acceptable,Double-walled coffee mug,200433,500179,300032,Coffee Mug,"$2,635.61 ",4
+Used - Very Good,Versatile air fryer,200334,500032,300033,Air Fryer,$303.20 ,13
+Pre-Owned,Adjustable dumbbells set,200596,500185,300034,Dumbbells,"$1,335.38 ",9
+Refurbished,Classic analog wristwatch,200783,500014,300035,Analog Watch,"$1,059.81 ",17
+Pre-Owned,Multi-functional survival knife,200316,500058,300036,Survival Knife,"$2,999.58 ",16
+Used - Acceptable,Convenient portable grill,200137,500292,300037,Portable Grill,"$2,513.83 ",7
+Used - Like New,Efficient vacuum cleaner,200476,500178,300038,Vacuum Cleaner,$113.46 ,12
+Used - Good,Compact first aid kit,200621,500003,300039,First Aid Kit,"$2,009.32 ",6
+Used - Acceptable,High-definition action camera,200016,500030,300040,Action Camera,"$2,716.84 ",14
+New,Comfortable running shoes,200241,500071,300041,Running Shoes,"$1,851.51 ",4
+Used - Like New,Foldable camping chair,200232,500260,300042,Camping Chair,$915.93 ,5
+Refurbished,Noise-isolating earbuds,200140,500236,300043,Noise-Isolating Earbuds,"$2,184.80 ",16
+Used - Good,Advanced smartwatch,200710,500102,300044,Smartwatch,"$2,099.06 ",7
+Used - Like New,Stylish leather journal,200324,500195,300045,Leather Journal,"$1,564.36 ",4
+Certified Refurbished,Durable travel mug,200067,500270,300046,Travel Mug,"$1,420.98 ",13
+Refurbished,Soft plush throw blanket,200655,500045,300047,Plush Throw Blanket,"$1,090.88 ",5
+Used - Very Good,Elegant crystal chandelier,200785,500033,300048,Crystal Chandelier,"$2,780.83 ",15
+Certified Refurbished,Portable car jump starter,200602,500117,300049,Car Jump Starter,$86.51 ,17
+Used - Very Good,Heavy-duty garden hose,200424,500176,300050,Garden Hose,"$2,738.71 ",2
+Open Box,Adjustable desk lamp,200182,500170,300051,Desk Lamp,"$2,746.58 ",15
+Pre-Owned,Sophisticated perfume set,200120,500031,300052,Perfume Set,"$2,826.19 ",5
+Used - Very Good,Waterproof phone case,200796,500157,300053,Phone Case,"$1,698.78 ",16
+Used - Very Good,Ergonomic bike seat,200047,500118,300054,Bike Seat,"$2,130.54 ",11
+Refurbished,Minimalist wall clock,200085,500221,300055,Wall Clock,"$2,720.91 ",10
+Certified Refurbished,Anti-theft laptop backpack,200059,500055,300056,Laptop Backpack,"$2,152.66 ",10
+Used - Very Good,Precision kitchen scale,200117,500038,300057,Kitchen Scale,"$2,415.64 ",1
+Open Box,Premium wireless earbuds,200164,500231,300058,Wireless Earbuds,"$1,862.75 ",11
+Used - Very Good,High-speed blender,200079,500039,300059,Blender,"$1,049.71 ",1
+Pre-Owned,Versatile toolset,200582,500213,300060,Toolset,"$2,522.79 ",13
+New,Multi-purpose folding table,200611,500296,300061,Folding Table,$498.30 ,11
+Used - Very Good,Adjustable standing desk,200110,500178,300062,Standing Desk,$820.74 ,13
+Used - Like New,Compact sewing machine,200781,500238,300063,Sewing Machine,"$1,894.78 ",6
+Used - Good,Advanced hair straightener,200734,500274,300064,Hair Straightener,$968.86 ,1
+New,Multi-functional printer,200785,500030,300065,Printer,"$1,142.65 ",2
+Certified Refurbished,Rechargeable hand warmer,200439,500037,300066,Hand Warmer,"$1,152.82 ",4
+Pre-Owned,Collapsible pet carrier,200203,500012,300067,Pet Carrier,$313.31 ,7
+Open Box,Digital kitchen timer,200119,500065,300068,Kitchen Timer,"$2,427.02 ",5
+Used - Good,Stainless steel kitchen tongs,200385,500138,300069,Kitchen Tongs,"$1,461.95 ",13
+Used - Good,Lightweight sleeping bag,200795,500242,300070,Sleeping Bag,$814.37 ,10
+Open Box,Premium cast iron skillet,200415,500037,300071,Cast Iron Skillet,"$2,386.45 ",16
+Refurbished,Durable cargo pants,200385,500140,300072,Cargo Pants,$364.54 ,13
+Used - Acceptable,Luxurious bathrobe,200532,500084,300073,Bathrobe,$574.98 ,19
+Pre-Owned,Travel-sized toiletries kit,200609,500062,300074,Toiletries Kit,$564.33 ,3
+Certified Refurbished,Heavy-duty bike lock,200393,500100,300075,Bike Lock,$896.41 ,18
+Used - Very Good,Portable camping stove,200041,500249,300076,Camping Stove,"$2,561.19 ",1
+New,Advanced car vacuum cleaner,200242,500046,300077,Car Vacuum,"$2,787.43 ",9
+Pre-Owned,Compact coffee grinder,200246,500041,300078,Coffee Grinder,"$2,088.52 ",18
+Refurbished,Elegant tea set,200479,500030,300079,Tea Set,$757.72 ,17
+Refurbished,Modern smartphone stand,200746,500193,300080,Smartphone Stand,"$1,507.01 ",1
+Used - Acceptable,Reusable food storage bags,200581,500270,300081,Food Storage Bags,"$2,017.53 ",1
+Refurbished,Premium quality umbrella,200546,500199,300082,Umbrella,"$2,930.62 ",14
+New,Ultra-light hiking tent,200226,500287,300083,Hiking Tent,"$2,186.09 ",3
+Used - Good,Stylish beach hat,200389,500024,300084,Beach Hat,$437.85 ,19
+Open Box,Durable work gloves,200471,500167,300085,Work Gloves,$298.12 ,15
+Certified Refurbished,Advanced video doorbell,200066,500297,300086,Video Doorbell,"$2,677.42 ",15
+Pre-Owned,Space-saving shoe organizer,200647,500150,300087,Shoe Organizer,"$1,049.43 ",4
+Used - Like New,Portable electric kettle,200799,500086,300088,Electric Kettle,"$2,261.28 ",9
+Used - Good,Soft sherpa fleece blanket,200745,500234,300089,Sherpa Fleece Blanket,"$2,247.44 ",18
+Used - Good,Sophisticated whiskey glasses,200327,500047,300090,Whiskey Glasses,$194.07 ,5
+Used - Good,Eco-friendly reusable straws,200371,500289,300091,Reusable Straws,"$2,297.34 ",4
+Pre-Owned,Lightweight portable hammock,200487,500095,300092,Portable Hammock,$413.56 ,3
+Used - Acceptable,Minimalist desk organizer,200555,500071,300093,Desk Organizer,$404.47 ,5
+Used - Like New,Advanced robotic vacuum,200109,500231,300094,Robotic Vacuum,"$1,805.10 ",10
+Used - Very Good,Sturdy wall-mounted shelf,200339,500062,300095,Wall Shelf,"$2,056.55 ",3
+Used - Very Good,Portable projector,200522,500051,300096,Portable Projector,"$1,822.76 ",13
+Refurbished,Soft travel neck pillow,200697,500287,300097,Travel Neck Pillow,"$1,981.98 ",2
+Used - Very Good,Foldable picnic blanket,200537,500023,300098,Picnic Blanket,"$2,680.30 ",14
+Used - Very Good,Digital meat thermometer,200167,500104,300099,Meat Thermometer,"$1,346.15 ",16
+Pre-Owned,Rechargeable book light,200044,500083,300100,Book Light,"$1,797.10 ",8
+Refurbished,Elegant leather handbag,200748,500132,300101,Leather Handbag,"$2,062.60 ",2
+New,Durable hiking boots,200409,500127,300102,Hiking Boots,"$1,100.29 ",3
+Pre-Owned,Comfortable wool socks,200479,500117,300103,Wool Socks,$742.50 ,1
+Certified Refurbished,Stylish denim jacket,200015,500188,300104,Denim Jacket,"$2,988.95 ",12
+Used - Good,Compact photo printer,200630,500205,300105,Photo Printer,$622.93 ,18
+Used - Good,Adjustable resistance bands,200037,500187,300106,Resistance Bands,"$1,969.49 ",19
+Pre-Owned,Premium cotton duvet cover,200703,500217,300107,Cotton Duvet Cover,"$1,217.24 ",19
+Refurbished,Versatile multi-tool,200278,500121,300108,Multi-Tool,"$1,592.61 ",20
+Used - Acceptable,Modern floor lamp,200627,500289,300109,Floor Lamp,"$2,944.60 ",10
+Pre-Owned,Luxurious cashmere scarf,200342,500291,300110,Cashmere Scarf,$375.56 ,6
+Used - Acceptable,Portable espresso machine,200618,500056,300111,Espresso Machine,"$2,380.70 ",6
+Used - Like New,Waterproof action camera,200629,500293,300112,Action Camera,"$1,974.23 ",17
+New,Compact air purifier,200193,500258,300113,Air Purifier,$403.37 ,11
+Open Box,Durable bike helmet,200647,500197,300114,Bike Helmet,"$1,337.13 ",13
+Used - Good,Soft bamboo sheets,200554,500054,300115,Bamboo Sheets,$699.83 ,16
+Open Box,High-performance gym bag,200544,500173,300116,Gym Bag,$980.26 ,17
+Refurbished,Advanced hair dryer,200249,500136,300117,Hair Dryer,$824.40 ,8
+Open Box,Energy-efficient space heater,200378,500238,300118,Space Heater,$676.16 ,11
+Refurbished,Sophisticated cocktail shaker,200248,500286,300119,Cocktail Shaker,$339.21 ,7
+Pre-Owned,Eco-friendly laundry detergent,200419,500218,300120,Laundry Detergent,$338.80 ,4
+Used - Acceptable,Durable BBQ grill cover,200040,500270,300121,BBQ Grill Cover,$206.54 ,13
+Open Box,Compact spice rack,200135,500142,300122,Spice Rack,$107.54 ,3
+Used - Acceptable,Stylish patio furniture,200159,500178,300123,Patio Furniture,"$2,959.63 ",2
+Open Box,Premium soundbar speaker,200132,500277,300124,Soundbar,"$1,788.92 ",18
+New,Advanced pet grooming kit,200059,500116,300125,Pet Grooming Kit,"$1,622.17 ",6
+Used - Good,High-quality baby stroller,200518,500060,300126,Baby Stroller,$28.30 ,17
+Refurbished,Elegant dining table set,200687,500007,300127,Dining Table Set,$447.03 ,11
+Used - Like New,Soft organic baby blanket,200383,500006,300128,Baby Blanket,$539.47 ,9
+Used - Like New,Lightweight power drill,200662,500043,300129,Power Drill,"$2,322.56 ",4
+Pre-Owned,Heavy-duty dog leash,200620,500162,300130,Dog Leash,$879.24 ,11
+New,Minimalist table clock,200472,500209,300131,Table Clock,"$1,994.28 ",15
+Open Box,Advanced gaming keyboard,200557,500148,300132,Gaming Keyboard,"$1,121.25 ",5
+Used - Acceptable,Foldable treadmill,200147,500183,300133,Treadmill,$431.57 ,15
+New,Multi-functional waffle maker,200036,500005,300134,Waffle Maker,"$1,634.23 ",19
+Used - Acceptable,Premium travel pillow,200692,500006,300135,Travel Pillow,$453.68 ,19
+New,Durable outdoor jacket,200465,500157,300136,Outdoor Jacket,"$2,176.34 ",18
+Used - Acceptable,Adjustable TV wall mount,200758,500205,300137,TV Wall Mount,"$2,920.13 ",6
+Refurbished,Waterproof travel bag,200046,500133,300138,Travel Bag,"$2,257.88 ",14
+Open Box,High-speed internet router,200623,500264,300139,Internet Router,"$2,745.78 ",1
+Used - Acceptable,Space-saving closet organizer,200134,500248,300140,Closet Organizer,"$2,313.23 ",11
+Open Box,Advanced sewing kit,200072,500103,300141,Sewing Kit,"$1,195.54 ",7
+Pre-Owned,Modern ergonomic sofa,200118,500040,300142,Ergonomic Sofa,"$1,757.46 ",18
+Used - Good,Luxurious showerhead,200795,500086,300143,Showerhead,"$2,728.85 ",1
+Used - Like New,Durable cooler bag,200365,500070,300144,Cooler Bag,$764.68 ,16
+Used - Like New,Elegant bathroom mirror,200337,500180,300145,Bathroom Mirror,"$2,585.40 ",6
+Used - Like New,Premium leather briefcase,200093,500177,300146,Leather Briefcase,"$1,862.91 ",8
+Refurbished,Comfortable hiking sandals,200164,500238,300147,Hiking Sandals,"$2,065.79 ",20
+Open Box,Soft wool blanket,200668,500055,300148,Wool Blanket,"$2,863.91 ",1
+Used - Acceptable,Portable massage gun,200751,500068,300149,Massage Gun,$968.32 ,16
+Used - Good,Rechargeable lantern,200597,500156,300150,Lantern,$574.18 ,1
+Used - Very Good,Sophisticated wine opener,200792,500037,300151,Wine Opener,$885.72 ,13
+New,Adjustable book stand,200342,500036,300152,Book Stand,"$1,430.90 ",4
+Refurbished,Premium stainless steel straws,200557,500183,300153,Stainless Steel Straws,$137.06 ,13
+New,Lightweight trekking poles,200296,500274,300154,Trekking Poles,$328.04 ,12
+New,Versatile garment steamer,200194,500281,300155,Garment Steamer,"$1,921.49 ",7
+Refurbished,High-quality bread machine,200721,500130,300156,Bread Machine,$847.45 ,9
+Pre-Owned,Durable camping table,200207,500039,300157,Camping Table,$710.55 ,4
+Used - Acceptable,Elegant table lamp,200362,500173,300158,Table Lamp,"$2,099.90 ",12
+Used - Very Good,Portable laptop desk,200176,500004,300159,Laptop Desk,"$2,511.07 ",3
+Used - Very Good,Premium pet bed,200533,500206,300160,Pet Bed,"$1,183.80 ",1
+Used - Acceptable,Soft weighted blanket,200256,500011,300161,Weighted Blanket,"$1,107.93 ",9
+Used - Acceptable,Compact portable fan,200588,500222,300162,Portable Fan,$20.80 ,5
+Refurbished,Waterproof Bluetooth speaker,200771,500100,300163,Bluetooth Speaker,$426.04 ,16
+Open Box,Energy-efficient air conditioner,200796,500050,300164,Air Conditioner,"$1,423.92 ",4
+Used - Acceptable,Minimalist bedside table,200755,500269,300165,Bedside Table,$788.04 ,6
+Certified Refurbished,Adjustable bed frame,200575,500174,300166,Bed Frame,"$1,308.96 ",5
+Used - Very Good,Space-saving laundry basket,200739,500037,300167,Laundry Basket,"$1,765.85 ",4
+Certified Refurbished,Advanced power inverter,200674,500077,300168,Power Inverter,$886.16 ,20
+Open Box,Heavy-duty snow shovel,200050,500200,300169,Snow Shovel,"$1,214.68 ",9
+Open Box,Comfortable sleeping pad,200077,500008,300170,Sleeping Pad,$397.65 ,2
+New,Luxurious face moisturizer,200099,500192,300171,Face Moisturizer,"$2,665.02 ",2
+Used - Acceptable,Versatile folding bike,200530,500246,300172,Folding Bike,"$1,769.83 ",20
+Used - Good,High-quality juicer,200476,500093,300173,Juicer,"$1,038.01 ",20
+Certified Refurbished,Stylish leather phone case,200062,500253,300174,Phone Case,"$2,196.08 ",13
+Used - Like New,Compact makeup mirror,200509,500285,300175,Makeup Mirror,$70.41 ,4
+Used - Like New,Durable hiking backpack,200388,500204,300176,Hiking Backpack,"$1,974.09 ",5
+New,Lightweight garden pruner,200516,500255,300177,Garden Pruner,"$2,624.74 ",6
+Used - Very Good,Advanced home security camera,200746,500164,300178,Home Security Camera,$686.46 ,7
+Pre-Owned,Minimalist floating shelf,200608,500193,300179,Floating Shelf,"$2,087.38 ",5
+Used - Acceptable,Premium smart thermostat,200232,500136,300180,Smart Thermostat,$670.32 ,20
+Refurbished,Soft merino wool sweater,200237,500006,300181,Wool Sweater,"$2,404.19 ",12
+Refurbished,Portable induction cooktop,200586,500264,300182,Induction Cooktop,"$1,277.84 ",16
+Refurbished,Adjustable baby carrier,200530,500104,300183,Baby Carrier,"$2,826.34 ",20
+Used - Acceptable,Stylish leather belt,200392,500092,300184,Leather Belt,$539.39 ,15
+Used - Good,Rechargeable hand blender,200526,500067,300185,Hand Blender,"$1,203.25 ",16
+New,Durable running shoes,200446,500147,300186,Running Shoes,"$1,729.02 ",4
+Open Box,Waterproof camera case,200226,500146,300187,Camera Case,"$1,589.36 ",19
+Used - Acceptable,Elegant crystal wine glasses,200580,500121,300188,Crystal Wine Glasses,$930.51 ,1
+Used - Like New,Comfortable bean bag chair,200778,500210,300189,Bean Bag Chair,"$2,053.34 ",1
+Refurbished,Sophisticated dinnerware set,200303,500139,300190,Dinnerware Set,"$2,972.28 ",19
+Open Box,Compact tool organizer,200568,500116,300191,Tool Organizer,"$2,463.16 ",4
+Certified Refurbished,High-speed electric scooter,200427,500087,300192,Electric Scooter,"$1,517.65 ",3
+Pre-Owned,Advanced programmable coffee maker,200342,500170,300193,Coffee Maker,$937.38 ,1
+Refurbished,Premium glass storage containers,200023,500177,300194,Storage Containers,"$1,062.02 ",3
+Certified Refurbished,Lightweight travel backpack,200701,500205,300195,Travel Backpack,"$2,642.66 ",15
+New,Minimalist desktop clock,200528,500206,300196,Desktop Clock,$298.83 ,3
+Refurbished,Foldable yoga mat,200514,500024,300197,Yoga Mat,"$2,149.18 ",1
+Used - Very Good,Durable camping tent,200511,500023,300198,Camping Tent,"$2,960.54 ",6
+Open Box,Portable solar charger,200012,500243,300199,Solar Charger,"$1,600.17 ",18
+Open Box,Soft flannel sheets,200075,500046,300200,Flannel Sheets,"$1,120.80 ",13
+Used - Good,Adjustable shower caddy,200095,500122,300201,Shower Caddy,"$2,578.08 ",13
+Used - Very Good,Heavy-duty storage box,200187,500234,300202,Storage Box,"$2,323.30 ",5
+Certified Refurbished,Stylish wool fedora,200694,500167,300203,Wool Fedora,"$2,998.03 ",20
+Certified Refurbished,High-quality garden gloves,200648,500095,300204,Garden Gloves,$388.14 ,15
+Used - Acceptable,Eco-friendly compost bin,200193,500176,300205,Compost Bin,"$1,802.96 ",2
+Used - Acceptable,Elegant silver bracelet,200657,500219,300206,Silver Bracelet,"$1,041.87 ",14
+Pre-Owned,Portable handheld vacuum,200662,500156,300207,Handheld Vacuum,$265.45 ,20
+Certified Refurbished,Waterproof bike panniers,200013,500293,300208,Bike Panniers,$372.83 ,15
+New,Comfortable lounge chair,200685,500153,300209,Lounge Chair,$871.33 ,18
+Refurbished,Premium silk pillowcase,200381,500032,300210,Silk Pillowcase,$192.83 ,13
+Used - Like New,Compact air mattress,200116,500001,300211,Air Mattress,"$1,643.14 ",5
+Used - Good,Versatile camping lantern,200107,500299,300212,Camping Lantern,"$1,424.26 ",18
+Used - Like New,Advanced fitness tracker,200286,500122,300213,Fitness Tracker,"$2,996.03 ",8
+Used - Acceptable,Durable garden rake,200273,500124,300214,Garden Rake,"$2,224.21 ",4
+Used - Like New,Modern home theater system,200635,500203,300215,Home Theater System,"$2,933.06 ",1
+Used - Like New,Lightweight utility cart,200428,500175,300216,Utility Cart,"$1,504.67 ",14
+Open Box,Adjustable pet gate,200630,500103,300217,Pet Gate,"$1,769.56 ",16
+Pre-Owned,Elegant pearl necklace,200232,500073,300218,Pearl Necklace,$895.82 ,13
+New,High-speed USB hub,200355,500078,300219,USB Hub,"$2,565.42 ",4
+Pre-Owned,Premium Bluetooth soundbar,200638,500147,300220,Bluetooth Soundbar,"$2,718.81 ",12
+Used - Acceptable,Stylish leather gloves,200472,500016,300221,Leather Gloves,$603.18 ,14
+Open Box,Heavy-duty extension cord,200634,500059,300222,Extension Cord,"$2,378.40 ",14
+New,Portable picnic cooler,200135,500240,300223,Picnic Cooler,$626.18 ,16
+Certified Refurbished,Sophisticated travel wallet,200531,500103,300224,Travel Wallet,"$2,928.58 ",14
+New,Lightweight stroller,200031,500123,300225,Stroller,$807.85 ,10
+Used - Acceptable,Durable pet playpen,200647,500024,300226,Pet Playpen,$329.79 ,20
+Used - Very Good,Compact tool belt,200512,500062,300227,Tool Belt,"$1,666.73 ",13
+Used - Acceptable,Luxurious facial cleanser,200218,500242,300228,Facial Cleanser,"$2,320.93 ",11
+Pre-Owned,Waterproof hiking shoes,200724,500264,300229,Hiking Shoes,$813.16 ,11
+Used - Like New,Space-saving drying rack,200681,500255,300230,Drying Rack,"$1,051.57 ",11
+New,Advanced smart door lock,200584,500267,300231,Smart Door Lock,"$2,994.99 ",20
+Used - Acceptable,Soft hypoallergenic comforter,200625,500227,300232,Comforter,"$2,859.28 ",3
+Used - Very Good,Portable water filter,200082,500018,300233,Water Filter,"$1,764.62 ",12
+Open Box,High-quality dog bed,200317,500179,300234,Dog Bed,$733.61 ,5
+Certified Refurbished,Modern cordless vacuum,200013,500285,300235,Cordless Vacuum,"$1,202.43 ",3
+New,Comfortable walking shoes,200007,500270,300236,Walking Shoes,$561.43 ,9
+Pre-Owned,Elegant copper cookware,200242,500294,300237,Copper Cookware,"$2,955.54 ",19
+Pre-Owned,Minimalist photo frame,200691,500232,300238,Photo Frame,$611.29 ,10
+Used - Very Good,Durable weatherproof jacket,200396,500259,300239,Weatherproof Jacket,"$2,721.50 ",8
+Used - Like New,Versatile multi-cooker,200759,500280,300240,Multi-Cooker,$453.98 ,20
+Open Box,Adjustable dumbbell set,200062,500212,300241,Dumbbell Set,"$2,410.37 ",13
+Used - Very Good,Premium herbal tea sampler,200529,500056,300242,Herbal Tea Sampler,"$1,051.05 ",8
+New,Stylish ceramic flower pot,200772,500169,300243,Ceramic Flower Pot,$294.08 ,12
+Used - Acceptable,Compact gaming monitor,200323,500161,300244,Gaming Monitor,$126.80 ,12
+Certified Refurbished,Lightweight workout leggings,200400,500117,300245,Workout Leggings,"$1,831.70 ",12
+Certified Refurbished,Foldable laundry hamper,200311,500133,300246,Laundry Hamper,$3.38 ,5
+Used - Like New,Advanced gaming headset,200528,500008,300247,Gaming Headset,"$1,754.98 ",6
+Used - Like New,Heavy-duty pressure washer,200670,500031,300248,Pressure Washer,"$1,336.84 ",4
+Pre-Owned,Comfortable armchair,200298,500134,300249,Armchair,"$1,307.17 ",8
+Used - Good,Sophisticated home decor set,200180,500118,300250,Home Decor Set,$135.74 ,18
+Used - Like New,Portable air compressor,200253,500245,300251,Air Compressor,"$1,250.11 ",16
+New,Premium hot sauce collection,200372,500251,300252,Hot Sauce Collection,"$1,743.69 ",3
+Certified Refurbished,Durable bike repair kit,200509,500209,300253,Bike Repair Kit,"$2,666.78 ",17
+Used - Acceptable,Modern digital picture frame,200397,500026,300254,Digital Picture Frame,"$1,818.07 ",5
+Refurbished,Waterproof dry bag,200076,500068,300255,Dry Bag,"$2,105.65 ",16
+Used - Like New,High-speed travel charger,200103,500233,300256,Travel Charger,"$2,704.61 ",5
+Used - Good,Minimalist bedside organizer,200783,500226,300257,Bedside Organizer,$953.97 ,10
+Used - Like New,Lightweight portable canopy,200090,500165,300258,Portable Canopy,$205.95 ,19
+Used - Very Good,Adjustable storage shelving,200588,500064,300259,Storage Shelving,"$2,461.41 ",18
+Used - Like New,Eco-friendly glass water bottle,200242,500018,300260,Glass Water Bottle,$951.59 ,16
+Used - Acceptable,Sophisticated cocktail mixer,200036,500050,300261,Cocktail Mixer,"$1,968.86 ",4
+Used - Like New,Compact shoe rack,200543,500104,300262,Shoe Rack,"$2,155.39 ",10
+Pre-Owned,Heavy-duty power washer,200455,500089,300263,Power Washer,"$1,179.63 ",14
+Certified Refurbished,Durable garden kneeler,200666,500050,300264,Garden Kneeler,"$1,143.03 ",9
+Used - Acceptable,Stylish winter coat,200526,500084,300265,Winter Coat,"$1,298.29 ",9
+Certified Refurbished,High-quality leather wallet,200339,500260,300266,Leather Wallet,$752.14 ,3
+Used - Very Good,Durable hiking backpack,200261,500211,300267,Hiking Backpack,"$1,171.08 ",6
+New,Noise-cancelling headphones,200241,500115,300268,Noise-Cancelling Headphones,$345.00 ,4
+Used - Acceptable,Soft cotton T-shirt,200613,500284,300269,Cotton T-Shirt,"$2,289.76 ",7
+Pre-Owned,Sleek stainless steel water bottle,200678,500233,300270,Stainless Steel Water Bottle,"$1,049.08 ",11
+Certified Refurbished,Compact Bluetooth speaker,200764,500139,300271,Bluetooth Speaker,"$2,606.30 ",6
+Used - Like New,Lightweight travel suitcase,200462,500012,300272,Travel Suitcase,"$1,722.44 ",12
+New,Premium organic coffee beans,200521,500008,300273,Organic Coffee Beans,"$2,841.65 ",2
+Used - Like New,Comfortable memory foam pillow,200426,500223,300274,Memory Foam Pillow,"$2,610.18 ",13
+New,Stylish wooden sunglasses,200696,500270,300275,Wooden Sunglasses,$947.88 ,9
+Certified Refurbished,Portable power bank,200333,500153,300276,Portable Power Bank,$743.78 ,5
+Open Box,Ultra-soft bath towel,200215,500071,300277,Bath Towel,"$2,588.41 ",11
+New,Elegant ceramic vase,200003,500214,300278,Ceramic Vase,$945.52 ,10
+Used - Very Good,Adjustable laptop stand,200268,500228,300279,Laptop Stand,"$2,950.14 ",12
+Refurbished,Versatile chef’s knife,200753,500057,300280,Chef’s Knife,"$2,596.78 ",7
+Used - Like New,Compact digital camera,200514,500184,300281,Digital Camera,"$2,882.66 ",14
+Refurbished,Durable stainless steel frying pan,200379,500246,300282,Stainless Steel Frying Pan,$316.14 ,2
+Refurbished,Eco-friendly bamboo toothbrush,200428,500069,300283,Bamboo Toothbrush,"$1,657.81 ",13
+Certified Refurbished,High-performance gaming mouse,200614,500118,300284,Gaming Mouse,"$2,578.19 ",5
+Used - Good,Ergonomic office chair,200103,500115,300285,Office Chair,$712.64 ,14
+Used - Good,Luxurious silk bedsheets,200767,500007,300286,Silk Bedsheets,"$2,310.03 ",10
+Used - Very Good,Heavy-duty toolbox,200541,500289,300287,Toolbox,$45.14 ,5
+Certified Refurbished,Rechargeable LED flashlight,200084,500151,300288,LED Flashlight,$636.94 ,4
+New,Modern minimalist watch,200703,500294,300289,Minimalist Watch,$300.73 ,14
+Used - Good,Wireless charging pad,200037,500236,300290,Wireless Charging Pad,$977.76 ,12
+Used - Good,Durable yoga mat,200102,500089,300291,Yoga Mat,$187.15 ,15
+Refurbished,Trendy canvas tote bag,200213,500252,300292,Canvas Tote Bag,"$1,407.01 ",20
+Refurbished,Waterproof fitness tracker,200512,500156,300293,Fitness Tracker,"$2,561.41 ",8
+Used - Like New,High-speed external hard drive,200399,500084,300294,External Hard Drive,"$1,508.73 ",14
+Used - Very Good,Elegant wine decanter,200618,500282,300295,Wine Decanter,"$1,574.90 ",14
+New,Advanced electric toothbrush,200077,500264,300296,Electric Toothbrush,$864.97 ,4
+Used - Very Good,Energy-efficient LED bulb,200381,500285,300297,LED Bulb,"$2,445.79 ",1
+New,Double-walled coffee mug,200230,500270,300298,Coffee Mug,$696.60 ,2
+Certified Refurbished,Versatile air fryer,200776,500015,300299,Air Fryer,$644.12 ,20
+Open Box,Adjustable dumbbells set,200580,500027,300300,Dumbbells,$197.98 ,10
+Used - Very Good,Classic analog wristwatch,200648,500282,300301,Analog Watch,$404.40 ,17
+Used - Like New,Multi-functional survival knife,200660,500059,300302,Survival Knife,"$1,724.72 ",9
+Certified Refurbished,Convenient portable grill,200327,500047,300303,Portable Grill,"$2,736.31 ",2
+Used - Very Good,Efficient vacuum cleaner,200276,500097,300304,Vacuum Cleaner,"$2,902.86 ",4
+New,Compact first aid kit,200095,500299,300305,First Aid Kit,$838.85 ,11
+Refurbished,High-definition action camera,200035,500118,300306,Action Camera,"$2,862.49 ",2
+Pre-Owned,Comfortable running shoes,200602,500255,300307,Running Shoes,$510.11 ,20
+Used - Like New,Foldable camping chair,200499,500256,300308,Camping Chair,"$2,947.88 ",13
+Refurbished,Noise-isolating earbuds,200415,500026,300309,Noise-Isolating Earbuds,"$1,794.41 ",2
+Used - Acceptable,Advanced smartwatch,200584,500041,300310,Smartwatch,"$2,597.75 ",2
+Used - Like New,Stylish leather journal,200651,500072,300311,Leather Journal,$572.29 ,2
+Used - Very Good,Durable travel mug,200673,500027,300312,Travel Mug,"$1,852.19 ",20
+Used - Like New,Soft plush throw blanket,200251,500014,300313,Plush Throw Blanket,"$2,466.84 ",5
+Open Box,Elegant crystal chandelier,200129,500168,300314,Crystal Chandelier,"$2,743.93 ",6
+Used - Very Good,Portable car jump starter,200268,500155,300315,Car Jump Starter,$747.41 ,4
+Used - Acceptable,Heavy-duty garden hose,200195,500159,300316,Garden Hose,$700.27 ,20
+Used - Very Good,Adjustable desk lamp,200365,500029,300317,Desk Lamp,"$2,178.13 ",13
+Used - Very Good,Sophisticated perfume set,200308,500147,300318,Perfume Set,"$1,342.74 ",20
+Used - Acceptable,Waterproof phone case,200322,500114,300319,Phone Case,$237.37 ,5
+Refurbished,Ergonomic bike seat,200365,500144,300320,Bike Seat,"$1,945.74 ",16
+Used - Acceptable,Minimalist wall clock,200114,500258,300321,Wall Clock,"$2,277.44 ",12
+Used - Acceptable,Anti-theft laptop backpack,200738,500168,300322,Laptop Backpack,$140.52 ,6
+Pre-Owned,Precision kitchen scale,200701,500126,300323,Kitchen Scale,"$2,371.56 ",20
+Open Box,Premium wireless earbuds,200643,500222,300324,Wireless Earbuds,"$1,789.22 ",19
+Certified Refurbished,High-speed blender,200535,500136,300325,Blender,"$1,983.91 ",20
+Used - Very Good,Versatile toolset,200709,500113,300326,Toolset,"$2,821.30 ",16
+Pre-Owned,Multi-purpose folding table,200004,500028,300327,Folding Table,"$1,173.01 ",11
+Used - Acceptable,Adjustable standing desk,200426,500086,300328,Standing Desk,"$1,012.06 ",20
+Certified Refurbished,Compact sewing machine,200147,500297,300329,Sewing Machine,$981.41 ,3
+Certified Refurbished,Advanced hair straightener,200242,500006,300330,Hair Straightener,$803.35 ,9
+Pre-Owned,Multi-functional printer,200560,500271,300331,Printer,$984.10 ,18
+Refurbished,Rechargeable hand warmer,200123,500010,300332,Hand Warmer,"$1,275.30 ",12
+Used - Good,Collapsible pet carrier,200596,500259,300333,Pet Carrier,"$1,258.31 ",12
+Used - Good,Digital kitchen timer,200350,500052,300334,Kitchen Timer,$481.16 ,2
+Pre-Owned,Stainless steel kitchen tongs,200315,500162,300335,Kitchen Tongs,$452.31 ,7
+Used - Acceptable,Lightweight sleeping bag,200154,500147,300336,Sleeping Bag,"$2,639.61 ",15
+Used - Like New,Premium cast iron skillet,200681,500155,300337,Cast Iron Skillet,"$1,115.22 ",13
+Open Box,Durable cargo pants,200092,500242,300338,Cargo Pants,"$2,344.76 ",20
+Certified Refurbished,Luxurious bathrobe,200112,500160,300339,Bathrobe,"$2,989.72 ",4
+Used - Like New,Travel-sized toiletries kit,200447,500204,300340,Toiletries Kit,"$1,558.31 ",18
+Used - Like New,Heavy-duty bike lock,200058,500172,300341,Bike Lock,"$1,999.68 ",12
+Pre-Owned,Portable camping stove,200455,500026,300342,Camping Stove,$644.71 ,3
+Certified Refurbished,Advanced car vacuum cleaner,200530,500040,300343,Car Vacuum,"$1,956.12 ",17
+Used - Like New,Compact coffee grinder,200631,500060,300344,Coffee Grinder,"$1,256.11 ",18
+Refurbished,Elegant tea set,200372,500242,300345,Tea Set,"$2,383.46 ",3
+Used - Very Good,Modern smartphone stand,200005,500229,300346,Smartphone Stand,"$2,495.73 ",10
+Refurbished,Reusable food storage bags,200122,500146,300347,Food Storage Bags,"$1,053.32 ",5
+Certified Refurbished,Premium quality umbrella,200341,500128,300348,Umbrella,"$1,735.28 ",12
+New,Ultra-light hiking tent,200024,500256,300349,Hiking Tent,$129.03 ,1
+Used - Very Good,Stylish beach hat,200439,500154,300350,Beach Hat,"$2,568.32 ",18
+Used - Good,Durable work gloves,200022,500155,300351,Work Gloves,"$1,504.88 ",7
+Used - Very Good,Advanced video doorbell,200044,500143,300352,Video Doorbell,"$1,177.98 ",15
+Used - Like New,Space-saving shoe organizer,200479,500226,300353,Shoe Organizer,$243.12 ,8
+New,Portable electric kettle,200162,500090,300354,Electric Kettle,"$2,988.31 ",20
+Certified Refurbished,Soft sherpa fleece blanket,200585,500029,300355,Sherpa Fleece Blanket,"$2,926.80 ",4
+Used - Like New,Sophisticated whiskey glasses,200060,500288,300356,Whiskey Glasses,$282.85 ,11
+Used - Good,Eco-friendly reusable straws,200795,500112,300357,Reusable Straws,"$2,423.89 ",20
+Certified Refurbished,Lightweight portable hammock,200530,500045,300358,Portable Hammock,$580.58 ,9
+New,Minimalist desk organizer,200723,500207,300359,Desk Organizer,$365.82 ,8
+Pre-Owned,Advanced robotic vacuum,200496,500021,300360,Robotic Vacuum,$857.83 ,8
+New,Sturdy wall-mounted shelf,200690,500094,300361,Wall Shelf,$456.67 ,10
+Used - Very Good,Portable projector,200678,500016,300362,Portable Projector,$318.80 ,10
+New,Soft travel neck pillow,200252,500142,300363,Travel Neck Pillow,"$1,070.12 ",3
+Open Box,Foldable picnic blanket,200117,500277,300364,Picnic Blanket,"$1,303.85 ",13
+Pre-Owned,Digital meat thermometer,200502,500272,300365,Meat Thermometer,$864.60 ,19
+Used - Good,Rechargeable book light,200149,500074,300366,Book Light,$741.25 ,20
+Open Box,Elegant leather handbag,200274,500065,300367,Leather Handbag,"$2,501.50 ",3
+Used - Very Good,Durable hiking boots,200767,500038,300368,Hiking Boots,"$2,113.93 ",11
+Refurbished,Comfortable wool socks,200144,500183,300369,Wool Socks,"$2,814.98 ",20
+New,Stylish denim jacket,200273,500194,300370,Denim Jacket,"$1,099.75 ",7
+Used - Good,Compact photo printer,200709,500008,300371,Photo Printer,"$2,074.98 ",9
+Used - Very Good,Adjustable resistance bands,200528,500136,300372,Resistance Bands,"$2,703.23 ",11
+Open Box,Premium cotton duvet cover,200375,500187,300373,Cotton Duvet Cover,"$1,064.03 ",4
+Certified Refurbished,Versatile multi-tool,200056,500167,300374,Multi-Tool,"$1,370.19 ",3
+Open Box,Modern floor lamp,200599,500147,300375,Floor Lamp,"$2,397.02 ",1
+Used - Acceptable,Luxurious cashmere scarf,200571,500027,300376,Cashmere Scarf,$830.51 ,2
+Used - Very Good,Portable espresso machine,200697,500055,300377,Espresso Machine,"$2,736.83 ",16
+New,Waterproof action camera,200615,500024,300378,Action Camera,"$1,051.59 ",14
+Open Box,Compact air purifier,200284,500285,300379,Air Purifier,"$1,058.72 ",1
+New,Durable bike helmet,200476,500285,300380,Bike Helmet,$518.72 ,19
+Used - Acceptable,Soft bamboo sheets,200035,500218,300381,Bamboo Sheets,"$2,728.96 ",18
+Pre-Owned,High-performance gym bag,200220,500288,300382,Gym Bag,"$2,797.45 ",8
+Used - Very Good,Advanced hair dryer,200373,500276,300383,Hair Dryer,"$1,731.05 ",18
+New,Energy-efficient space heater,200247,500073,300384,Space Heater,"$1,490.39 ",13
+Used - Good,Sophisticated cocktail shaker,200049,500217,300385,Cocktail Shaker,"$1,505.15 ",20
+New,Eco-friendly laundry detergent,200546,500103,300386,Laundry Detergent,"$1,669.62 ",9
+Used - Good,Durable BBQ grill cover,200147,500132,300387,BBQ Grill Cover,$428.49 ,5
+Used - Very Good,Compact spice rack,200418,500126,300388,Spice Rack,"$2,843.07 ",16
+Refurbished,Stylish patio furniture,200048,500078,300389,Patio Furniture,"$2,969.12 ",5
+Pre-Owned,Premium soundbar speaker,200238,500093,300390,Soundbar,"$1,143.67 ",18
+Used - Good,Advanced pet grooming kit,200776,500064,300391,Pet Grooming Kit,"$1,597.46 ",7
+Open Box,High-quality baby stroller,200051,500146,300392,Baby Stroller,$53.44 ,6
+Used - Very Good,Elegant dining table set,200015,500122,300393,Dining Table Set,$227.01 ,8
+Certified Refurbished,Soft organic baby blanket,200500,500294,300394,Baby Blanket,"$1,444.44 ",9
+Pre-Owned,Lightweight power drill,200381,500295,300395,Power Drill,$493.87 ,16
+Refurbished,Heavy-duty dog leash,200518,500023,300396,Dog Leash,$596.35 ,9
+Refurbished,Minimalist table clock,200680,500291,300397,Table Clock,"$2,503.10 ",6
+Open Box,Advanced gaming keyboard,200516,500125,300398,Gaming Keyboard,"$2,063.19 ",13
+Certified Refurbished,Foldable treadmill,200189,500035,300399,Treadmill,$725.85 ,2
+Used - Like New,Multi-functional waffle maker,200612,500087,300400,Waffle Maker,"$1,878.83 ",18
+Used - Acceptable,Premium travel pillow,200619,500156,300401,Travel Pillow,$895.16 ,6
+Certified Refurbished,Durable outdoor jacket,200053,500200,300402,Outdoor Jacket,"$1,388.55 ",19
+New,Adjustable TV wall mount,200136,500205,300403,TV Wall Mount,$931.25 ,13
+Certified Refurbished,Waterproof travel bag,200686,500228,300404,Travel Bag,"$1,989.41 ",15
+Used - Good,High-speed internet router,200495,500011,300405,Internet Router,"$1,916.76 ",17
+Open Box,Space-saving closet organizer,200115,500029,300406,Closet Organizer,"$1,053.71 ",16
+Used - Acceptable,Advanced sewing kit,200242,500114,300407,Sewing Kit,"$2,868.33 ",7
+Used - Good,Modern ergonomic sofa,200560,500218,300408,Ergonomic Sofa,"$1,088.88 ",18
+Refurbished,Luxurious showerhead,200109,500219,300409,Showerhead,"$2,194.10 ",4
+Open Box,Durable cooler bag,200334,500241,300410,Cooler Bag,"$1,006.80 ",15
+Certified Refurbished,Elegant bathroom mirror,200008,500225,300411,Bathroom Mirror,"$1,216.67 ",8
+Used - Like New,Premium leather briefcase,200192,500116,300412,Leather Briefcase,"$1,123.93 ",5
+Open Box,Comfortable hiking sandals,200029,500109,300413,Hiking Sandals,"$2,419.26 ",17
+Used - Acceptable,Soft wool blanket,200263,500039,300414,Wool Blanket,"$2,059.19 ",18
+Used - Acceptable,Portable massage gun,200371,500199,300415,Massage Gun,$912.51 ,17
+Used - Good,Rechargeable lantern,200677,500286,300416,Lantern,"$2,623.65 ",5
+Used - Like New,Sophisticated wine opener,200288,500107,300417,Wine Opener,$624.55 ,7
+Used - Good,Adjustable book stand,200272,500284,300418,Book Stand,$743.82 ,3
+Used - Good,Premium stainless steel straws,200139,500139,300419,Stainless Steel Straws,"$1,576.08 ",15
+Used - Acceptable,Lightweight trekking poles,200538,500053,300420,Trekking Poles,"$2,638.26 ",1
+Certified Refurbished,Versatile garment steamer,200223,500017,300421,Garment Steamer,"$2,235.91 ",14
+Used - Good,High-quality bread machine,200290,500239,300422,Bread Machine,"$1,202.65 ",3
+Used - Very Good,Durable camping table,200339,500103,300423,Camping Table,"$1,597.73 ",8
+Used - Good,Elegant table lamp,200180,500228,300424,Table Lamp,"$1,552.95 ",5
+Pre-Owned,Portable laptop desk,200268,500000,300425,Laptop Desk,$638.05 ,18
+Used - Like New,Premium pet bed,200643,500186,300426,Pet Bed,"$2,951.83 ",15
+Certified Refurbished,Soft weighted blanket,200069,500229,300427,Weighted Blanket,"$2,694.18 ",2
+Used - Very Good,Compact portable fan,200615,500004,300428,Portable Fan,$323.60 ,15
+Open Box,Waterproof Bluetooth speaker,200158,500186,300429,Bluetooth Speaker,"$2,708.04 ",2
+Pre-Owned,Energy-efficient air conditioner,200207,500003,300430,Air Conditioner,"$2,893.44 ",3
+Refurbished,Minimalist bedside table,200088,500191,300431,Bedside Table,$126.19 ,20
+Used - Acceptable,Adjustable bed frame,200043,500024,300432,Bed Frame,"$2,842.91 ",2
+Used - Like New,Space-saving laundry basket,200635,500224,300433,Laundry Basket,"$2,877.77 ",17
+New,Advanced power inverter,200627,500159,300434,Power Inverter,"$2,640.94 ",4
+Used - Acceptable,Heavy-duty snow shovel,200450,500018,300435,Snow Shovel,"$1,249.77 ",2
+Used - Very Good,Comfortable sleeping pad,200653,500190,300436,Sleeping Pad,"$1,306.99 ",6
+Open Box,Luxurious face moisturizer,200427,500201,300437,Face Moisturizer,$309.07 ,17
+Used - Like New,Versatile folding bike,200510,500244,300438,Folding Bike,"$2,537.86 ",20
+New,High-quality juicer,200666,500030,300439,Juicer,$964.10 ,5
+Used - Very Good,Stylish leather phone case,200271,500261,300440,Phone Case,"$1,544.77 ",18
+Used - Like New,Compact makeup mirror,200709,500142,300441,Makeup Mirror,"$1,104.23 ",18
+Pre-Owned,Durable hiking backpack,200580,500199,300442,Hiking Backpack,"$2,002.38 ",9
+Used - Good,Lightweight garden pruner,200530,500203,300443,Garden Pruner,"$1,743.73 ",17
+Used - Acceptable,Advanced home security camera,200157,500202,300444,Home Security Camera,"$2,170.30 ",1
+New,Minimalist floating shelf,200111,500070,300445,Floating Shelf,"$2,144.85 ",15
+Pre-Owned,Premium smart thermostat,200020,500110,300446,Smart Thermostat,"$1,437.64 ",6
+Used - Very Good,Soft merino wool sweater,200739,500060,300447,Wool Sweater,$412.71 ,18
+Pre-Owned,Portable induction cooktop,200054,500007,300448,Induction Cooktop,"$2,222.92 ",15
+Used - Acceptable,Adjustable baby carrier,200502,500077,300449,Baby Carrier,$509.14 ,7
+Used - Good,Stylish leather belt,200059,500051,300450,Leather Belt,$371.39 ,3
+Used - Acceptable,Rechargeable hand blender,200018,500043,300451,Hand Blender,"$1,934.56 ",2
+Used - Acceptable,Durable running shoes,200502,500245,300452,Running Shoes,"$2,398.27 ",11
+New,Waterproof camera case,200297,500081,300453,Camera Case,"$2,742.76 ",3
+Used - Good,Elegant crystal wine glasses,200123,500091,300454,Crystal Wine Glasses,"$1,945.61 ",14
+New,Comfortable bean bag chair,200519,500151,300455,Bean Bag Chair,"$1,408.41 ",16
+Used - Good,Sophisticated dinnerware set,200728,500254,300456,Dinnerware Set,"$2,321.56 ",4
+Used - Acceptable,Compact tool organizer,200744,500105,300457,Tool Organizer,"$1,247.41 ",14
+Used - Like New,High-speed electric scooter,200130,500070,300458,Electric Scooter,"$1,089.61 ",16
+Pre-Owned,Advanced programmable coffee maker,200558,500017,300459,Coffee Maker,"$2,938.80 ",6
+New,Premium glass storage containers,200351,500285,300460,Storage Containers,$305.57 ,1
+Used - Acceptable,Lightweight travel backpack,200333,500012,300461,Travel Backpack,"$2,460.08 ",7
+Pre-Owned,Minimalist desktop clock,200256,500010,300462,Desktop Clock,"$2,619.74 ",7
+Used - Very Good,Foldable yoga mat,200643,500058,300463,Yoga Mat,"$1,675.53 ",9
+Used - Like New,Durable camping tent,200262,500185,300464,Camping Tent,"$2,332.99 ",12
+Pre-Owned,Portable solar charger,200147,500036,300465,Solar Charger,"$1,931.40 ",19
+Open Box,Soft flannel sheets,200130,500164,300466,Flannel Sheets,$724.46 ,17
+Used - Very Good,Adjustable shower caddy,200084,500256,300467,Shower Caddy,"$1,368.34 ",16
+New,Heavy-duty storage box,200652,500265,300468,Storage Box,"$2,594.10 ",14
+Open Box,Stylish wool fedora,200278,500162,300469,Wool Fedora,"$1,161.92 ",16
+Pre-Owned,High-quality garden gloves,200527,500106,300470,Garden Gloves,$140.63 ,1
+Used - Very Good,Eco-friendly compost bin,200213,500100,300471,Compost Bin,"$2,974.40 ",17
+Used - Like New,Elegant silver bracelet,200159,500198,300472,Silver Bracelet,"$1,224.70 ",10
+New,Portable handheld vacuum,200069,500057,300473,Handheld Vacuum,$801.33 ,11
+New,Waterproof bike panniers,200510,500238,300474,Bike Panniers,"$2,873.63 ",9
+Used - Like New,Comfortable lounge chair,200701,500112,300475,Lounge Chair,"$1,392.04 ",15
+Open Box,Premium silk pillowcase,200562,500268,300476,Silk Pillowcase,"$2,066.04 ",20
+Used - Like New,Compact air mattress,200589,500258,300477,Air Mattress,"$1,988.57 ",13
+Certified Refurbished,Versatile camping lantern,200678,500013,300478,Camping Lantern,"$1,582.13 ",17
+Used - Acceptable,Advanced fitness tracker,200796,500062,300479,Fitness Tracker,"$1,187.68 ",17
+Refurbished,Durable garden rake,200516,500198,300480,Garden Rake,"$1,080.56 ",4
+Certified Refurbished,Modern home theater system,200217,500213,300481,Home Theater System,"$1,396.32 ",2
+Certified Refurbished,Lightweight utility cart,200159,500068,300482,Utility Cart,"$2,318.23 ",11
+Used - Good,Adjustable pet gate,200622,500111,300483,Pet Gate,$285.62 ,17
+Used - Like New,Elegant pearl necklace,200252,500273,300484,Pearl Necklace,"$1,944.97 ",2
+New,High-speed USB hub,200241,500190,300485,USB Hub,"$1,425.31 ",7
+Certified Refurbished,Premium Bluetooth soundbar,200307,500002,300486,Bluetooth Soundbar,"$2,008.29 ",15
+Certified Refurbished,Stylish leather gloves,200558,500270,300487,Leather Gloves,$53.83 ,9
+Certified Refurbished,Heavy-duty extension cord,200739,500000,300488,Extension Cord,"$1,245.77 ",19
+New,Portable picnic cooler,200603,500214,300489,Picnic Cooler,"$1,073.01 ",5
+Refurbished,Sophisticated travel wallet,200627,500180,300490,Travel Wallet,"$1,168.37 ",16
+Used - Very Good,Lightweight stroller,200671,500019,300491,Stroller,"$1,083.48 ",12
+New,Durable pet playpen,200028,500272,300492,Pet Playpen,"$1,098.10 ",15
+Used - Good,Compact tool belt,200179,500282,300493,Tool Belt,"$1,486.77 ",1
+Used - Good,Luxurious facial cleanser,200168,500030,300494,Facial Cleanser,"$2,584.64 ",9
+Refurbished,Waterproof hiking shoes,200398,500171,300495,Hiking Shoes,"$2,134.78 ",1
+Used - Good,Space-saving drying rack,200261,500299,300496,Drying Rack,"$1,019.06 ",4
+Open Box,Advanced smart door lock,200661,500110,300497,Smart Door Lock,"$1,143.14 ",5
+Used - Very Good,Soft hypoallergenic comforter,200460,500098,300498,Comforter,"$2,233.21 ",15
+Used - Good,Portable water filter,200773,500036,300499,Water Filter,$932.95 ,16
+Open Box,High-quality dog bed,200534,500089,300500,Dog Bed,$668.95 ,9
+Pre-Owned,Modern cordless vacuum,200550,500232,300501,Cordless Vacuum,"$2,753.49 ",13
+Refurbished,Comfortable walking shoes,200157,500131,300502,Walking Shoes,$185.99 ,14
+Used - Like New,Elegant copper cookware,200588,500060,300503,Copper Cookware,"$2,608.81 ",19
+Open Box,Minimalist photo frame,200361,500233,300504,Photo Frame,$832.13 ,2
+New,Durable weatherproof jacket,200662,500169,300505,Weatherproof Jacket,$864.92 ,16
+Used - Good,Versatile multi-cooker,200291,500144,300506,Multi-Cooker,"$2,710.89 ",9
+Used - Very Good,Adjustable dumbbell set,200563,500074,300507,Dumbbell Set,"$2,134.69 ",5
+Used - Like New,Premium herbal tea sampler,200057,500097,300508,Herbal Tea Sampler,$407.18 ,5
+Refurbished,Stylish ceramic flower pot,200716,500030,300509,Ceramic Flower Pot,$274.04 ,11
+Used - Like New,Compact gaming monitor,200596,500007,300510,Gaming Monitor,$4.33 ,6
+Open Box,Lightweight workout leggings,200569,500239,300511,Workout Leggings,"$1,243.78 ",13
+Used - Very Good,Foldable laundry hamper,200299,500226,300512,Laundry Hamper,"$2,119.91 ",17
+Used - Acceptable,Advanced gaming headset,200720,500189,300513,Gaming Headset,"$1,677.87 ",14
+Refurbished,Heavy-duty pressure washer,200763,500292,300514,Pressure Washer,"$2,899.39 ",3
+New,Comfortable armchair,200403,500152,300515,Armchair,"$1,225.08 ",4
+Open Box,Sophisticated home decor set,200354,500119,300516,Home Decor Set,$433.35 ,9
+Pre-Owned,Portable air compressor,200228,500027,300517,Air Compressor,"$2,455.74 ",6
+Certified Refurbished,Premium hot sauce collection,200287,500100,300518,Hot Sauce Collection,"$2,494.69 ",5
+New,Durable bike repair kit,200510,500165,300519,Bike Repair Kit,"$2,717.53 ",18
+Open Box,Modern digital picture frame,200454,500003,300520,Digital Picture Frame,"$1,850.72 ",20
+Used - Good,Waterproof dry bag,200747,500226,300521,Dry Bag,$586.83 ,5
+Open Box,High-speed travel charger,200143,500146,300522,Travel Charger,"$2,595.96 ",18
+Used - Good,Minimalist bedside organizer,200720,500267,300523,Bedside Organizer,$722.14 ,8
+Refurbished,Lightweight portable canopy,200522,500098,300524,Portable Canopy,"$2,440.26 ",12
+Used - Good,Adjustable storage shelving,200594,500048,300525,Storage Shelving,"$1,383.78 ",18
+Certified Refurbished,Eco-friendly glass water bottle,200138,500156,300526,Glass Water Bottle,$161.16 ,10
+Pre-Owned,Sophisticated cocktail mixer,200702,500095,300527,Cocktail Mixer,$431.13 ,8
+Pre-Owned,Compact shoe rack,200443,500087,300528,Shoe Rack,"$2,971.75 ",17
+Used - Like New,Heavy-duty power washer,200371,500088,300529,Power Washer,"$1,968.46 ",16
+Open Box,Durable garden kneeler,200431,500177,300530,Garden Kneeler,$910.98 ,3
+Certified Refurbished,Stylish winter coat,200459,500173,300531,Winter Coat,$168.31 ,4
+New,High-quality leather wallet,200104,500050,300532,Leather Wallet,"$2,257.37 ",9
+Refurbished,Durable hiking backpack,200669,500243,300533,Hiking Backpack,"$1,876.94 ",17
+Used - Acceptable,Noise-cancelling headphones,200361,500026,300534,Noise-Cancelling Headphones,$58.26 ,5
+Open Box,Soft cotton T-shirt,200557,500053,300535,Cotton T-Shirt,$921.68 ,13
+New,Sleek stainless steel water bottle,200336,500159,300536,Stainless Steel Water Bottle,$828.77 ,10
+Refurbished,Compact Bluetooth speaker,200691,500028,300537,Bluetooth Speaker,"$1,348.56 ",5
+Used - Very Good,Lightweight travel suitcase,200523,500065,300538,Travel Suitcase,"$1,795.21 ",4
+Pre-Owned,Premium organic coffee beans,200607,500227,300539,Organic Coffee Beans,"$1,614.99 ",14
+Pre-Owned,Comfortable memory foam pillow,200196,500209,300540,Memory Foam Pillow,$471.16 ,20
+Pre-Owned,Stylish wooden sunglasses,200159,500151,300541,Wooden Sunglasses,"$1,703.25 ",8
+Refurbished,Portable power bank,200514,500127,300542,Portable Power Bank,"$2,449.32 ",2
+Certified Refurbished,Ultra-soft bath towel,200675,500081,300543,Bath Towel,"$1,740.59 ",13
+New,Elegant ceramic vase,200445,500255,300544,Ceramic Vase,"$1,415.43 ",17
+Used - Good,Adjustable laptop stand,200648,500194,300545,Laptop Stand,"$1,999.98 ",4
+Pre-Owned,Versatile chef’s knife,200581,500140,300546,Chef’s Knife,"$1,256.99 ",18
+Used - Very Good,Compact digital camera,200432,500207,300547,Digital Camera,"$1,010.73 ",6
+Used - Like New,Durable stainless steel frying pan,200344,500002,300548,Stainless Steel Frying Pan,$33.41 ,13
+Used - Acceptable,Eco-friendly bamboo toothbrush,200193,500119,300549,Bamboo Toothbrush,"$1,969.63 ",17
+New,High-performance gaming mouse,200601,500161,300550,Gaming Mouse,"$2,922.56 ",2
+Used - Acceptable,Ergonomic office chair,200261,500296,300551,Office Chair,"$1,990.61 ",9
+Used - Like New,Luxurious silk bedsheets,200250,500095,300552,Silk Bedsheets,"$2,373.66 ",1
+Used - Like New,Heavy-duty toolbox,200031,500079,300553,Toolbox,$349.35 ,8
+Used - Good,Rechargeable LED flashlight,200078,500001,300554,LED Flashlight,"$2,989.53 ",15
+Refurbished,Modern minimalist watch,200033,500011,300555,Minimalist Watch,$952.44 ,8
+Pre-Owned,Wireless charging pad,200153,500120,300556,Wireless Charging Pad,"$1,337.36 ",18
+Pre-Owned,Durable yoga mat,200271,500142,300557,Yoga Mat,$139.84 ,15
+Pre-Owned,Trendy canvas tote bag,200390,500254,300558,Canvas Tote Bag,"$1,831.87 ",19
+Pre-Owned,Waterproof fitness tracker,200006,500053,300559,Fitness Tracker,"$2,211.59 ",10
+Refurbished,High-speed external hard drive,200333,500146,300560,External Hard Drive,$335.34 ,16
+Open Box,Elegant wine decanter,200343,500235,300561,Wine Decanter,"$2,750.47 ",8
+Used - Acceptable,Advanced electric toothbrush,200747,500027,300562,Electric Toothbrush,"$2,523.55 ",16
+Refurbished,Energy-efficient LED bulb,200309,500197,300563,LED Bulb,$60.90 ,3
+Used - Acceptable,Double-walled coffee mug,200735,500012,300564,Coffee Mug,"$1,362.49 ",5
+Pre-Owned,Versatile air fryer,200002,500064,300565,Air Fryer,$968.68 ,15
+Pre-Owned,Adjustable dumbbells set,200678,500124,300566,Dumbbells,"$1,110.97 ",1
+Used - Acceptable,Classic analog wristwatch,200439,500212,300567,Analog Watch,"$1,510.50 ",10
+New,Multi-functional survival knife,200689,500115,300568,Survival Knife,"$2,911.06 ",12
+Used - Acceptable,Convenient portable grill,200794,500183,300569,Portable Grill,"$2,340.14 ",19
+New,Efficient vacuum cleaner,200396,500168,300570,Vacuum Cleaner,"$2,094.32 ",12
+Used - Like New,Compact first aid kit,200394,500199,300571,First Aid Kit,"$2,495.04 ",14
+Used - Very Good,High-definition action camera,200799,500232,300572,Action Camera,$234.86 ,20
+Used - Like New,Comfortable running shoes,200002,500253,300573,Running Shoes,"$1,536.88 ",9
+Certified Refurbished,Foldable camping chair,200651,500273,300574,Camping Chair,"$2,935.73 ",6
+Used - Acceptable,Noise-isolating earbuds,200439,500120,300575,Noise-Isolating Earbuds,$52.32 ,19
+Used - Very Good,Advanced smartwatch,200016,500029,300576,Smartwatch,"$2,705.14 ",2
+Used - Acceptable,Stylish leather journal,200039,500209,300577,Leather Journal,$128.59 ,5
+Used - Good,Durable travel mug,200269,500269,300578,Travel Mug,$596.97 ,2
+Open Box,Soft plush throw blanket,200748,500253,300579,Plush Throw Blanket,"$1,398.14 ",2
+Certified Refurbished,Elegant crystal chandelier,200340,500193,300580,Crystal Chandelier,"$1,452.67 ",7
+Used - Like New,Portable car jump starter,200740,500001,300581,Car Jump Starter,"$1,022.41 ",19
+Open Box,Heavy-duty garden hose,200716,500146,300582,Garden Hose,"$1,999.71 ",13
+Certified Refurbished,Adjustable desk lamp,200513,500103,300583,Desk Lamp,"$1,419.38 ",4
+Refurbished,Sophisticated perfume set,200134,500163,300584,Perfume Set,$307.25 ,2
+Pre-Owned,Waterproof phone case,200007,500284,300585,Phone Case,$261.71 ,2
+Used - Very Good,Ergonomic bike seat,200273,500211,300586,Bike Seat,"$1,579.11 ",1
+New,Minimalist wall clock,200015,500087,300587,Wall Clock,$785.08 ,4
+Pre-Owned,Anti-theft laptop backpack,200676,500069,300588,Laptop Backpack,"$1,557.90 ",3
+Used - Acceptable,Precision kitchen scale,200367,500032,300589,Kitchen Scale,$606.54 ,12
+Certified Refurbished,Premium wireless earbuds,200404,500127,300590,Wireless Earbuds,"$2,238.69 ",18
+Refurbished,High-speed blender,200502,500127,300591,Blender,$817.66 ,10
+Used - Like New,Versatile toolset,200723,500122,300592,Toolset,"$2,467.03 ",5
+Open Box,Multi-purpose folding table,200168,500081,300593,Folding Table,"$2,403.09 ",17
+Used - Acceptable,Adjustable standing desk,200483,500128,300594,Standing Desk,"$2,069.59 ",13
+New,Compact sewing machine,200105,500057,300595,Sewing Machine,"$1,500.90 ",3
+Open Box,Advanced hair straightener,200492,500048,300596,Hair Straightener,$687.97 ,12
+Used - Acceptable,Multi-functional printer,200180,500008,300597,Printer,"$2,615.04 ",11
+New,Rechargeable hand warmer,200794,500148,300598,Hand Warmer,"$2,205.87 ",11
+New,Collapsible pet carrier,200513,500258,300599,Pet Carrier,$59.35 ,10
+Certified Refurbished,Digital kitchen timer,200453,500067,300600,Kitchen Timer,"$1,027.25 ",17
+Used - Like New,Stainless steel kitchen tongs,200576,500264,300601,Kitchen Tongs,$930.12 ,8
+Used - Good,Lightweight sleeping bag,200087,500127,300602,Sleeping Bag,"$2,972.88 ",19
+Used - Very Good,Premium cast iron skillet,200127,500255,300603,Cast Iron Skillet,$788.81 ,6
+Used - Like New,Durable cargo pants,200235,500112,300604,Cargo Pants,"$2,286.70 ",13
+Used - Like New,Luxurious bathrobe,200625,500139,300605,Bathrobe,$873.67 ,3
+Pre-Owned,Travel-sized toiletries kit,200261,500280,300606,Toiletries Kit,"$2,808.45 ",18
+Pre-Owned,Heavy-duty bike lock,200439,500215,300607,Bike Lock,"$1,417.03 ",4
+New,Portable camping stove,200382,500001,300608,Camping Stove,"$2,945.76 ",10
+Refurbished,Advanced car vacuum cleaner,200508,500177,300609,Car Vacuum,$605.11 ,16
+New,Compact coffee grinder,200322,500223,300610,Coffee Grinder,$907.10 ,1
+Pre-Owned,Elegant tea set,200324,500195,300611,Tea Set,"$1,718.20 ",9
+Certified Refurbished,Modern smartphone stand,200107,500245,300612,Smartphone Stand,"$1,967.64 ",9
+Open Box,Reusable food storage bags,200717,500265,300613,Food Storage Bags,"$2,159.66 ",11
+Used - Very Good,Premium quality umbrella,200333,500237,300614,Umbrella,"$1,002.75 ",12
+New,Ultra-light hiking tent,200437,500038,300615,Hiking Tent,"$1,733.01 ",16
+Open Box,Stylish beach hat,200772,500174,300616,Beach Hat,$638.48 ,4
+Used - Good,Durable work gloves,200782,500289,300617,Work Gloves,"$1,154.10 ",2
+Used - Good,Advanced video doorbell,200479,500287,300618,Video Doorbell,"$1,783.18 ",6
+Certified Refurbished,Space-saving shoe organizer,200476,500023,300619,Shoe Organizer,"$2,536.16 ",6
+Used - Good,Portable electric kettle,200671,500106,300620,Electric Kettle,"$2,326.95 ",10
+Certified Refurbished,Soft sherpa fleece blanket,200510,500194,300621,Sherpa Fleece Blanket,$337.65 ,8
+Used - Good,Sophisticated whiskey glasses,200015,500165,300622,Whiskey Glasses,"$1,524.00 ",10
+Refurbished,Eco-friendly reusable straws,200545,500085,300623,Reusable Straws,"$2,145.77 ",10
+Used - Like New,Lightweight portable hammock,200598,500138,300624,Portable Hammock,"$2,232.02 ",3
+Open Box,Minimalist desk organizer,200620,500280,300625,Desk Organizer,$911.03 ,16
+Used - Good,Advanced robotic vacuum,200621,500225,300626,Robotic Vacuum,$341.61 ,2
+Open Box,Sturdy wall-mounted shelf,200466,500264,300627,Wall Shelf,"$2,767.92 ",6
+Open Box,Portable projector,200686,500117,300628,Portable Projector,$528.15 ,19
+Used - Like New,Soft travel neck pillow,200558,500066,300629,Travel Neck Pillow,$636.42 ,5
+Used - Good,Foldable picnic blanket,200668,500069,300630,Picnic Blanket,"$1,230.78 ",3
+Open Box,Digital meat thermometer,200390,500204,300631,Meat Thermometer,"$2,854.03 ",18
+Used - Like New,Rechargeable book light,200502,500159,300632,Book Light,"$1,847.18 ",3
+Used - Acceptable,Elegant leather handbag,200004,500265,300633,Leather Handbag,"$1,502.07 ",7
+Pre-Owned,Durable hiking boots,200712,500132,300634,Hiking Boots,"$1,227.88 ",13
+Pre-Owned,Comfortable wool socks,200002,500278,300635,Wool Socks,"$1,025.42 ",4
+Used - Acceptable,Stylish denim jacket,200019,500083,300636,Denim Jacket,"$2,496.42 ",5
+Used - Very Good,Compact photo printer,200063,500015,300637,Photo Printer,"$2,779.28 ",7
+New,Adjustable resistance bands,200400,500183,300638,Resistance Bands,"$1,934.17 ",15
+Used - Acceptable,Premium cotton duvet cover,200149,500067,300639,Cotton Duvet Cover,$842.08 ,16
+Refurbished,Versatile multi-tool,200281,500223,300640,Multi-Tool,$72.97 ,10
+Open Box,Modern floor lamp,200040,500113,300641,Floor Lamp,"$1,491.03 ",12
+Open Box,Luxurious cashmere scarf,200157,500009,300642,Cashmere Scarf,"$2,130.30 ",4
+New,Portable espresso machine,200239,500178,300643,Espresso Machine,"$2,818.37 ",17
+Open Box,Waterproof action camera,200069,500173,300644,Action Camera,"$1,914.82 ",6
+Refurbished,Compact air purifier,200768,500246,300645,Air Purifier,"$1,655.76 ",19
+Used - Good,Durable bike helmet,200474,500257,300646,Bike Helmet,$539.91 ,6
+Used - Acceptable,Soft bamboo sheets,200193,500072,300647,Bamboo Sheets,"$1,495.84 ",2
+Certified Refurbished,High-performance gym bag,200360,500292,300648,Gym Bag,"$2,681.08 ",11
+Pre-Owned,Advanced hair dryer,200642,500036,300649,Hair Dryer,"$2,437.05 ",8
+Open Box,Energy-efficient space heater,200673,500024,300650,Space Heater,$546.61 ,5
+Certified Refurbished,Sophisticated cocktail shaker,200144,500180,300651,Cocktail Shaker,$826.97 ,15
+Used - Like New,Eco-friendly laundry detergent,200348,500088,300652,Laundry Detergent,"$2,530.18 ",2
+Open Box,Durable BBQ grill cover,200684,500185,300653,BBQ Grill Cover,"$1,141.43 ",18
+Open Box,Compact spice rack,200093,500260,300654,Spice Rack,$311.59 ,1
+Used - Good,Stylish patio furniture,200043,500296,300655,Patio Furniture,$238.67 ,14
+Used - Acceptable,Premium soundbar speaker,200538,500017,300656,Soundbar,"$2,225.78 ",12
+Certified Refurbished,Advanced pet grooming kit,200258,500171,300657,Pet Grooming Kit,"$2,175.95 ",12
+Used - Good,High-quality baby stroller,200561,500132,300658,Baby Stroller,"$1,939.65 ",7
+Used - Acceptable,Elegant dining table set,200615,500145,300659,Dining Table Set,$972.66 ,14
+Open Box,Soft organic baby blanket,200511,500061,300660,Baby Blanket,$569.47 ,8
+Certified Refurbished,Lightweight power drill,200171,500183,300661,Power Drill,"$2,820.57 ",11
+Used - Like New,Heavy-duty dog leash,200228,500203,300662,Dog Leash,"$2,737.98 ",16
+Open Box,Minimalist table clock,200027,500148,300663,Table Clock,$85.64 ,13
+Refurbished,Advanced gaming keyboard,200589,500096,300664,Gaming Keyboard,"$1,618.31 ",5
+Pre-Owned,Foldable treadmill,200737,500084,300665,Treadmill,"$2,025.90 ",10
+Refurbished,Multi-functional waffle maker,200296,500042,300666,Waffle Maker,"$2,597.24 ",13
+Used - Good,Premium travel pillow,200798,500149,300667,Travel Pillow,$750.02 ,16
+Pre-Owned,Durable outdoor jacket,200799,500251,300668,Outdoor Jacket,$82.97 ,17
+Used - Acceptable,Adjustable TV wall mount,200357,500189,300669,TV Wall Mount,"$1,149.33 ",13
+Used - Good,Waterproof travel bag,200325,500254,300670,Travel Bag,$107.46 ,1
+Used - Acceptable,High-speed internet router,200799,500098,300671,Internet Router,$865.78 ,4
+Refurbished,Space-saving closet organizer,200227,500255,300672,Closet Organizer,"$1,258.11 ",19
+Refurbished,Advanced sewing kit,200791,500276,300673,Sewing Kit,"$2,637.39 ",11
+Refurbished,Modern ergonomic sofa,200625,500237,300674,Ergonomic Sofa,$861.64 ,9
+Certified Refurbished,Luxurious showerhead,200718,500069,300675,Showerhead,$222.33 ,15
+Pre-Owned,Durable cooler bag,200537,500155,300676,Cooler Bag,"$2,464.23 ",17
+Open Box,Elegant bathroom mirror,200452,500003,300677,Bathroom Mirror,$456.40 ,14
+Open Box,Premium leather briefcase,200587,500289,300678,Leather Briefcase,"$1,423.69 ",6
+Used - Like New,Comfortable hiking sandals,200591,500096,300679,Hiking Sandals,"$1,021.44 ",13
+Certified Refurbished,Soft wool blanket,200792,500114,300680,Wool Blanket,"$2,955.19 ",15
+New,Portable massage gun,200217,500113,300681,Massage Gun,"$2,939.68 ",12
+Used - Good,Rechargeable lantern,200642,500234,300682,Lantern,"$2,187.58 ",5
+Used - Very Good,Sophisticated wine opener,200375,500183,300683,Wine Opener,"$2,933.99 ",19
+Open Box,Adjustable book stand,200445,500029,300684,Book Stand,$874.38 ,4
+Open Box,Premium stainless steel straws,200092,500287,300685,Stainless Steel Straws,"$1,725.34 ",15
+Certified Refurbished,Lightweight trekking poles,200403,500125,300686,Trekking Poles,"$2,098.07 ",11
+Pre-Owned,Versatile garment steamer,200132,500117,300687,Garment Steamer,"$1,177.44 ",1
+Used - Like New,High-quality bread machine,200528,500234,300688,Bread Machine,"$2,481.01 ",17
+Open Box,Durable camping table,200247,500002,300689,Camping Table,$634.49 ,1
+Used - Very Good,Elegant table lamp,200025,500081,300690,Table Lamp,"$2,773.62 ",7
+Used - Like New,Portable laptop desk,200321,500153,300691,Laptop Desk,$57.85 ,11
+Used - Good,Premium pet bed,200013,500098,300692,Pet Bed,$676.08 ,18
+New,Soft weighted blanket,200187,500103,300693,Weighted Blanket,"$1,838.05 ",11
+New,Compact portable fan,200467,500031,300694,Portable Fan,$849.13 ,11
+Used - Good,Waterproof Bluetooth speaker,200737,500103,300695,Bluetooth Speaker,"$1,404.75 ",20
+Pre-Owned,Energy-efficient air conditioner,200481,500062,300696,Air Conditioner,$402.35 ,11
+Used - Like New,Minimalist bedside table,200093,500010,300697,Bedside Table,"$2,486.40 ",8
+New,Adjustable bed frame,200543,500076,300698,Bed Frame,"$2,555.27 ",19
+Refurbished,Space-saving laundry basket,200035,500243,300699,Laundry Basket,"$2,035.49 ",13
+Used - Like New,Advanced power inverter,200314,500261,300700,Power Inverter,"$2,507.01 ",16
+Used - Very Good,Heavy-duty snow shovel,200448,500165,300701,Snow Shovel,"$2,776.31 ",14
+Pre-Owned,Comfortable sleeping pad,200794,500265,300702,Sleeping Pad,"$1,365.09 ",12
+Used - Very Good,Luxurious face moisturizer,200583,500227,300703,Face Moisturizer,"$2,048.84 ",1
+Used - Like New,Versatile folding bike,200554,500187,300704,Folding Bike,"$2,793.42 ",12
+Certified Refurbished,High-quality juicer,200782,500100,300705,Juicer,"$2,398.10 ",14
+Used - Like New,Stylish leather phone case,200705,500232,300706,Phone Case,$400.16 ,11
+Used - Very Good,Compact makeup mirror,200001,500101,300707,Makeup Mirror,"$2,261.18 ",10
+Pre-Owned,Durable hiking backpack,200457,500061,300708,Hiking Backpack,"$1,356.80 ",2
+Used - Good,Lightweight garden pruner,200368,500251,300709,Garden Pruner,"$1,401.73 ",8
+Used - Like New,Advanced home security camera,200307,500276,300710,Home Security Camera,"$1,338.50 ",11
+Refurbished,Minimalist floating shelf,200159,500292,300711,Floating Shelf,$696.14 ,13
+New,Premium smart thermostat,200093,500124,300712,Smart Thermostat,"$1,468.09 ",11
+New,Soft merino wool sweater,200262,500052,300713,Wool Sweater,"$2,218.94 ",12
+Used - Very Good,Portable induction cooktop,200141,500082,300714,Induction Cooktop,"$2,147.54 ",3
+Refurbished,Adjustable baby carrier,200643,500174,300715,Baby Carrier,"$1,930.10 ",3
+New,Stylish leather belt,200623,500032,300716,Leather Belt,"$1,891.73 ",15
+Certified Refurbished,Rechargeable hand blender,200140,500099,300717,Hand Blender,$670.84 ,12
+Certified Refurbished,Durable running shoes,200255,500063,300718,Running Shoes,"$1,709.58 ",4
+Used - Very Good,Waterproof camera case,200372,500231,300719,Camera Case,$817.61 ,6
+Used - Acceptable,Elegant crystal wine glasses,200570,500079,300720,Crystal Wine Glasses,$171.42 ,10
+Used - Acceptable,Comfortable bean bag chair,200708,500243,300721,Bean Bag Chair,$414.56 ,8
+Used - Good,Sophisticated dinnerware set,200604,500080,300722,Dinnerware Set,"$1,386.92 ",6
+Certified Refurbished,Compact tool organizer,200327,500241,300723,Tool Organizer,$570.02 ,1
+Used - Acceptable,High-speed electric scooter,200707,500000,300724,Electric Scooter,"$2,788.47 ",6
+Used - Acceptable,Advanced programmable coffee maker,200064,500169,300725,Coffee Maker,"$2,426.24 ",9
+Open Box,Premium glass storage containers,200651,500129,300726,Storage Containers,"$1,450.11 ",7
+Used - Very Good,Lightweight travel backpack,200363,500221,300727,Travel Backpack,$54.99 ,5
+New,Minimalist desktop clock,200584,500146,300728,Desktop Clock,$121.68 ,5
+New,Foldable yoga mat,200353,500224,300729,Yoga Mat,"$2,481.70 ",9
+Open Box,Durable camping tent,200167,500108,300730,Camping Tent,$37.38 ,10
+Used - Good,Portable solar charger,200063,500258,300731,Solar Charger,$763.12 ,19
+Used - Like New,Soft flannel sheets,200745,500238,300732,Flannel Sheets,$294.48 ,5
+Used - Like New,Adjustable shower caddy,200353,500208,300733,Shower Caddy,"$2,996.33 ",10
+Certified Refurbished,Heavy-duty storage box,200453,500235,300734,Storage Box,$916.84 ,8
+Used - Acceptable,Stylish wool fedora,200401,500252,300735,Wool Fedora,"$2,027.90 ",13
+Certified Refurbished,High-quality garden gloves,200473,500056,300736,Garden Gloves,$697.99 ,6
+Used - Acceptable,Eco-friendly compost bin,200387,500030,300737,Compost Bin,"$1,601.81 ",18
+Refurbished,Elegant silver bracelet,200646,500000,300738,Silver Bracelet,"$1,313.66 ",17
+Refurbished,Portable handheld vacuum,200192,500000,300739,Handheld Vacuum,"$1,412.55 ",11
+New,Waterproof bike panniers,200782,500211,300740,Bike Panniers,"$1,554.52 ",1
+Certified Refurbished,Comfortable lounge chair,200284,500090,300741,Lounge Chair,$863.95 ,4
+Certified Refurbished,Premium silk pillowcase,200555,500111,300742,Silk Pillowcase,"$2,994.42 ",10
+Used - Acceptable,Compact air mattress,200167,500008,300743,Air Mattress,$614.78 ,17
+Refurbished,Versatile camping lantern,200042,500196,300744,Camping Lantern,"$2,349.15 ",2
+Used - Good,Advanced fitness tracker,200335,500291,300745,Fitness Tracker,"$2,982.77 ",4
+Refurbished,Durable garden rake,200442,500178,300746,Garden Rake,"$1,419.27 ",19
+New,Modern home theater system,200213,500162,300747,Home Theater System,"$2,469.96 ",14
+Pre-Owned,Lightweight utility cart,200390,500109,300748,Utility Cart,"$2,098.24 ",15
+Used - Acceptable,Adjustable pet gate,200110,500157,300749,Pet Gate,"$1,815.50 ",19
+Used - Very Good,Elegant pearl necklace,200087,500264,300750,Pearl Necklace,"$2,239.23 ",11
+New,High-speed USB hub,200293,500175,300751,USB Hub,"$1,213.18 ",17
+Pre-Owned,Premium Bluetooth soundbar,200202,500205,300752,Bluetooth Soundbar,$618.04 ,1
+Certified Refurbished,Stylish leather gloves,200298,500132,300753,Leather Gloves,"$2,927.77 ",17
+Used - Good,Heavy-duty extension cord,200466,500273,300754,Extension Cord,"$1,482.01 ",7
+Used - Acceptable,Portable picnic cooler,200170,500132,300755,Picnic Cooler,"$1,473.03 ",20
+Used - Good,Sophisticated travel wallet,200721,500138,300756,Travel Wallet,$901.12 ,20
+Used - Acceptable,Lightweight stroller,200015,500066,300757,Stroller,"$2,360.87 ",14
+Used - Acceptable,Durable pet playpen,200394,500152,300758,Pet Playpen,"$1,553.75 ",13
+Used - Like New,Compact tool belt,200375,500283,300759,Tool Belt,"$2,477.66 ",9
+New,Luxurious facial cleanser,200017,500296,300760,Facial Cleanser,$706.37 ,18
+Used - Like New,Waterproof hiking shoes,200126,500233,300761,Hiking Shoes,"$2,486.11 ",18
+New,Space-saving drying rack,200203,500171,300762,Drying Rack,$425.08 ,18
+Used - Acceptable,Advanced smart door lock,200101,500240,300763,Smart Door Lock,$852.99 ,19
+Refurbished,Soft hypoallergenic comforter,200094,500138,300764,Comforter,$826.77 ,18
+Used - Like New,Portable water filter,200783,500044,300765,Water Filter,$176.40 ,17
+Used - Very Good,High-quality dog bed,200183,500180,300766,Dog Bed,"$2,071.96 ",7
+New,Modern cordless vacuum,200526,500097,300767,Cordless Vacuum,"$2,170.10 ",11
+Used - Very Good,Comfortable walking shoes,200038,500202,300768,Walking Shoes,"$1,900.36 ",11
+Used - Good,Elegant copper cookware,200285,500041,300769,Copper Cookware,"$2,179.67 ",15
+Certified Refurbished,Minimalist photo frame,200712,500117,300770,Photo Frame,"$1,245.57 ",6
+Pre-Owned,Durable weatherproof jacket,200281,500224,300771,Weatherproof Jacket,"$1,763.65 ",11
+Used - Like New,Versatile multi-cooker,200031,500053,300772,Multi-Cooker,"$2,740.75 ",7
+Used - Very Good,Adjustable dumbbell set,200016,500214,300773,Dumbbell Set,"$1,423.97 ",20
+New,Premium herbal tea sampler,200592,500261,300774,Herbal Tea Sampler,"$1,559.11 ",13
+Certified Refurbished,Stylish ceramic flower pot,200741,500265,300775,Ceramic Flower Pot,"$1,694.13 ",6
+Refurbished,Compact gaming monitor,200190,500123,300776,Gaming Monitor,"$2,829.88 ",4
+Used - Very Good,Lightweight workout leggings,200334,500239,300777,Workout Leggings,$655.65 ,10
+Refurbished,Foldable laundry hamper,200198,500193,300778,Laundry Hamper,$493.34 ,5
+Pre-Owned,Advanced gaming headset,200694,500018,300779,Gaming Headset,$642.31 ,14
+Used - Good,Heavy-duty pressure washer,200114,500182,300780,Pressure Washer,"$1,074.25 ",5
+New,Comfortable armchair,200096,500180,300781,Armchair,"$2,218.25 ",18
+Used - Very Good,Sophisticated home decor set,200690,500271,300782,Home Decor Set,"$1,380.32 ",4
+Pre-Owned,Portable air compressor,200625,500157,300783,Air Compressor,$954.68 ,18
+Used - Acceptable,Premium hot sauce collection,200641,500126,300784,Hot Sauce Collection,$876.78 ,19
+Pre-Owned,Durable bike repair kit,200615,500282,300785,Bike Repair Kit,"$1,193.13 ",15
+Used - Good,Modern digital picture frame,200595,500286,300786,Digital Picture Frame,"$2,048.19 ",11
+Refurbished,Waterproof dry bag,200269,500020,300787,Dry Bag,$716.46 ,17
+New,High-speed travel charger,200459,500147,300788,Travel Charger,"$1,013.60 ",5
+New,Minimalist bedside organizer,200374,500124,300789,Bedside Organizer,"$2,995.29 ",1
+Certified Refurbished,Lightweight portable canopy,200604,500261,300790,Portable Canopy,$80.38 ,9
+New,Adjustable storage shelving,200426,500082,300791,Storage Shelving,$272.18 ,1
+Used - Acceptable,Eco-friendly glass water bottle,200307,500163,300792,Glass Water Bottle,"$2,634.55 ",4
+New,Sophisticated cocktail mixer,200381,500149,300793,Cocktail Mixer,"$2,460.98 ",13
+Refurbished,Compact shoe rack,200278,500077,300794,Shoe Rack,$501.83 ,19
+Used - Very Good,Heavy-duty power washer,200240,500106,300795,Power Washer,"$1,633.22 ",20
+Used - Good,Durable garden kneeler,200576,500024,300796,Garden Kneeler,"$1,438.48 ",17
+Used - Like New,Stylish winter coat,200444,500045,300797,Winter Coat,$133.99 ,16
+Used - Like New,High-quality leather wallet,200646,500274,300798,Leather Wallet,"$2,734.95 ",6
+Used - Very Good,Durable hiking backpack,200054,500286,300799,Hiking Backpack,$834.45 ,19
+Certified Refurbished,Noise-cancelling headphones,200225,500043,300800,Noise-Cancelling Headphones,"$2,001.14 ",13
+Used - Like New,Soft cotton T-shirt,200147,500161,300801,Cotton T-Shirt,$310.39 ,6
+Used - Acceptable,Sleek stainless steel water bottle,200289,500261,300802,Stainless Steel Water Bottle,"$1,410.00 ",10
+Certified Refurbished,Compact Bluetooth speaker,200041,500148,300803,Bluetooth Speaker,$441.19 ,7
+Used - Acceptable,Lightweight travel suitcase,200240,500086,300804,Travel Suitcase,"$1,777.58 ",10
+Open Box,Premium organic coffee beans,200084,500150,300805,Organic Coffee Beans,"$1,582.40 ",16
+Certified Refurbished,Comfortable memory foam pillow,200692,500223,300806,Memory Foam Pillow,$149.07 ,8
+Used - Good,Stylish wooden sunglasses,200614,500112,300807,Wooden Sunglasses,$807.65 ,10
+Refurbished,Portable power bank,200442,500094,300808,Portable Power Bank,"$1,787.46 ",8
+Used - Very Good,Ultra-soft bath towel,200765,500246,300809,Bath Towel,"$2,715.67 ",5
+Used - Very Good,Elegant ceramic vase,200551,500036,300810,Ceramic Vase,"$1,906.09 ",10
+Used - Very Good,Adjustable laptop stand,200164,500180,300811,Laptop Stand,"$2,158.72 ",17
+Used - Very Good,Versatile chef’s knife,200193,500244,300812,Chef’s Knife,"$2,875.75 ",13
+Open Box,Compact digital camera,200426,500185,300813,Digital Camera,"$2,093.75 ",4
+Used - Very Good,Durable stainless steel frying pan,200760,500068,300814,Stainless Steel Frying Pan,$300.56 ,4
+New,Eco-friendly bamboo toothbrush,200044,500118,300815,Bamboo Toothbrush,$44.36 ,16
+Used - Acceptable,High-performance gaming mouse,200207,500120,300816,Gaming Mouse,"$1,800.56 ",17
+Certified Refurbished,Ergonomic office chair,200375,500243,300817,Office Chair,$392.62 ,20
+New,Luxurious silk bedsheets,200133,500158,300818,Silk Bedsheets,"$1,882.65 ",13
+Open Box,Heavy-duty toolbox,200473,500268,300819,Toolbox,"$2,808.74 ",4
+Refurbished,Rechargeable LED flashlight,200720,500142,300820,LED Flashlight,$252.40 ,9
+Used - Very Good,Modern minimalist watch,200462,500047,300821,Minimalist Watch,"$1,129.08 ",8
+Open Box,Wireless charging pad,200746,500288,300822,Wireless Charging Pad,$446.60 ,2
+Used - Like New,Durable yoga mat,200585,500279,300823,Yoga Mat,"$1,608.85 ",15
+Refurbished,Trendy canvas tote bag,200426,500205,300824,Canvas Tote Bag,"$2,405.15 ",9
+Used - Very Good,Waterproof fitness tracker,200185,500176,300825,Fitness Tracker,"$1,809.11 ",5
+Open Box,High-speed external hard drive,200584,500106,300826,External Hard Drive,"$1,200.62 ",20
+Used - Acceptable,Elegant wine decanter,200545,500034,300827,Wine Decanter,"$1,010.19 ",1
+Certified Refurbished,Advanced electric toothbrush,200343,500145,300828,Electric Toothbrush,$200.88 ,2
+Used - Acceptable,Energy-efficient LED bulb,200660,500155,300829,LED Bulb,$822.67 ,6
+Pre-Owned,Double-walled coffee mug,200468,500019,300830,Coffee Mug,$403.04 ,18
+Refurbished,Versatile air fryer,200142,500180,300831,Air Fryer,$717.51 ,10
+Pre-Owned,Adjustable dumbbells set,200284,500048,300832,Dumbbells,$411.42 ,16
+Used - Like New,Classic analog wristwatch,200579,500161,300833,Analog Watch,"$1,271.72 ",12
+New,Multi-functional survival knife,200103,500175,300834,Survival Knife,$997.36 ,3
+Used - Acceptable,Convenient portable grill,200041,500114,300835,Portable Grill,"$1,458.07 ",17
+New,Efficient vacuum cleaner,200033,500177,300836,Vacuum Cleaner,"$2,150.17 ",17
+Used - Like New,Compact first aid kit,200442,500232,300837,First Aid Kit,"$2,305.16 ",7
+Used - Acceptable,High-definition action camera,200156,500005,300838,Action Camera,"$1,169.69 ",13
+Used - Acceptable,Comfortable running shoes,200764,500095,300839,Running Shoes,$887.80 ,15
+Used - Acceptable,Foldable camping chair,200355,500206,300840,Camping Chair,"$1,060.96 ",7
+Used - Good,Noise-isolating earbuds,200659,500245,300841,Noise-Isolating Earbuds,$723.39 ,8
+Used - Acceptable,Advanced smartwatch,200783,500190,300842,Smartwatch,"$1,396.69 ",9
+Refurbished,Stylish leather journal,200758,500109,300843,Leather Journal,"$1,041.47 ",10
+Used - Very Good,Durable travel mug,200383,500182,300844,Travel Mug,"$2,257.92 ",16
+Certified Refurbished,Soft plush throw blanket,200738,500187,300845,Plush Throw Blanket,"$1,095.93 ",17
+Used - Like New,Elegant crystal chandelier,200736,500191,300846,Crystal Chandelier,"$2,842.19 ",2
+Open Box,Portable car jump starter,200670,500226,300847,Car Jump Starter,"$2,156.82 ",17
+Pre-Owned,Heavy-duty garden hose,200348,500176,300848,Garden Hose,"$1,098.26 ",13
+Pre-Owned,Adjustable desk lamp,200321,500201,300849,Desk Lamp,"$2,784.58 ",9
+Used - Like New,Sophisticated perfume set,200212,500293,300850,Perfume Set,"$1,585.02 ",11
+Used - Very Good,Waterproof phone case,200770,500080,300851,Phone Case,"$2,485.29 ",16
+New,Ergonomic bike seat,200279,500106,300852,Bike Seat,$396.87 ,15
+Used - Very Good,Minimalist wall clock,200076,500032,300853,Wall Clock,$855.36 ,8
+New,Anti-theft laptop backpack,200672,500222,300854,Laptop Backpack,"$1,540.52 ",8
+Used - Very Good,Precision kitchen scale,200694,500086,300855,Kitchen Scale,"$1,508.08 ",13
+New,Premium wireless earbuds,200063,500212,300856,Wireless Earbuds,"$2,115.30 ",4
+Certified Refurbished,High-speed blender,200328,500037,300857,Blender,"$2,062.21 ",15
+Used - Good,Versatile toolset,200413,500277,300858,Toolset,"$1,781.33 ",9
+Used - Acceptable,Multi-purpose folding table,200202,500122,300859,Folding Table,"$2,957.66 ",9
+New,Adjustable standing desk,200200,500030,300860,Standing Desk,"$1,126.31 ",6
+Open Box,Compact sewing machine,200521,500205,300861,Sewing Machine,"$2,468.89 ",10
+Used - Acceptable,Advanced hair straightener,200660,500103,300862,Hair Straightener,"$1,652.84 ",16
+New,Multi-functional printer,200598,500247,300863,Printer,"$2,940.10 ",5
+Used - Good,Rechargeable hand warmer,200791,500229,300864,Hand Warmer,$614.71 ,3
+Certified Refurbished,Collapsible pet carrier,200592,500277,300865,Pet Carrier,"$2,950.87 ",1
+Refurbished,Digital kitchen timer,200376,500030,300866,Kitchen Timer,"$1,390.04 ",4
+Used - Like New,Stainless steel kitchen tongs,200172,500053,300867,Kitchen Tongs,$907.03 ,15
+Used - Like New,Lightweight sleeping bag,200352,500210,300868,Sleeping Bag,"$1,122.15 ",15
+New,Premium cast iron skillet,200541,500132,300869,Cast Iron Skillet,"$2,056.61 ",14
+Used - Very Good,Durable cargo pants,200673,500052,300870,Cargo Pants,"$1,316.50 ",11
+Used - Good,Luxurious bathrobe,200794,500134,300871,Bathrobe,"$1,656.89 ",20
+Used - Acceptable,Travel-sized toiletries kit,200041,500089,300872,Toiletries Kit,"$2,805.36 ",20
+Used - Like New,Heavy-duty bike lock,200748,500288,300873,Bike Lock,"$2,494.23 ",17
+Refurbished,Portable camping stove,200359,500170,300874,Camping Stove,"$1,350.40 ",1
+Pre-Owned,Advanced car vacuum cleaner,200211,500015,300875,Car Vacuum,$273.23 ,19
+Used - Acceptable,Compact coffee grinder,200011,500204,300876,Coffee Grinder,"$2,179.96 ",7
+Used - Good,Elegant tea set,200743,500177,300877,Tea Set,"$2,156.39 ",18
+Certified Refurbished,Modern smartphone stand,200210,500094,300878,Smartphone Stand,$270.11 ,20
+Certified Refurbished,Reusable food storage bags,200715,500040,300879,Food Storage Bags,"$1,139.27 ",10
+Used - Good,Premium quality umbrella,200652,500043,300880,Umbrella,$324.66 ,4
+Pre-Owned,Ultra-light hiking tent,200531,500195,300881,Hiking Tent,"$1,870.02 ",15
+Used - Acceptable,Stylish beach hat,200058,500008,300882,Beach Hat,"$2,987.10 ",6
+Certified Refurbished,Durable work gloves,200660,500292,300883,Work Gloves,"$2,674.04 ",15
+Used - Very Good,Advanced video doorbell,200552,500168,300884,Video Doorbell,"$1,981.08 ",15
+Used - Good,Space-saving shoe organizer,200765,500225,300885,Shoe Organizer,"$2,928.22 ",4
+New,Portable electric kettle,200250,500043,300886,Electric Kettle,"$2,675.14 ",5
+Used - Acceptable,Soft sherpa fleece blanket,200651,500222,300887,Sherpa Fleece Blanket,"$2,801.67 ",12
+Used - Like New,Sophisticated whiskey glasses,200703,500275,300888,Whiskey Glasses,"$1,326.74 ",11
+New,Eco-friendly reusable straws,200463,500044,300889,Reusable Straws,$544.83 ,9
+New,Lightweight portable hammock,200263,500090,300890,Portable Hammock,"$2,983.22 ",6
+Pre-Owned,Minimalist desk organizer,200419,500022,300891,Desk Organizer,"$1,357.26 ",19
+Open Box,Advanced robotic vacuum,200322,500165,300892,Robotic Vacuum,$351.59 ,17
+Used - Good,Sturdy wall-mounted shelf,200748,500216,300893,Wall Shelf,"$2,546.90 ",12
+Pre-Owned,Portable projector,200739,500298,300894,Portable Projector,"$1,519.87 ",5
+Open Box,Soft travel neck pillow,200414,500114,300895,Travel Neck Pillow,$224.56 ,19
+Used - Good,Foldable picnic blanket,200294,500075,300896,Picnic Blanket,"$1,980.89 ",15
+Used - Acceptable,Digital meat thermometer,200240,500156,300897,Meat Thermometer,"$2,760.01 ",5
+Pre-Owned,Rechargeable book light,200483,500021,300898,Book Light,"$2,347.79 ",17
+New,Elegant leather handbag,200385,500222,300899,Leather Handbag,$13.28 ,13
