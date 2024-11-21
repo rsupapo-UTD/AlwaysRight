@@ -26,6 +26,6 @@ Payment ID
 	633 - 666k
 	
 	Third Party
-	766 - 799k
+	666 - 799k
 
 *** Payment ID’s can’t be duplicates. Disjoint entities. ***
