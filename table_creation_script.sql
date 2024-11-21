@@ -6,6 +6,14 @@ CREATE TABLE Account (
     PRIMARY KEY (AccountID) 
 );
 
+CREATE TABLE ACCOUNT_ADDRESS (
+    AccountAddress VARCHAR(80),
+    FK_Account_ID INT,
+    PRIMARY KEY (AccountAddress , FK_Account_ID),
+    FOREIGN KEY (FK_Account_ID)
+        REFERENCES Account (AccountID)
+);
+
 CREATE TABLE PaymentMethod (
     FK_AccountID INT NOT NULL,
     PaymentID INT NOT NULL,
