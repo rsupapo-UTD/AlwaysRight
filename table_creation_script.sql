@@ -18,7 +18,7 @@ CREATE TABLE ShoppingCart (
     AccountID INT,
     AmountOfItems INT,
     OrderID INT NOT NULL,
-    TotalAmount DECIMAL,
+    TotalAmount DECIMAL(30,2),
     PRIMARY KEY (OrderID)
 );
     
@@ -111,7 +111,7 @@ CREATE TABLE Debit_Credit (
 
 CREATE TABLE Discounts (
     DiscountCode VARCHAR(12),
-    FK_ProductID INT NOT NULL,
+    FK_ProductID BIGINT NOT NULL,
     PRIMARY KEY (FK_ProductID),
     FOREIGN KEY (FK_ProductID)
         REFERENCES ShoppingCart (OrderID)
@@ -119,7 +119,7 @@ CREATE TABLE Discounts (
 
 CREATE TABLE Orders (
     OrderDate VARCHAR(10),
-    FK_OrderID INT NOT NULL,
+    FK_OrderID BIGINT NOT NULL,
     OrderStatus VARCHAR(50),
     PRIMARY KEY (FK_OrderID),
     FOREIGN KEY (FK_OrderID)
