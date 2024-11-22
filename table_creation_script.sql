@@ -19,7 +19,9 @@ CREATE TABLE ShoppingCart (
     AmountOfItems INT,
     OrderID INT NOT NULL,
     TotalAmount DECIMAL(30,2),
-    PRIMARY KEY (OrderID)
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (AccountID)
+        REFERENCES Account (AccountID)
 );
     
 CREATE TABLE Supplier (
@@ -32,15 +34,12 @@ CREATE TABLE Supplier (
 CREATE TABLE Product (
     `Condition` VARCHAR(30), -- KEYWORD
     `Description` VARCHAR(200), -- KEYWORD
-    FK_OrderID INT NOT NULL,
     FK_SupplierID INT NOT NULL,
     ProductID INT NOT NULL,
     ProductName VARCHAR(80),
     Price DECIMAL(30,2),
     Quantity INT,
     PRIMARY KEY (ProductID),
-    FOREIGN KEY (FK_OrderID)
-        REFERENCES ShoppingCart (OrderID),
     FOREIGN KEY (FK_SupplierID)
         REFERENCES Supplier (SupplierID)
 );
@@ -90,7 +89,7 @@ CREATE TABLE Customer_Business (
 
 CREATE TABLE Customer_Person (
     AccountID INT NOT NULL,
-    DateOfBirth VARCHAR(10),
+    DateOfBirth DATE,
     FirstName VARCHAR(15),
     LastName VARCHAR(15),
     PRIMARY KEY (AccountID),
@@ -102,7 +101,7 @@ CREATE TABLE Debit_Credit (
     CardNumber BIGINT,
     CardholderName VARCHAR(30),
     CVV INT,
-    ExpirationDate VARCHAR(10),
+    ExpirationDate DATE,
     FK_Payment_ID INT NOT NULL,
     PRIMARY KEY (FK_Payment_ID),
     FOREIGN KEY (FK_Payment_ID)
@@ -119,7 +118,7 @@ CREATE TABLE Discounts (
 
 CREATE TABLE Orders (
     FK_OrderID INT NOT NULL,
-    OrderDate VARCHAR(10),
+    OrderDate DATE,
     OrderStatus VARCHAR(50),
     PRIMARY KEY (FK_OrderID),
     FOREIGN KEY (FK_OrderID)
@@ -155,7 +154,7 @@ CREATE TABLE Seller_Business (
 
 CREATE TABLE Seller_Person (
     AccountID INT NOT NULL,
-    DateOfBirth VARCHAR(10),
+    DateOfBirth DATE,
     FirstName VARCHAR(15),
     LastName VARCHAR(15),
     PRIMARY KEY (AccountID),

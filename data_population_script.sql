@@ -1,3 +1,6 @@
+SET sql_mode = '';
+
+-- 1. 
 LOAD DATA LOCAL INFILE './Mock-Datasets/Account.csv' 
 INTO TABLE Account
 FIELDS TERMINATED BY ',' 
@@ -12,43 +15,16 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE './Mock-Datasets/ShoppingCart.csv' 
-INTO TABLE ShoppingCart
+LOAD DATA LOCAL INFILE './Mock-Datasets/Supplier.csv' 
+INTO TABLE Supplier
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE './Mock-Datasets/Orders.csv' 
-INTO TABLE Orders
-FIELDS TERMINATED BY ',' 
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
-
-LOAD DATA LOCAL INFILE './Mock-Datasets/Product.csv' 
-INTO TABLE Product
-FIELDS TERMINATED BY ',' 
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
-
-LOAD DATA LOCAL INFILE './Mock-Datasets/PaymentMethod.csv' 
-INTO TABLE PaymentMethod
-FIELDS TERMINATED BY ',' 
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
-
-LOAD DATA LOCAL INFILE './Mock-Datasets/Review.csv' 
-INTO TABLE Review
-FIELDS TERMINATED BY ',' 
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
-
-LOAD DATA LOCAL INFILE './Mock-Datasets/CATEGORIZES.csv' 
-INTO TABLE CATEGORIZES
+-- 2. 
+LOAD DATA LOCAL INFILE './Mock-Datasets/Customer.csv' 
+INTO TABLE Customer
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -59,17 +35,43 @@ INTO TABLE Customer_Person
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
+IGNORE 1 LINES
+(AccountID, @DateOfBirth, FirstName, LastName)
+SET DateOfBirth = STR_TO_DATE(@DateOfBirth, '%m/%d/%Y');
 
-LOAD DATA LOCAL INFILE './Mock-Datasets/Supplier.csv' 
-INTO TABLE Supplier
+LOAD DATA LOCAL INFILE './Mock-Datasets/Customer_Business.csv' 
+INTO TABLE Customer_Business
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE './Mock-Datasets/Customer.csv' 
-INTO TABLE Customer
+LOAD DATA LOCAL INFILE './Mock-Datasets/Seller.csv' 
+INTO TABLE Seller
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE './Mock-Datasets/Seller_Person.csv' 
+INTO TABLE Seller_Person
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(AccountID, @DateOfBirth, FirstName, LastName)
+SET DateOfBirth = STR_TO_DATE(@DateOfBirth, '%m/%d/%Y');
+
+LOAD DATA LOCAL INFILE './Mock-Datasets/Seller_Business.csv' 
+INTO TABLE Seller_Business
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+-- 3. 
+LOAD DATA LOCAL INFILE './Mock-Datasets/PaymentMethod.csv' 
+INTO TABLE PaymentMethod
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -82,6 +84,13 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
+LOAD DATA LOCAL INFILE './Mock-Datasets/WireTransfer.csv' 
+INTO TABLE WireTransfer
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
 LOAD DATA LOCAL INFILE './Mock-Datasets/ThirdParty.csv' 
 INTO TABLE ThirdParty
 FIELDS TERMINATED BY ',' 
@@ -89,37 +98,40 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE './Mock-Datasets/Seller_Business.csv' 
-INTO TABLE Seller_Business
+-- 4. 
+LOAD DATA LOCAL INFILE './Mock-Datasets/ShoppingCart.csv' 
+INTO TABLE ShoppingCart
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE './Mock-Datasets/Seller_Person.csv' 
-INTO TABLE Seller_Person
+LOAD DATA LOCAL INFILE './Mock-Datasets/Orders.csv' 
+INTO TABLE Orders
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(FK_OrderID, @OrderDate, OrderStatus)
+SET OrderDate = STR_TO_DATE(@OrderDate, '%m/%d/%Y');
+
+LOAD DATA LOCAL INFILE './Mock-Datasets/Product.csv' 
+INTO TABLE Product
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE './Mock-Datasets/Customer_Business.csv' 
-INTO TABLE Customer_Business
+LOAD DATA LOCAL INFILE './Mock-Datasets/Review.csv' 
+INTO TABLE Review
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-
-LOAD DATA LOCAL INFILE './Mock-Datasets/Discounts.csv' 
-INTO TABLE Discounts
-FIELDS TERMINATED BY ',' 
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
-
-LOAD DATA LOCAL INFILE './Mock-Datasets/WireTransfer.csv' 
-INTO TABLE WireTransfer
+-- 5. 
+LOAD DATA LOCAL INFILE './Mock-Datasets/CATEGORIZES.csv' 
+INTO TABLE CATEGORIZES
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -132,8 +144,8 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE './Mock-Datasets/Seller.csv' 
-INTO TABLE Seller
+LOAD DATA LOCAL INFILE './Mock-Datasets/Discounts.csv' 
+INTO TABLE Discounts
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
