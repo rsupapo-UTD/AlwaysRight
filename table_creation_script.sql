@@ -34,9 +34,9 @@ CREATE TABLE Product (
     `Description` VARCHAR(200), -- KEYWORD
     FK_OrderID INT NOT NULL,
     FK_SupplierID INT NOT NULL,
-    ProductID INT,
+    ProductID INT NOT NULL,
     ProductName VARCHAR(80),
-    Price DECIMAL,
+    Price DECIMAL(30,2),
     Quantity INT,
     PRIMARY KEY (ProductID),
     FOREIGN KEY (FK_OrderID)
@@ -82,7 +82,7 @@ CREATE TABLE Customer_Business (
     AccountID INT NOT NULL,
     BusinessName VARCHAR(50),
     ContactPerson VARCHAR(30),
-    TaxID INT,
+    TaxID VARCHAR(20),
     PRIMARY KEY (AccountID),
     FOREIGN KEY (AccountID)
         REFERENCES Account (AccountID)
@@ -99,10 +99,10 @@ CREATE TABLE Customer_Person (
 );
 
 CREATE TABLE Debit_Credit (
-    CardNumber INT,
+    CardNumber BIGINT,
     CardholderName VARCHAR(30),
     CVV INT,
-    ExpirationDate VARCHAR(4),
+    ExpirationDate VARCHAR(10),
     FK_Payment_ID INT NOT NULL,
     PRIMARY KEY (FK_Payment_ID),
     FOREIGN KEY (FK_Payment_ID)
@@ -110,16 +110,16 @@ CREATE TABLE Debit_Credit (
 );
 
 CREATE TABLE Discounts (
-    DiscountCode VARCHAR(12),
+    DiscountCode VARCHAR(40),
     FK_ProductID INT NOT NULL,
     PRIMARY KEY (FK_ProductID),
     FOREIGN KEY (FK_ProductID)
-        REFERENCES ShoppingCart (OrderID)
+        REFERENCES Product (ProductID)
 );
 
 CREATE TABLE Orders (
-    OrderDate VARCHAR(10),
     FK_OrderID INT NOT NULL,
+    OrderDate VARCHAR(10),
     OrderStatus VARCHAR(50),
     PRIMARY KEY (FK_OrderID),
     FOREIGN KEY (FK_OrderID)
@@ -127,8 +127,8 @@ CREATE TABLE Orders (
 );
 
 CREATE TABLE Review (
+    ReviewID INT NOT NULL,
     FK_ProductID INT NOT NULL,
-    ReviewID INT,
     ReviewStar DECIMAL,
     PRIMARY KEY (ReviewID),
     FOREIGN KEY (FK_ProductID)
@@ -147,7 +147,7 @@ CREATE TABLE Seller_Business (
     AccountID INT NOT NULL,
     BusinessName VARCHAR(50),
     ContactPerson VARCHAR(30),
-    TaxID INT,
+    TaxID VARCHAR(20),
     PRIMARY KEY (AccountID),
     FOREIGN KEY (AccountID)
         REFERENCES Account (AccountID)
@@ -173,7 +173,7 @@ CREATE TABLE ThirdParty (
 );
 
 CREATE TABLE WireTransfer (
-    AccountNumber INT,
+    AccountNumber BIGINT,
     RoutingNumber INT,
     FK_PaymentID INT NOT NULL,
     PRIMARY KEY (FK_PaymentID),
