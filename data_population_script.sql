@@ -98,23 +98,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
--- 4. 
-LOAD DATA LOCAL INFILE './Mock-Datasets/ShoppingCart.csv' 
-INTO TABLE ShoppingCart
-FIELDS TERMINATED BY ',' 
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
-
-LOAD DATA LOCAL INFILE './Mock-Datasets/Orders.csv' 
-INTO TABLE Orders
-FIELDS TERMINATED BY ',' 
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES
-(FK_OrderID, @OrderDate, OrderStatus)
-SET OrderDate = STR_TO_DATE(@OrderDate, '%m/%d/%Y');
-
+-- 4. 先加载 Product
 LOAD DATA LOCAL INFILE './Mock-Datasets/Product.csv' 
 INTO TABLE Product
 FIELDS TERMINATED BY ',' 
@@ -122,12 +106,17 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
+-- 然后立即加载 Review
 LOAD DATA LOCAL INFILE './Mock-Datasets/Review.csv' 
 INTO TABLE Review
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
+IGNORE 1 LINES
+(@FK_ProductID, @ReviewID, @ReviewStar)
+SET ReviewID = @ReviewID,
+    FK_ProductID = @FK_ProductID,
+    ReviewStar = @ReviewStar;
 
 -- 5. 
 LOAD DATA LOCAL INFILE './Mock-Datasets/CATEGORIZES.csv' 
