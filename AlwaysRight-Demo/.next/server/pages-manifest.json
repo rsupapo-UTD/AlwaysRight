@@ -1,10 +1,12 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
+  "/orders": "pages/orders.js",
   "/dashboard": "pages/dashboard.js",
+  "/analytics": "pages/analytics.js",
+  "/": "pages/index.js",
+  "/api/order-status": "pages/api/order-status.js",
   "/api/statistics": "pages/api/statistics.js",
-  "/api/sales": "pages/api/sales.js",
   "/api/top-products": "pages/api/top-products.js",
-  "/api/order-status": "pages/api/order-status.js"
+  "/api/sales": "pages/api/sales.js"
 }

@@ -5,14 +5,14 @@
 (globalThis.TURBOPACK_CHUNK_LISTS = globalThis.TURBOPACK_CHUNK_LISTS || []).push({
   "path": "static/chunks/src_pages_profile_5771e1._.js",
   "chunks": [
+    "static/chunks/[root of the server]__da4715._.js",
     "static/chunks/node_modules_next_807290._.js",
     "static/chunks/node_modules_react_1cad9b._.js",
     "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
     "static/chunks/node_modules_react-dom_f14d04._.js",
-    "static/chunks/node_modules_@mui_material_7ecfe8._.js",
-    "static/chunks/node_modules_@mui_system_esm_29c08d._.js",
-    "static/chunks/node_modules_cf27a8._.js",
-    "static/chunks/[root of the server]__123907._.js"
+    "static/chunks/node_modules_@mui_material_f154e1._.js",
+    "static/chunks/node_modules_@mui_system_esm_c143f1._.js",
+    "static/chunks/node_modules_640a4f._.js"
   ],
   "source": "entry"
 });

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file:///Users/jun/Desktop/AlwaysRight-Demo/src/pages/_app.tsx"],"sourcesContent":["import { ThemeProvider } from '@mui/material/styles';\nimport CssBaseline from '@mui/material/CssBaseline';\nimport { theme } from '../theme';\n\nfunction MyApp({ Component, pageProps }) {\n  return (\n    <ThemeProvider theme={theme}>\n      <CssBaseline />\n      <Component {...pageProps} />\n    </ThemeProvider>\n  );\n}\n\nexport default MyApp; "],"names":[],"mappings":";;;;AAEA;AAFA;AACA;;;;;AAGA,SAAS,MAAM,EAAE,SAAS,EAAE,SAAS,EAAE;IACrC,qBACE,uIAAC,iMAAA,CAAA,gBAAa;QAAC,OAAO,8GAAA,CAAA,QAAK;;0BACzB,uIAAC,wJAAA,CAAA,UAAW;;;;;0BACZ,uIAAC;gBAAW,GAAG,SAAS;;;;;;;;;;;;AAG9B;uCAEe"}},
+    {"offset": {"line": 74, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

@@ -12,19 +12,27 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Divider
+  Divider,
+  Badge
+  
 } from '@mui/material';
 import {
   Menu as MenuIcon,
   Dashboard,
-  Analytics,
+  LocalOffer,
   People,
   Settings,
-  Help
+  Help,
+  Inventory,
+  ShoppingCart
 } from '@mui/icons-material';
 import NavMenu from './NavMenu';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useRouter } from 'next/router';
+import CartDrawer from '../cart/CartDrawer';
+import { useCart } from '../../context/CartContext';
+import { People as PeopleIcon } from '@mui/icons-material';
+
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -32,18 +40,22 @@ interface DashboardLayoutProps {
 
 const menuItems = [
   { text: 'Dashboard', icon: <Dashboard />, path: '/dashboard' },
-  { text: 'Analytics', icon: <Analytics />, path: '/analytics' },
-  { text: 'Customers', icon: <People />, path: '/customers' },
+  { text: 'Products', icon: <Inventory />, path: '/products' },
+  { text: 'Orders', icon: <ShoppingCart />, path: '/orders' },
+  { text: 'Users', icon: <PeopleIcon />, path: '/users' },
+  { text: 'Discounts', icon: <LocalOffer />, path: '/analytics' },
   { text: 'Settings', icon: <Settings />, path: '/settings' },
   { text: 'Help', icon: <Help />, path: '/help' }
 ] as const;  // 添加 as const 使类型更严格
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
   const router = useRouter();
   // 移除 Auth0 相关代码
   const isAuthenticated = true; // 临时设置
   const isLoading = false; // 临时设置
+  const { items } = useCart();  // 获取购物车中的商品
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -86,7 +98,14 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
               AlwaysRight Analytics
             </Typography>
           </Box>
-          <NavMenu />
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <IconButton color="inherit" onClick={() => setCartOpen(true)}>
+              <Badge badgeContent={items.length} color="error">
+                <ShoppingCart />
+              </Badge>
+            </IconButton>
+            <NavMenu />
+          </Box>
         </Toolbar>
       </AppBar>
 
@@ -122,6 +141,12 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
           ))}
         </List>
       </Drawer>
+
+      <CartDrawer
+        open={cartOpen}
+        onClose={() => setCartOpen(false)}
+        items={[]} // 这里需要添加购物车状态管理
+      />
 
       <Container maxWidth="lg" sx={{ py: 4, flex: 1 }}>
         {children}

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import {
   Box,
+  IconButton,
   Avatar,
   Menu,
   MenuItem,
   ListItemIcon,
-  Divider,
-  IconButton
+  Divider
 } from '@mui/material';
 import {
   Person,
@@ -19,11 +19,8 @@ const NavMenu = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const router = useRouter();
   
-  // 模拟用户数据
-  const mockUser = {
-    name: 'Test User',
-    picture: 'https://via.placeholder.com/40'
-  };
+  // 从 localStorage 获取用户信息
+  const user = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('user') || '{}') : {};
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -34,8 +31,11 @@ const NavMenu = () => {
   };
 
   const handleLogout = () => {
-    // 临时禁用登出功能
-    handleClose();
+    // 清除本地存储的用户信息
+    localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('user');
+    // 重定向到登录页面
+    router.push('/login');
   };
 
   return (
@@ -45,8 +45,8 @@ const NavMenu = () => {
         sx={{ padding: 0, ml: 2 }}
       >
         <Avatar
-          alt={mockUser.name}
-          src={mockUser.picture}
+          alt={user.name || 'User'}
+          src={user.picture || 'https://via.placeholder.com/40'}
           sx={{ width: 40, height: 40 }}
         />
       </IconButton>

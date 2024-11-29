@@ -1,0 +1,3 @@
+{
+  "/api/payments/process": "pages/api/payments/process.js"
+}

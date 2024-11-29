@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 55, "column": 0}, "map": {"version":3,"sources":["file:///Users/jun/Desktop/AlwaysRight-Demo/src/pages/_app.tsx"],"sourcesContent":["import { ThemeProvider } from '@mui/material/styles';\nimport CssBaseline from '@mui/material/CssBaseline';\nimport { createTheme } from '@mui/material/styles';\n\nconst theme = createTheme({\n  palette: {\n    primary: {\n      main: '#2563eb',\n    },\n    secondary: {\n      main: '#10b981',\n    },\n  },\n});\n\nfunction MyApp({ Component, pageProps }) {\n  return (\n    <ThemeProvider theme={theme}>\n      <CssBaseline />\n      <Component {...pageProps} />\n    </ThemeProvider>\n  );\n}\n\nexport default MyApp; "],"names":[],"mappings":";;;;AAEA;AAFA;AACA;;;;;AAGA,MAAM,QAAQ,CAAA,GAAA,6MAAA,CAAA,cAAW,AAAD,EAAE;IACxB,SAAS;QACP,SAAS;YACP,MAAM;QACR;QACA,WAAW;YACT,MAAM;QACR;IACF;AACF;AAEA,SAAS,MAAM,EAAE,SAAS,EAAE,SAAS,EAAE;IACrC,qBACE,uIAAC,iMAAA,CAAA,gBAAa;QAAC,OAAO;;0BACpB,uIAAC,wJAAA,CAAA,UAAW;;;;;0BACZ,uIAAC;gBAAW,GAAG,SAAS;;;;;;;;;;;;AAG9B;uCAEe"}},
+    {"offset": {"line": 100, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
