@@ -21,7 +21,14 @@ interface Message {
 }
 
 export default function Help() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: 'welcome',
+      content: 'Hello! How can I help you today?',
+      sender: 'assistant',
+      timestamp: new Date()
+    }
+  ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
@@ -57,11 +64,19 @@ export default function Help() {
         body: JSON.stringify({ message: input }),
       });
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
+      
+      if (data.error) {
+        throw new Error(data.error);
+      }
 
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: data.response,
+        content: data.reply || 'Sorry, I could not process your request.',
         sender: 'assistant',
         timestamp: new Date()
       };
@@ -69,6 +84,13 @@ export default function Help() {
       setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Error sending message:', error);
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        content: 'Sorry, there was an error processing your request. Please try again.',
+        sender: 'assistant',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
     }
@@ -152,6 +174,11 @@ export default function Help() {
           </Box>
         </Paper>
       </Box>
+      {isLoading && (
+        <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
+          <CircularProgress size={24} />
+        </Box>
+      )}
     </DashboardLayout>
   );
 } 
