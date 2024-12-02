@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, Box, Skeleton } from '@mui/material';
+import { Grid, Box, Skeleton, Container, Paper, Typography, CircularProgress } from '@mui/material';
 import DashboardLayout from '../components/layouts/DashboardLayout';
 import StatCard from '../components/dashboard/StatCard';
 import SalesChart from '../components/dashboard/SalesChart';
@@ -9,132 +9,181 @@ import { fetchSalesData, fetchStatistics, fetchTopProducts, fetchOrderStatus } f
 import { ShoppingCart, AttachMoney, People, Inventory } from '@mui/icons-material';
 import { SalesData, Statistics, TopProduct, OrderStatus } from '../types/dashboard';
 import { mockSalesData, mockStatistics, mockTopProducts, mockOrderStatus } from '../utils/mockData';
+import TopProductsTable from '@/components/dashboard/TopProductsTable';
+
+// 定义类型
+interface Order {
+  id: string;
+  status: 'pending' | 'processing' | 'completed';
+  total: number;
+  orderDate: string;
+}
+
+interface OrderStatusData {
+  OrderStatus: string;
+  count: number;
+}
+
+interface DashboardStats {
+  totalSales: number;
+  totalOrders: number;
+  totalCustomers: number;
+  totalProducts: number;
+}
 
 export default function Dashboard() {
     const [isLoading, setIsLoading] = useState(true);
     const [salesData, setSalesData] = useState<SalesData>(mockSalesData);
-    const [stats, setStats] = useState<Statistics>(mockStatistics); // 提供初始值
+    const [stats, setStats] = useState<DashboardStats>({
+        totalSales: 0,
+        totalOrders: 0,
+        totalCustomers: 0,
+        totalProducts: 0
+    });
     const [topProducts, setTopProducts] = useState<TopProduct[]>(mockTopProducts);
-    const [orderStatus, setOrderStatus] = useState<OrderStatus[]>(mockOrderStatus);
+    const [orderStatusData, setOrderStatusData] = useState<OrderStatusData[]>([]);
+
+    const calculateRealTimeStats = async () => {
+        try {
+            // 获取所有订单
+            const orders: Order[] = JSON.parse(localStorage.getItem('orders') || '[]');
+            
+            // 计算订单状态分布
+            const statusCounts = orders.reduce((acc: { [key: string]: number }, order) => {
+                const status = order.status || 'pending';
+                acc[status] = (acc[status] || 0) + 1;
+                return acc;
+            }, {});
+
+            // 转换为图表需要的格式
+            const chartData = Object.entries(statusCounts).map(([status, count]) => ({
+                OrderStatus: status,
+                count: count
+            }));
+
+            setOrderStatusData(chartData);
+        } catch (error) {
+            console.error('Error loading dashboard data:', error);
+            setSalesData(mockSalesData);
+            setStats(mockStatistics);
+            setTopProducts(mockTopProducts);
+            setOrderStatusData([
+                { OrderStatus: 'pending', count: 0 },
+                { OrderStatus: 'processing', count: 0 },
+                { OrderStatus: 'completed', count: 0 }
+            ]);
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     useEffect(() => {
-        const loadData = async () => {
-            setIsLoading(true); // 开始加载
-            try {
-                const [salesRes, statsRes, productsRes, statusRes] = await Promise.all([
-                    fetchSalesData(),
-                    fetchStatistics(),
-                    fetchTopProducts(),
-                    fetchOrderStatus()
-                ]);
-                
-                // 使用新数据更新状态
-                setSalesData(salesRes);
-                setStats(statsRes);
-                setTopProducts(productsRes);
-                setOrderStatus(statusRes);
-            } catch (error) {
-                console.error('Error loading dashboard data:', error);
-            } finally {
-                // 延迟结束加载状态，避免闪烁
-                setTimeout(() => {
-                    setIsLoading(false);
-                }, 500);
-            }
-        };
-
-        loadData();
+        calculateRealTimeStats();
     }, []);
-
-    const renderStatCards = () => (
-        <Grid container spacing={3} sx={{ mb: 3 }}>
-            <Grid item xs={12} sm={6} md={3}>
-                {isLoading ? (
-                    <Skeleton variant="rectangular" height={120} />
-                ) : (
-                    <StatCard 
-                        title="Total Sales" 
-                        value={stats?.totalSales ?? 0}
-                        icon={<AttachMoney />}
-                        color="primary"
-                    />
-                )}
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-                {isLoading ? (
-                    <Skeleton variant="rectangular" height={120} />
-                ) : (
-                    <StatCard 
-                        title="Total Orders" 
-                        value={stats?.totalOrders ?? 0}
-                        icon={<ShoppingCart />}
-                        color="secondary"
-                    />
-                )}
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-                {isLoading ? (
-                    <Skeleton variant="rectangular" height={120} />
-                ) : (
-                    <StatCard 
-                        title="Total Customers" 
-                        value={stats?.totalCustomers ?? 0}
-                        icon={<People />}
-                        color="success"
-                    />
-                )}
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-                {isLoading ? (
-                    <Skeleton variant="rectangular" height={120} />
-                ) : (
-                    <StatCard 
-                        title="Total Products" 
-                        value={stats?.totalProducts ?? 0}
-                        icon={<Inventory />}
-                        color="warning"
-                    />
-                )}
-            </Grid>
-        </Grid>
-    );
-
-    const renderCharts = () => (
-        <Grid container spacing={3}>
-            <Grid item xs={12}>
-                {isLoading ? (
-                    <Skeleton variant="rectangular" height={400} />
-                ) : (
-                    <SalesChart data={salesData} />
-                )}
-            </Grid>
-            <Grid item xs={12} md={6}>
-                {isLoading ? (
-                    <Skeleton variant="rectangular" height={350} />
-                ) : (
-                    <Box sx={{ height: '350px' }}>
-                        <TopProductsChart data={topProducts} />
-                    </Box>
-                )}
-            </Grid>
-            <Grid item xs={12} md={6}>
-                {isLoading ? (
-                    <Skeleton variant="rectangular" height={350} />
-                ) : (
-                    <Box sx={{ height: '350px' }}>
-                        <OrderStatusChart data={orderStatus} />
-                    </Box>
-                )}
-            </Grid>
-        </Grid>
-    );
 
     return (
         <DashboardLayout>
-            <Box sx={{ flexGrow: 1 }}>
-                {renderStatCards()}
-                {renderCharts()}
-            </Box>
+            <Container maxWidth="lg" sx={{ mb: 4 }}>
+                {/* Stats Cards */}
+                <Grid container spacing={3} sx={{ mb: 3 }}>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <StatCard 
+                            title="Total Sales" 
+                            value={stats.totalSales}
+                            icon={<AttachMoney />}
+                            trend={12}
+                            sx={{
+                                background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
+                                color: 'white'
+                            }}
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <StatCard 
+                            title="Total Orders" 
+                            value={stats.totalOrders}
+                            icon={<ShoppingCart />}
+                            trend={8}
+                            sx={{
+                                background: 'linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)',
+                                color: 'white'
+                            }}
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <StatCard 
+                            title="Total Customers" 
+                            value={stats.totalCustomers}
+                            icon={<People />}
+                            trend={15}
+                            sx={{
+                                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                                color: 'white'
+                            }}
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <StatCard 
+                            title="Total Products" 
+                            value={stats.totalProducts}
+                            icon={<Inventory />}
+                            trend={5}
+                            sx={{
+                                background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+                                color: 'white'
+                            }}
+                        />
+                    </Grid>
+                </Grid>
+
+                {/* Charts Row */}
+                <Grid container spacing={3} sx={{ mb: 3 }}>
+                    <Grid item xs={12} md={8}>
+                        <Paper sx={{ p: 3, height: '400px' }}>
+                            <Typography variant="h6" gutterBottom>
+                                Sales Trend
+                            </Typography>
+                            {isLoading ? (
+                                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                                    <CircularProgress />
+                                </Box>
+                            ) : (
+                                <SalesChart data={salesData} />
+                            )}
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <Paper sx={{ p: 3, height: '400px' }}>
+                            <Typography variant="h6" gutterBottom>
+                                Order Status
+                            </Typography>
+                            {isLoading ? (
+                                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                                    <CircularProgress />
+                                </Box>
+                            ) : (
+                                <OrderStatusChart data={orderStatusData} />
+                            )}
+                        </Paper>
+                    </Grid>
+                </Grid>
+
+                {/* Top Products Table */}
+                <Grid container spacing={3}>
+                    <Grid item xs={12}>
+                        <Paper sx={{ p: 3 }}>
+                            <Typography variant="h6" gutterBottom>
+                                Top Products
+                            </Typography>
+                            {isLoading ? (
+                                <Skeleton variant="rectangular" height={200} />
+                            ) : (
+                                <TopProductsTable products={topProducts} />
+                            )}
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Container>
         </DashboardLayout>
     );
 } 

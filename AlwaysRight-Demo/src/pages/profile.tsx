@@ -178,11 +178,63 @@ export default function Profile() {
         {/* 基本信息卡片 */}
         <Paper sx={{ p: 4, mb: 4 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
-            <Avatar
-              src={userData.picture}
-              sx={{ width: 100, height: 100, mr: 3 }}
-            />
-            <Box>
+            <Box sx={{ position: 'relative' }}>
+              <Avatar
+                src={userData.picture}
+                sx={{ 
+                  width: 100, 
+                  height: 100,
+                  cursor: 'pointer'
+                }}
+              />
+              <input
+                accept="image/*"
+                type="file"
+                id="icon-button-file"
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  if (file) {
+                    const reader = new FileReader();
+                    reader.onloadend = () => {
+                      const base64String = reader.result as string;
+                      setUserData(prev => ({
+                        ...prev,
+                        picture: base64String
+                      }));
+                      
+                      // 更新 localStorage
+                      const updatedUser = {
+                        ...JSON.parse(localStorage.getItem('user') || '{}'),
+                        picture: base64String
+                      };
+                      localStorage.setItem('user', JSON.stringify(updatedUser));
+                      setShowSuccess(true);
+                    };
+                    reader.readAsDataURL(file);
+                  }
+                }}
+                style={{ display: 'none' }}
+              />
+              <label htmlFor="icon-button-file">
+                <IconButton
+                  color="primary"
+                  aria-label="upload picture"
+                  component="span"
+                  sx={{
+                    position: 'absolute',
+                    bottom: -10,
+                    right: -10,
+                    backgroundColor: 'background.paper',
+                    '&:hover': {
+                      backgroundColor: 'background.default'
+                    }
+                  }}
+                >
+                  <PhotoCamera />
+                </IconButton>
+              </label>
+            </Box>
+            <Box sx={{ ml: 3 }}>
               <Typography variant="h4" gutterBottom>
                 {isEditing ? 'Edit Profile' : 'Profile'}
               </Typography>

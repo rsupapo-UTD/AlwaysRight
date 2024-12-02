@@ -24,7 +24,8 @@ import {
   Settings,
   Help,
   Inventory,
-  ShoppingCart
+  ShoppingCart,
+  Notifications
 } from '@mui/icons-material';
 import NavMenu from './NavMenu';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -48,6 +49,10 @@ const menuItems = [
   { text: 'Help', icon: <Help />, path: '/help' }
 ] as const;  // 添加 as const 使类型更严格
 
+interface DashboardLayoutProps {
+  children: React.ReactNode;
+}
+
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
@@ -55,7 +60,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   // 移除 Auth0 相关代码
   const isAuthenticated = true; // 临时设置
   const isLoading = false; // 临时设置
-  const { items } = useCart();  // 获取购物车中的商品
+  const { cartItems } = useCart();
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -63,57 +68,13 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
 
   // 移除认证相关的检查
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <AppBar 
-        position="sticky" 
-        color="inherit" 
-        elevation={0}
-        sx={{
-          borderBottom: '1px solid',
-          borderColor: 'divider',
-          backdropFilter: 'blur(6px)',
-          backgroundColor: 'rgba(255, 255, 255, 0.8)'
-        }}
-      >
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <IconButton 
-              edge="start" 
-              onClick={toggleDrawer} 
-              sx={{ mr: 2 }}
-              size="large"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography 
-              variant="h6" 
-              sx={{ 
-                background: 'linear-gradient(45deg, #2563eb, #10b981)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                color: 'transparent',
-                fontWeight: 700
-              }}
-            >
-              AlwaysRight Analytics
-            </Typography>
-          </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <IconButton color="inherit" onClick={() => setCartOpen(true)}>
-              <Badge badgeContent={items.length} color="error">
-                <ShoppingCart />
-              </Badge>
-            </IconButton>
-            <NavMenu />
-          </Box>
-        </Toolbar>
-      </AppBar>
-
+    <Box sx={{ display: 'flex', minHeight: '100vh' }}>
+      {/* Sidebar */}
       <Drawer
-        anchor="left"
-        open={drawerOpen}
-        onClose={toggleDrawer}
+        variant="permanent"
         sx={{
+          width: 240,
+          flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: 240,
             boxSizing: 'border-box',
@@ -142,15 +103,62 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
         </List>
       </Drawer>
 
+      {/* Main content */}
+      <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+        <AppBar 
+          position="fixed" 
+          color="default"
+          elevation={1}
+          sx={{ 
+            ml: '240px', 
+            width: `calc(100% - 240px)`,
+          }}
+        >
+          <Toolbar sx={{ justifyContent: 'flex-end' }}>
+            {/* 右侧图标 */}
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              {/* 购物车图标 */}
+              <IconButton color="inherit" onClick={() => setCartOpen(true)}>
+                <Badge badgeContent={cartItems.length} color="primary">
+                  <ShoppingCart />
+                </Badge>
+              </IconButton>
+
+              {/* 通知图标 */}
+              <IconButton color="inherit">
+                <Badge badgeContent={4} color="error">
+                  <Notifications />
+                </Badge>
+              </IconButton>
+
+              {/* 用户头像菜单 */}
+              <NavMenu />
+            </Box>
+          </Toolbar>
+        </AppBar>
+
+        {/* Toolbar spacing */}
+        <Toolbar />
+
+        {/* Main content area */}
+        <Box 
+          component="main" 
+          sx={{ 
+            flexGrow: 1,
+            p: 3,
+            overflow: 'auto',
+            backgroundColor: (theme) => theme.palette.grey[100]
+          }}
+        >
+          {children}
+        </Box>
+      </Box>
+
       <CartDrawer
         open={cartOpen}
         onClose={() => setCartOpen(false)}
-        items={[]} // 这里需要添加购物车状态管理
+        items={cartItems}
       />
-
-      <Container maxWidth="lg" sx={{ py: 4, flex: 1 }}>
-        {children}
-      </Container>
     </Box>
   );
 };

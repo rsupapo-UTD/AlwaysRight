@@ -20,7 +20,8 @@ import {
   FormControl,
   InputLabel,
   Select,
-  MenuItem
+  MenuItem,
+  Avatar
 } from '@mui/material';
 import { Edit as EditIcon, Delete as DeleteIcon } from '@mui/icons-material';
 import DashboardLayout from '../../components/layouts/DashboardLayout';
@@ -32,24 +33,44 @@ interface User {
   role: 'admin' | 'user';
   status: 'active' | 'inactive';
   lastLogin: string;
+  avatar?: string;
+  orders: number;
+  totalSpent: number;
 }
 
 const initialUsers: User[] = [
   {
     id: '1',
     name: 'John Doe',
-    email: 'john@example.com',
+    email: 'john.doe@example.com',
     role: 'admin',
     status: 'active',
-    lastLogin: '2024-03-20'
+    lastLogin: '2024-03-20',
+    avatar: 'https://mui.com/static/images/avatar/1.jpg',
+    orders: 15,
+    totalSpent: 2500.00
   },
   {
     id: '2',
     name: 'Jane Smith',
-    email: 'jane@example.com',
+    email: 'jane.smith@example.com',
     role: 'user',
     status: 'active',
-    lastLogin: '2024-03-19'
+    lastLogin: '2024-03-19',
+    avatar: 'https://mui.com/static/images/avatar/2.jpg',
+    orders: 8,
+    totalSpent: 1200.00
+  },
+  {
+    id: '3',
+    name: 'Bob Johnson',
+    email: 'bob.johnson@example.com',
+    role: 'user',
+    status: 'inactive',
+    lastLogin: '2024-02-28',
+    avatar: 'https://mui.com/static/images/avatar/3.jpg',
+    orders: 3,
+    totalSpent: 450.00
   }
 ];
 
@@ -60,6 +81,7 @@ interface User {
   role: 'admin' | 'user';
   status: 'active' | 'inactive';
   lastLogin: string;
+  avatar?: string;
 }
 
 interface FormData {
@@ -128,9 +150,12 @@ export default function Users() {
         id: String(Date.now()),
         name: formData.name,
         email: formData.email,
-        role: formData.role,
-        status: formData.status,
-        lastLogin: new Date().toISOString()
+        role: 'user',
+        status: 'active',
+        lastLogin: new Date().toISOString(),
+        avatar: `https://mui.com/static/images/avatar/${Math.floor(Math.random() * 8) + 1}.jpg`,
+        orders: 0,
+        totalSpent: 0
       };
       setUsers([...users, newUser]);
     }
@@ -167,8 +192,19 @@ export default function Users() {
             <TableBody>
               {users.map((user) => (
                 <TableRow key={user.id}>
-                  <TableCell>{user.name}</TableCell>
-                  <TableCell>{user.email}</TableCell>
+                  <TableCell>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                      <Avatar src={user.avatar} alt={user.name}>
+                        {user.name.charAt(0)}
+                      </Avatar>
+                      <Box>
+                        <Typography variant="subtitle2">{user.name}</Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {user.email}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </TableCell>
                   <TableCell>
                     <Chip 
                       label={user.role}

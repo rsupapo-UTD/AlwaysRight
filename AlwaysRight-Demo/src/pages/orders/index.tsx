@@ -2,165 +2,135 @@ import { useState, useEffect } from 'react';
 import {
   Box,
   Typography,
+  Paper,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
-  Paper,
+  Button,
+  Select,
+  MenuItem,
+  SelectChangeEvent,
   Chip,
-  IconButton,
-  Collapse,
-  Button
+  Snackbar,
+  Alert
 } from '@mui/material';
-import {
-  KeyboardArrowDown,
-  KeyboardArrowUp,
-  Visibility as VisibilityIcon
-} from '@mui/icons-material';
 import DashboardLayout from '../../components/layouts/DashboardLayout';
-import { useRouter } from 'next/router';
-
-interface OrderItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-}
 
 interface Order {
   id: string;
-  userId: string;
-  items: OrderItem[];
+  status: 'pending' | 'processing' | 'completed';
   total: number;
-  status: 'pending' | 'processing' | 'shipped' | 'delivered';
-  paymentMethod: string;
-  shippingAddress: {
-    name: string;
-    street: string;
-    city: string;
-    state: string;
-    zipCode: string;
-    country: string;
-  };
   orderDate: string;
-  paymentStatus: 'paid' | 'pending' | 'failed';
-}
-
-function Row({ order }: { order: Order }) {
-  const [open, setOpen] = useState(false);
-  const router = useRouter();
-
-  return (
-    <>
-      <TableRow>
-        <TableCell>
-          <IconButton size="small" onClick={() => setOpen(!open)}>
-            {open ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-          </IconButton>
-        </TableCell>
-        <TableCell>{order.id}</TableCell>
-        <TableCell>{new Date(order.orderDate).toLocaleDateString()}</TableCell>
-        <TableCell>
-          <Chip
-            label={order.status}
-            color={
-              order.status === 'delivered' ? 'success' :
-              order.status === 'shipped' ? 'primary' :
-              order.status === 'processing' ? 'warning' : 
-              'default'
-            }
-            size="small"
-          />
-        </TableCell>
-        <TableCell>
-          <Chip
-            label={order.paymentStatus}
-            color={
-              order.paymentStatus === 'paid' ? 'success' :
-              order.paymentStatus === 'pending' ? 'warning' :
-              'error'
-            }
-            size="small"
-          />
-        </TableCell>
-        <TableCell align="right">${order.total.toFixed(2)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box sx={{ margin: 2 }}>
-              <Typography variant="h6" gutterBottom component="div">
-                Order Details
-              </Typography>
-              
-              {/* Items */}
-              <Table size="small">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Product</TableCell>
-                    <TableCell>Quantity</TableCell>
-                    <TableCell align="right">Price</TableCell>
-                    <TableCell align="right">Total</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {order.items.map((item) => (
-                    <TableRow key={item.id}>
-                      <TableCell>{item.name}</TableCell>
-                      <TableCell>{item.quantity}</TableCell>
-                      <TableCell align="right">${item.price.toFixed(2)}</TableCell>
-                      <TableCell align="right">
-                        ${(item.price * item.quantity).toFixed(2)}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-
-              {/* Shipping Address */}
-              <Typography variant="subtitle2" sx={{ mt: 2, mb: 1 }}>
-                Shipping Address
-              </Typography>
-              <Typography variant="body2">
-                {order.shippingAddress.name}<br />
-                {order.shippingAddress.street}<br />
-                {order.shippingAddress.city}, {order.shippingAddress.state} {order.shippingAddress.zipCode}<br />
-                {order.shippingAddress.country}
-              </Typography>
-
-              {/* Payment Method */}
-              <Typography variant="subtitle2" sx={{ mt: 2, mb: 1 }}>
-                Payment Method
-              </Typography>
-              <Typography variant="body2">
-                {order.paymentMethod}
-              </Typography>
-            </Box>
-          </Collapse>
-        </TableCell>
-      </TableRow>
-    </>
-  );
+  items: Array<{
+    id: string;
+    name: string;
+    price: number;
+    quantity: number;
+  }>;
 }
 
 export default function Orders() {
   const [orders, setOrders] = useState<Order[]>([]);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   useEffect(() => {
-    // 从 localStorage 获取订单数据
     const savedOrders = JSON.parse(localStorage.getItem('orders') || '[]');
     setOrders(savedOrders);
   }, []);
+
+  const handleStatusChange = (orderId: string, newStatus: 'pending' | 'processing' | 'completed') => {
+    const updatedOrders = orders.map(order => {
+      if (order.id === orderId) {
+        return { ...order, status: newStatus };
+      }
+      return order;
+    });
+
+    setOrders(updatedOrders);
+    localStorage.setItem('orders', JSON.stringify(updatedOrders));
+    setShowSuccess(true);
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return 'success';
+      case 'processing':
+        return 'warning';
+      case 'pending':
+        return 'error';
+      default:
+        return 'default';
+    }
+  };
 
   return (
     <DashboardLayout>
       <Box sx={{ p: 3 }}>
         <Typography variant="h4" sx={{ mb: 3 }}>Orders</Typography>
         
-        {orders.length === 0 ? (
-          <Paper sx={{ p: 3, textAlign: 'center' }}>
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Order ID</TableCell>
+                <TableCell>Date</TableCell>
+                <TableCell>Items</TableCell>
+                <TableCell>Total</TableCell>
+                <TableCell>Status</TableCell>
+                <TableCell>Action</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {orders.map((order) => (
+                <TableRow key={order.id}>
+                  <TableCell>{order.id}</TableCell>
+                  <TableCell>
+                    {new Date(order.orderDate).toLocaleDateString()}
+                  </TableCell>
+                  <TableCell>
+                    {order.items.map(item => (
+                      <Box key={item.id} sx={{ mb: 1 }}>
+                        {item.name} x {item.quantity}
+                      </Box>
+                    ))}
+                  </TableCell>
+                  <TableCell>${order.total.toFixed(2)}</TableCell>
+                  <TableCell>
+                    <Chip 
+                      label={order.status.toUpperCase()}
+                      color={getStatusColor(order.status)}
+                      size="small"
+                    />
+                  </TableCell>
+                  <TableCell>
+                    <Select
+                      value={order.status}
+                      size="small"
+                      onChange={(e: SelectChangeEvent) => 
+                        handleStatusChange(
+                          order.id, 
+                          e.target.value as 'pending' | 'processing' | 'completed'
+                        )
+                      }
+                      sx={{ minWidth: 120 }}
+                    >
+                      <MenuItem value="pending">Pending</MenuItem>
+                      <MenuItem value="processing">Processing</MenuItem>
+                      <MenuItem value="completed">Completed</MenuItem>
+                    </Select>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+
+        {orders.length === 0 && (
+          <Paper sx={{ p: 3, mt: 3, textAlign: 'center' }}>
             <Typography variant="h6" color="text.secondary">
               No orders found
             </Typography>
@@ -172,27 +142,22 @@ export default function Orders() {
               Start Shopping
             </Button>
           </Paper>
-        ) : (
-          <TableContainer component={Paper}>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell />
-                  <TableCell>Order ID</TableCell>
-                  <TableCell>Date</TableCell>
-                  <TableCell>Status</TableCell>
-                  <TableCell>Payment</TableCell>
-                  <TableCell align="right">Total</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {orders.map((order) => (
-                  <Row key={order.id} order={order} />
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
         )}
+
+        <Snackbar
+          open={showSuccess}
+          autoHideDuration={3000}
+          onClose={() => setShowSuccess(false)}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        >
+          <Alert 
+            onClose={() => setShowSuccess(false)} 
+            severity="success"
+            sx={{ width: '100%' }}
+          >
+            Order status updated successfully!
+          </Alert>
+        </Snackbar>
       </Box>
     </DashboardLayout>
   );

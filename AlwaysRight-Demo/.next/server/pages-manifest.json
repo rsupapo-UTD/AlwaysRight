@@ -3,10 +3,15 @@
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
   "/dashboard": "pages/dashboard.js",
+  "/api/top-products": "pages/api/top-products.js",
   "/api/statistics": "pages/api/statistics.js",
   "/api/sales": "pages/api/sales.js",
-  "/api/top-products": "pages/api/top-products.js",
   "/api/order-status": "pages/api/order-status.js",
-  "/help": "pages/help.js",
-  "/api/chat": "pages/api/chat.js"
+  "/users": "pages/users.js",
+  "/_error": "pages/_error.js",
+  "/products": "pages/products.js",
+  "/products/[id]": "pages/products/[id].js",
+  "/checkout": "pages/checkout.js",
+  "/orders": "pages/orders.js",
+  "/profile": "pages/profile.js"
 }

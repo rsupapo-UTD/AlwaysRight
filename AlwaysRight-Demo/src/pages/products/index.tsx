@@ -41,7 +41,7 @@ export default function Products() {
   const [sortBy, setSortBy] = useState('name');
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
-  const { addItem } = useCart();
+  const { addToCart } = useCart();
 
   // 筛选逻辑
   const filteredProducts = products
@@ -245,7 +245,13 @@ export default function Products() {
                   <Button
                     variant="contained"
                     startIcon={<ShoppingCart />}
-                    onClick={() => addItem(product)}
+                    onClick={() => addToCart({
+                      id: product.id,
+                      name: product.name,
+                      price: product.price,
+                      quantity: 1,
+                      imageUrl: product.imageUrl
+                    })}
                   >
                     Add to Cart
                   </Button>

@@ -5,8 +5,9 @@ interface StatCardProps {
     title: string;
     value: number | string;
     icon?: React.ReactNode;
-    trend?: number;
     color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error';
+    trend?: number;
+    sx?: any;
 }
 
 const StatCard: React.FC<StatCardProps> = ({ 
@@ -14,82 +15,71 @@ const StatCard: React.FC<StatCardProps> = ({
     value, 
     icon, 
     trend, 
-    color = 'primary' 
+    color = 'primary',
+    sx = {} 
 }) => {
-    // 格式化数值的函数
-    const formatValue = (val: number | string) => {
-        if (typeof val !== 'number') return val;
-        
-        if (val >= 1000000) {
-            return `${(val / 1000000).toFixed(1)}M`;
-        }
-        if (val >= 1000) {
-            return `${(val / 1000).toFixed(1)}K`;
-        }
-        return val.toLocaleString();
-    };
-
     return (
         <Paper 
             elevation={0}
             sx={{ 
                 p: 3, 
                 height: '100%',
-                background: (theme) => `linear-gradient(135deg, ${alpha(theme.palette[color].light, 0.1)} 0%, ${alpha(theme.palette[color].main, 0.05)} 100%)`,
-                border: '1px solid',
-                borderColor: (theme) => alpha(theme.palette[color].main, 0.1),
-                transition: 'all 0.3s ease',
-                '&:hover': {
-                    transform: 'translateY(-4px)',
-                    boxShadow: (theme) => `0 12px 24px ${alpha(theme.palette[color].main, 0.1)}`
-                }
+                borderRadius: 2,
+                position: 'relative',
+                overflow: 'hidden',
+                ...sx
             }}
         >
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
-                {icon && (
-                    <Box 
-                        sx={{ 
-                            p: 1,
-                            borderRadius: 2,
-                            display: 'flex',
-                            color: `${color}.main`,
-                            bgcolor: (theme) => alpha(theme.palette[color].main, 0.12)
-                        }}
-                    >
-                        {icon}
-                    </Box>
-                )}
-                {trend !== undefined && (
-                    <Typography 
-                        variant="subtitle2" 
-                        sx={{ 
-                            color: trend >= 0 ? 'success.main' : 'error.main',
-                            display: 'flex',
-                            alignItems: 'center'
-                        }}
-                    >
-                        {trend >= 0 ? '+' : ''}{trend}%
-                    </Typography>
-                )}
+            <Box sx={{ position: 'relative', zIndex: 1 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
+                    {icon && (
+                        <Box 
+                            sx={{ 
+                                p: 1,
+                                borderRadius: 2,
+                                display: 'flex',
+                                bgcolor: 'rgba(255, 255, 255, 0.2)'
+                            }}
+                        >
+                            {icon}
+                        </Box>
+                    )}
+                    {trend !== undefined && (
+                        <Typography 
+                            variant="subtitle2" 
+                            sx={{ 
+                                display: 'flex',
+                                alignItems: 'center',
+                                color: trend >= 0 ? '#10b981' : '#ef4444',
+                                bgcolor: 'rgba(255, 255, 255, 0.2)',
+                                px: 1,
+                                py: 0.5,
+                                borderRadius: 1
+                            }}
+                        >
+                            {trend >= 0 ? '+' : ''}{trend}%
+                        </Typography>
+                    )}
+                </Box>
+                <Typography variant="h4" sx={{ mb: 1, fontWeight: 'bold' }}>
+                    {typeof value === 'number' ? value.toLocaleString() : value}
+                </Typography>
+                <Typography variant="subtitle2" sx={{ opacity: 0.8 }}>
+                    {title}
+                </Typography>
             </Box>
-            <Typography 
-                variant="h4" 
-                sx={{ 
-                    mb: 1,
-                    color: 'text.primary'
+            <Box
+                sx={{
+                    position: 'absolute',
+                    right: -20,
+                    bottom: -20,
+                    width: 140,
+                    height: 140,
+                    borderRadius: '50%',
+                    bgcolor: 'rgba(255, 255, 255, 0.1)',
+                    zIndex: 0
                 }}
-            >
-                {formatValue(value)}
-            </Typography>
-            <Typography 
-                variant="subtitle1" 
-                sx={{ 
-                    color: 'text.secondary',
-                    fontWeight: 500
-                }}
-            >
-                {title}
-            </Typography>
+            />
         </Paper>
     );
 };

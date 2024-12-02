@@ -18,11 +18,11 @@ export const mockStatistics: Statistics = {
 };
 
 export const mockTopProducts: TopProduct[] = [
-  { ProductName: 'Product A', total_revenue: 25000 },
-  { ProductName: 'Product B', total_revenue: 18000 },
-  { ProductName: 'Product C', total_revenue: 15000 },
-  { ProductName: 'Product D', total_revenue: 12000 },
-  { ProductName: 'Product E', total_revenue: 8500 }
+  { ProductName: 'Modern Leather Sofa', total_revenue: 25000 },
+  { ProductName: 'Nike Air Max 2024', total_revenue: 18000 },
+  { ProductName: 'Adjustable Standing Desk', total_revenue: 15000 },
+  { ProductName: 'iPhone 15 Pro', total_revenue: 12000 },
+  { ProductName: 'MacBook Pro M3', total_revenue: 8500 }
 ];
 
 export const mockOrderStatus: OrderStatus[] = [

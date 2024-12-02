@@ -621,60 +621,70 @@ var _s = __turbopack_refresh__.signature(), _s1 = __turbopack_refresh__.signatur
 const CartContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["createContext"])(undefined);
 function CartProvider({ children }) {
     _s();
-    const [items, setItems] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const addItem = (product)=>{
-        setItems((current)=>{
-            const existingItem = current.find((item)=>item.id === product.id);
+    const [cartItems, setCartItems] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    // 从 localStorage 加载购物车数据
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "CartProvider.useEffect": ()=>{
+            const savedCart = localStorage.getItem('cart');
+            if (savedCart) {
+                setCartItems(JSON.parse(savedCart));
+            }
+        }
+    }["CartProvider.useEffect"], []);
+    // 保存购物车数据到 localStorage
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "CartProvider.useEffect": ()=>{
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+        }
+    }["CartProvider.useEffect"], [
+        cartItems
+    ]);
+    const addToCart = (item)=>{
+        setCartItems((prev)=>{
+            const existingItem = prev.find((i)=>i.id === item.id);
             if (existingItem) {
-                return current.map((item)=>item.id === product.id ? {
-                        ...item,
-                        quantity: item.quantity + 1
-                    } : item);
+                return prev.map((i)=>i.id === item.id ? {
+                        ...i,
+                        quantity: i.quantity + 1
+                    } : i);
             }
             return [
-                ...current,
+                ...prev,
                 {
-                    ...product,
+                    ...item,
                     quantity: 1
                 }
             ];
         });
     };
-    const removeItem = (id)=>{
-        setItems((current)=>current.filter((item)=>item.id !== id));
-    };
-    const updateQuantity = (id, quantity)=>{
-        setItems((current)=>current.map((item)=>item.id === id ? {
-                    ...item,
-                    quantity
-                } : item));
+    const removeFromCart = (itemId)=>{
+        setCartItems((prev)=>prev.filter((item)=>item.id !== itemId));
     };
     const clearCart = ()=>{
-        setItems([]);
+        setCartItems([]);
     };
-    const total = items.reduce((sum, item)=>sum + item.price * item.quantity, 0);
+    const itemCount = cartItems.reduce((total, item)=>total + item.quantity, 0);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CartContext.Provider, {
         value: {
-            items,
-            addItem,
-            removeItem,
-            updateQuantity,
+            cartItems,
+            addToCart,
+            removeFromCart,
             clearCart,
-            total
+            itemCount
         },
         children: children
     }, void 0, false, {
         fileName: "[project]/src/context/CartContext.tsx",
-        lineNumber: 58,
+        lineNumber: 61,
         columnNumber: 5
     }, this);
 }
-_s(CartProvider, "6WAym07vHedVzpAy8bFDJKqtv8I=");
+_s(CartProvider, "jdONvkEabzLc64SbXgqXBHRMg9M=");
 _c = CartProvider;
 function useCart() {
     _s1();
     const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useContext"])(CartContext);
-    if (!context) {
+    if (context === undefined) {
         throw new Error('useCart must be used within a CartProvider');
     }
     return context;
@@ -743,49 +753,21 @@ __turbopack_esm__({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$theme$2f$index$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/theme/index.ts [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$CartContext$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/context/CartContext.tsx [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$auth$2f$ProtectedRoute$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/auth/ProtectedRoute.tsx [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$styles$2f$ThemeProvider$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ThemeProvider$3e$__ = __turbopack_import__("[project]/node_modules/@mui/material/styles/ThemeProvider.js [client] (ecmascript) <export default as ThemeProvider>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$CssBaseline$2f$CssBaseline$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@mui/material/CssBaseline/CssBaseline.js [client] (ecmascript)");
-;
-;
-;
-;
 ;
 ;
 function MyApp({ Component, pageProps }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$CartContext$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["CartProvider"], {
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$auth$2f$ProtectedRoute$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$styles$2f$ThemeProvider$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ThemeProvider$3e$__["ThemeProvider"], {
-                theme: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$theme$2f$index$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["theme"],
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$CssBaseline$2f$CssBaseline$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                        fileName: "[project]/src/pages/_app.tsx",
-                        lineNumber: 12,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Component, {
-                        ...pageProps
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/_app.tsx",
-                        lineNumber: 13,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/pages/_app.tsx",
-                lineNumber: 11,
-                columnNumber: 9
-            }, this)
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Component, {
+            ...pageProps
         }, void 0, false, {
             fileName: "[project]/src/pages/_app.tsx",
-            lineNumber: 10,
+            lineNumber: 6,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/pages/_app.tsx",
-        lineNumber: 9,
+        lineNumber: 5,
         columnNumber: 5
     }, this);
 }

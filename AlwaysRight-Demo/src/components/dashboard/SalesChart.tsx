@@ -1,49 +1,90 @@
-import React from 'react';
-import { Paper, Typography, Box } from '@mui/material';
+import { Box } from '@mui/material';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  ChartData,
+  ChartOptions
+} from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { commonOptions } from '../../utils/chartConfig';
 import { SalesData } from '../../types/dashboard';
+
+// 注册 ChartJS 组件
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+// 定义图表选项类型
+const chartOptions: ChartOptions<'line'> = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: 'top',
+      display: true
+    },
+    title: {
+      display: false
+    }
+  },
+  scales: {
+    x: {
+      grid: {
+        display: false
+      }
+    },
+    y: {
+      beginAtZero: true,
+      ticks: {
+        callback: function(value) {
+          return '$' + value.toLocaleString();
+        }
+      },
+      grid: {
+        borderDash: [2],
+        drawBorder: false,
+        color: 'rgba(0, 0, 0, 0.1)'
+      }
+    }
+  },
+  elements: {
+    line: {
+      tension: 0.4
+    },
+    point: {
+      radius: 4,
+      hitRadius: 10,
+      hoverRadius: 6
+    }
+  }
+} as ChartOptions<'line'>;
 
 interface SalesChartProps {
   data: SalesData;
 }
 
-const SalesChart: React.FC<SalesChartProps> = ({ data }) => {
-  const chartData = {
-    ...data,
-    datasets: data.datasets.map(dataset => ({
-      ...dataset,
-      fill: true,
-      backgroundColor: (context: any) => {
-        const ctx = context.chart.ctx;
-        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient.addColorStop(0, 'rgba(37, 99, 235, 0.2)');
-        gradient.addColorStop(1, 'rgba(37, 99, 235, 0)');
-        return gradient;
-      }
-    }))
-  };
-
+export default function SalesChart({ data }: SalesChartProps) {
   return (
-    <Paper 
-      elevation={0}
-      sx={{ 
-        p: 3,
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        border: '1px solid',
-        borderColor: 'divider'
-      }}
-    >
-      <Typography variant="h6" gutterBottom>
-        Sales Trend
-      </Typography>
-      <Box sx={{ flexGrow: 1, position: 'relative', minHeight: '400px' }}>
-        <Line data={chartData} options={commonOptions} />
-      </Box>
-    </Paper>
+    <Box sx={{ 
+      width: '100%', 
+      height: 'calc(100% - 40px)',
+      position: 'relative'
+    }}>
+      <Line
+        data={data}
+        options={chartOptions}
+      />
+    </Box>
   );
-};
-
-export default SalesChart; 
+} 
