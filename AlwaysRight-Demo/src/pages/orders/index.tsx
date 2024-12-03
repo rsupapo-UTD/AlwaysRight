@@ -15,8 +15,14 @@ import {
   SelectChangeEvent,
   Chip,
   Snackbar,
-  Alert
+  Alert,
+  IconButton,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
 } from '@mui/material';
+import { Delete as DeleteIcon } from '@mui/icons-material';
 import DashboardLayout from '../../components/layouts/DashboardLayout';
 
 interface Order {
@@ -35,6 +41,9 @@ interface Order {
 export default function Orders() {
   const [orders, setOrders] = useState<Order[]>([]);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [orderToDelete, setOrderToDelete] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {
     const savedOrders = JSON.parse(localStorage.getItem('orders') || '[]');
@@ -51,7 +60,25 @@ export default function Orders() {
 
     setOrders(updatedOrders);
     localStorage.setItem('orders', JSON.stringify(updatedOrders));
+    setSuccessMessage('Order status updated successfully!');
     setShowSuccess(true);
+  };
+
+  const handleDeleteClick = (orderId: string) => {
+    setOrderToDelete(orderId);
+    setDeleteDialogOpen(true);
+  };
+
+  const handleDeleteConfirm = () => {
+    if (orderToDelete) {
+      const updatedOrders = orders.filter(order => order.id !== orderToDelete);
+      setOrders(updatedOrders);
+      localStorage.setItem('orders', JSON.stringify(updatedOrders));
+      setSuccessMessage('Order deleted successfully!');
+      setShowSuccess(true);
+    }
+    setDeleteDialogOpen(false);
+    setOrderToDelete(null);
   };
 
   const getStatusColor = (status: string) => {
@@ -81,7 +108,7 @@ export default function Orders() {
                 <TableCell>Items</TableCell>
                 <TableCell>Total</TableCell>
                 <TableCell>Status</TableCell>
-                <TableCell>Action</TableCell>
+                <TableCell>Actions</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -106,7 +133,7 @@ export default function Orders() {
                       size="small"
                     />
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{ display: 'flex', gap: 1 }}>
                     <Select
                       value={order.status}
                       size="small"
@@ -122,6 +149,13 @@ export default function Orders() {
                       <MenuItem value="processing">Processing</MenuItem>
                       <MenuItem value="completed">Completed</MenuItem>
                     </Select>
+                    <IconButton 
+                      color="error" 
+                      onClick={() => handleDeleteClick(order.id)}
+                      size="small"
+                    >
+                      <DeleteIcon />
+                    </IconButton>
                   </TableCell>
                 </TableRow>
               ))}
@@ -129,21 +163,24 @@ export default function Orders() {
           </Table>
         </TableContainer>
 
-        {orders.length === 0 && (
-          <Paper sx={{ p: 3, mt: 3, textAlign: 'center' }}>
-            <Typography variant="h6" color="text.secondary">
-              No orders found
-            </Typography>
-            <Button
-              variant="contained"
-              href="/products"
-              sx={{ mt: 2 }}
-            >
-              Start Shopping
+        {/* Delete Confirmation Dialog */}
+        <Dialog
+          open={deleteDialogOpen}
+          onClose={() => setDeleteDialogOpen(false)}
+        >
+          <DialogTitle>Delete Order</DialogTitle>
+          <DialogContent>
+            Are you sure you want to delete this order? This action cannot be undone.
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={() => setDeleteDialogOpen(false)}>Cancel</Button>
+            <Button onClick={handleDeleteConfirm} color="error" variant="contained">
+              Delete
             </Button>
-          </Paper>
-        )}
+          </DialogActions>
+        </Dialog>
 
+        {/* Success Snackbar */}
         <Snackbar
           open={showSuccess}
           autoHideDuration={3000}
@@ -155,7 +192,7 @@ export default function Orders() {
             severity="success"
             sx={{ width: '100%' }}
           >
-            Order status updated successfully!
+            {successMessage}
           </Alert>
         </Snackbar>
       </Box>

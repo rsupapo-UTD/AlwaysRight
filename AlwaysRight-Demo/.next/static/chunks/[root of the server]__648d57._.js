@@ -2103,15 +2103,29 @@ function Dashboard() {
     const [orderStatusData, setOrderStatusData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const calculateRealTimeStats = async ()=>{
         try {
-            // 获取所有订单
+            // Get orders from localStorage
             const orders = JSON.parse(localStorage.getItem('orders') || '[]');
-            // 计算订单状态分布
+            const products = JSON.parse(localStorage.getItem('products') || '[]');
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+            // Calculate total sales and orders
+            const totalSales = orders.reduce((sum, order)=>sum + (order.total || 0), 0);
+            const totalOrders = orders.length;
+            const totalCustomers = users.filter((user)=>user.role === 'user').length;
+            const totalProducts = products.length;
+            // Update stats
+            setStats({
+                totalSales,
+                totalOrders,
+                totalCustomers,
+                totalProducts
+            });
+            // Calculate order status distribution
             const statusCounts = orders.reduce((acc, order)=>{
                 const status = order.status || 'pending';
                 acc[status] = (acc[status] || 0) + 1;
                 return acc;
             }, {});
-            // 转换为图表需要的格式
+            // Convert to chart format
             const chartData = Object.entries(statusCounts).map(([status, count])=>({
                     OrderStatus: status,
                     count: count
@@ -2119,21 +2133,25 @@ function Dashboard() {
             setOrderStatusData(chartData);
         } catch (error) {
             console.error('Error loading dashboard data:', error);
-            setSalesData(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$mockData$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["mockSalesData"]);
-            setStats(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$mockData$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["mockStatistics"]);
-            setTopProducts(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$mockData$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["mockTopProducts"]);
+            // Fallback to mock data
+            setStats({
+                totalSales: 150000,
+                totalOrders: 450,
+                totalCustomers: 200,
+                totalProducts: 50
+            });
             setOrderStatusData([
                 {
                     OrderStatus: 'pending',
-                    count: 0
+                    count: 26
                 },
                 {
                     OrderStatus: 'processing',
-                    count: 0
+                    count: 45
                 },
                 {
                     OrderStatus: 'completed',
-                    count: 0
+                    count: 85
                 }
             ]);
         } finally{
@@ -2169,7 +2187,7 @@ function Dashboard() {
                                 value: stats.totalSales,
                                 icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$AttachMoney$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/pages/dashboard.tsx",
-                                    lineNumber: 93,
+                                    lineNumber: 113,
                                     columnNumber: 35
                                 }, void 0),
                                 trend: 12,
@@ -2179,12 +2197,12 @@ function Dashboard() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/dashboard.tsx",
-                                lineNumber: 90,
+                                lineNumber: 110,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/dashboard.tsx",
-                            lineNumber: 89,
+                            lineNumber: 109,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Grid$2f$Grid$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid$3e$__["Grid"], {
@@ -2197,7 +2215,7 @@ function Dashboard() {
                                 value: stats.totalOrders,
                                 icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$ShoppingCart$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/pages/dashboard.tsx",
-                                    lineNumber: 105,
+                                    lineNumber: 125,
                                     columnNumber: 35
                                 }, void 0),
                                 trend: 8,
@@ -2207,12 +2225,12 @@ function Dashboard() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/dashboard.tsx",
-                                lineNumber: 102,
+                                lineNumber: 122,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/dashboard.tsx",
-                            lineNumber: 101,
+                            lineNumber: 121,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Grid$2f$Grid$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid$3e$__["Grid"], {
@@ -2225,7 +2243,7 @@ function Dashboard() {
                                 value: stats.totalCustomers,
                                 icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$People$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/pages/dashboard.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 137,
                                     columnNumber: 35
                                 }, void 0),
                                 trend: 15,
@@ -2235,12 +2253,12 @@ function Dashboard() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/dashboard.tsx",
-                                lineNumber: 114,
+                                lineNumber: 134,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/dashboard.tsx",
-                            lineNumber: 113,
+                            lineNumber: 133,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Grid$2f$Grid$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid$3e$__["Grid"], {
@@ -2253,7 +2271,7 @@ function Dashboard() {
                                 value: stats.totalProducts,
                                 icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Inventory$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/pages/dashboard.tsx",
-                                    lineNumber: 129,
+                                    lineNumber: 149,
                                     columnNumber: 35
                                 }, void 0),
                                 trend: 5,
@@ -2263,18 +2281,18 @@ function Dashboard() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/dashboard.tsx",
-                                lineNumber: 126,
+                                lineNumber: 146,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/dashboard.tsx",
-                            lineNumber: 125,
+                            lineNumber: 145,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/dashboard.tsx",
-                    lineNumber: 88,
+                    lineNumber: 108,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Grid$2f$Grid$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid$3e$__["Grid"], {
@@ -2300,7 +2318,7 @@ function Dashboard() {
                                         children: "Sales Trend"
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/dashboard.tsx",
-                                        lineNumber: 143,
+                                        lineNumber: 163,
                                         columnNumber: 29
                                     }, this),
                                     isLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Box$2f$Box$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -2312,29 +2330,29 @@ function Dashboard() {
                                         },
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$CircularProgress$2f$CircularProgress$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CircularProgress$3e$__["CircularProgress"], {}, void 0, false, {
                                             fileName: "[project]/src/pages/dashboard.tsx",
-                                            lineNumber: 148,
+                                            lineNumber: 168,
                                             columnNumber: 37
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/dashboard.tsx",
-                                        lineNumber: 147,
+                                        lineNumber: 167,
                                         columnNumber: 33
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$SalesChart$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                         data: salesData
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/dashboard.tsx",
-                                        lineNumber: 151,
+                                        lineNumber: 171,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/dashboard.tsx",
-                                lineNumber: 142,
+                                lineNumber: 162,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/dashboard.tsx",
-                            lineNumber: 141,
+                            lineNumber: 161,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Grid$2f$Grid$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid$3e$__["Grid"], {
@@ -2353,7 +2371,7 @@ function Dashboard() {
                                         children: "Order Status"
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/dashboard.tsx",
-                                        lineNumber: 157,
+                                        lineNumber: 177,
                                         columnNumber: 29
                                     }, this),
                                     isLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Box$2f$Box$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -2365,35 +2383,35 @@ function Dashboard() {
                                         },
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$CircularProgress$2f$CircularProgress$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CircularProgress$3e$__["CircularProgress"], {}, void 0, false, {
                                             fileName: "[project]/src/pages/dashboard.tsx",
-                                            lineNumber: 162,
+                                            lineNumber: 182,
                                             columnNumber: 37
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/dashboard.tsx",
-                                        lineNumber: 161,
+                                        lineNumber: 181,
                                         columnNumber: 33
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$OrderStatusChart$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                         data: orderStatusData
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/dashboard.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 185,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/dashboard.tsx",
-                                lineNumber: 156,
+                                lineNumber: 176,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/dashboard.tsx",
-                            lineNumber: 155,
+                            lineNumber: 175,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/dashboard.tsx",
-                    lineNumber: 140,
+                    lineNumber: 160,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Grid$2f$Grid$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid$3e$__["Grid"], {
@@ -2413,7 +2431,7 @@ function Dashboard() {
                                     children: "Top Products"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/dashboard.tsx",
-                                    lineNumber: 175,
+                                    lineNumber: 195,
                                     columnNumber: 29
                                 }, this),
                                 isLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Skeleton$2f$Skeleton$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Skeleton$3e$__["Skeleton"], {
@@ -2421,40 +2439,40 @@ function Dashboard() {
                                     height: 200
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/dashboard.tsx",
-                                    lineNumber: 179,
+                                    lineNumber: 199,
                                     columnNumber: 33
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$TopProductsTable$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                     products: topProducts
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/dashboard.tsx",
-                                    lineNumber: 181,
+                                    lineNumber: 201,
                                     columnNumber: 33
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/dashboard.tsx",
-                            lineNumber: 174,
+                            lineNumber: 194,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/dashboard.tsx",
-                        lineNumber: 173,
+                        lineNumber: 193,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/pages/dashboard.tsx",
-                    lineNumber: 172,
+                    lineNumber: 192,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/dashboard.tsx",
-            lineNumber: 86,
+            lineNumber: 106,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/pages/dashboard.tsx",
-        lineNumber: 85,
+        lineNumber: 105,
         columnNumber: 9
     }, this);
 }

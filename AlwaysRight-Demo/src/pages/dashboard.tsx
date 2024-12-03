@@ -45,17 +45,33 @@ export default function Dashboard() {
 
     const calculateRealTimeStats = async () => {
         try {
-            // 获取所有订单
+            // Get orders from localStorage
             const orders: Order[] = JSON.parse(localStorage.getItem('orders') || '[]');
-            
-            // 计算订单状态分布
+            const products = JSON.parse(localStorage.getItem('products') || '[]');
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+
+            // Calculate total sales and orders
+            const totalSales = orders.reduce((sum, order) => sum + (order.total || 0), 0);
+            const totalOrders = orders.length;
+            const totalCustomers = users.filter(user => user.role === 'user').length;
+            const totalProducts = products.length;
+
+            // Update stats
+            setStats({
+                totalSales,
+                totalOrders,
+                totalCustomers,
+                totalProducts
+            });
+
+            // Calculate order status distribution
             const statusCounts = orders.reduce((acc: { [key: string]: number }, order) => {
                 const status = order.status || 'pending';
                 acc[status] = (acc[status] || 0) + 1;
                 return acc;
             }, {});
 
-            // 转换为图表需要的格式
+            // Convert to chart format
             const chartData = Object.entries(statusCounts).map(([status, count]) => ({
                 OrderStatus: status,
                 count: count
@@ -64,13 +80,17 @@ export default function Dashboard() {
             setOrderStatusData(chartData);
         } catch (error) {
             console.error('Error loading dashboard data:', error);
-            setSalesData(mockSalesData);
-            setStats(mockStatistics);
-            setTopProducts(mockTopProducts);
+            // Fallback to mock data
+            setStats({
+                totalSales: 150000,
+                totalOrders: 450,
+                totalCustomers: 200,
+                totalProducts: 50
+            });
             setOrderStatusData([
-                { OrderStatus: 'pending', count: 0 },
-                { OrderStatus: 'processing', count: 0 },
-                { OrderStatus: 'completed', count: 0 }
+                { OrderStatus: 'pending', count: 26 },
+                { OrderStatus: 'processing', count: 45 },
+                { OrderStatus: 'completed', count: 85 }
             ]);
         } finally {
             setIsLoading(false);

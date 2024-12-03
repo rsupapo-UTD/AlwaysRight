@@ -52,6 +52,17 @@ interface Product {
   imageUrl: string;
   rating: number;
   reviews: Review[];
+  appliedDiscountCode?: string;
+}
+
+interface Discount {
+  id: string;
+  code: string;
+  type: string;
+  value: number;
+  status: string;
+  maxUses?: number;
+  currentUses?: number;
 }
 
 export default function ProductDetail() {
@@ -63,6 +74,7 @@ export default function ProductDetail() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [discountCode, setDiscountCode] = useState('');
   const [loading, setLoading] = useState(true);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     if (id) {
@@ -142,16 +154,67 @@ export default function ProductDetail() {
   };
 
   const handleApplyDiscount = () => {
-    if (product && product.discountCode === discountCode) {
-      const discountedPrice = product.price * (1 - (product.discountPercentage || 0) / 100);
-      setProduct({
-        ...product,
-        price: discountedPrice
-      });
-      setShowSuccess(true);
-    } else {
-      alert('Invalid discount code');
+    // Get discounts from localStorage
+    const discounts = JSON.parse(localStorage.getItem('discounts') || '[]');
+    
+    // Find the active discount with matching code
+    const discount = discounts.find(
+      (d: Discount) => 
+        d.code === discountCode && 
+        d.status === 'active' && 
+        (!d.maxUses || d.currentUses < d.maxUses)
+    );
+
+    if (!discount || !product) {
+      alert('Invalid or expired discount code');
+      return;
     }
+
+    // Calculate discounted price based on discount type
+    let discountedPrice = product.price;
+    if (discount.type === 'percentage') {
+      discountedPrice = product.price * (1 - discount.value / 100);
+    } else { // fixed amount
+      discountedPrice = Math.max(0, product.price - discount.value);
+    }
+
+    // Update product with discount info
+    setProduct({
+      ...product,
+      price: discountedPrice,
+      originalPrice: product.price,
+      discountPercentage: discount.type === 'percentage' ? discount.value : 
+        Math.round((discount.value / product.price) * 100),
+      appliedDiscountCode: discountCode // Add this to track applied discount
+    });
+
+    // Update discount usage
+    const updatedDiscounts = discounts.map((d: Discount) => {
+      if (d.id === discount.id) {
+        return { ...d, currentUses: d.currentUses + 1 };
+      }
+      return d;
+    });
+    localStorage.setItem('discounts', JSON.stringify(updatedDiscounts));
+
+    setShowSuccess(true);
+  };
+
+  const handleAddToCart = () => {
+    if (!product) return;
+
+    const cartItem = {
+      id: product.id,
+      name: product.name,
+      price: product.price, // This will be the discounted price if a discount was applied
+      quantity: 1,
+      imageUrl: product.imageUrl,
+      originalPrice: product.originalPrice, // Store original price for reference
+      appliedDiscountCode: product.appliedDiscountCode // Track applied discount
+    };
+
+    addToCart(cartItem);
+    alert('Product added to cart!');
   };
 
   if (loading) {
@@ -251,6 +314,7 @@ export default function ProductDetail() {
                 variant="contained"
                 size="large"
                 fullWidth
+                onClick={handleAddToCart}
                 sx={{ mb: 2 }}
               >
                 Add to Cart

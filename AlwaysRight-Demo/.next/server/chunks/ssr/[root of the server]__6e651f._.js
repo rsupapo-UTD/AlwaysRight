@@ -64,7 +64,6 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$re
 const CartContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["createContext"])(undefined);
 function CartProvider({ children }) {
     const [cartItems, setCartItems] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])([]);
-    const [itemCount, setItemCount] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
     // 从 localStorage 加载购物车数据
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         const savedCart = localStorage.getItem('cart');
@@ -75,13 +74,6 @@ function CartProvider({ children }) {
     // 保存购物车数据到 localStorage
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         localStorage.setItem('cart', JSON.stringify(cartItems));
-    }, [
-        cartItems
-    ]);
-    // 更新商品总数
-    (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
-        const count = cartItems.reduce((total, item)=>total + item.quantity, 0);
-        setItemCount(count);
     }, [
         cartItems
     ]);
@@ -109,6 +101,7 @@ function CartProvider({ children }) {
     const clearCart = ()=>{
         setCartItems([]);
     };
+    const itemCount = cartItems.reduce((total, item)=>total + item.quantity, 0);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(CartContext.Provider, {
         value: {
             cartItems,
@@ -120,13 +113,13 @@ function CartProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/context/CartContext.tsx",
-        lineNumber: 70,
+        lineNumber: 62,
         columnNumber: 5
     }, this);
 }
 function useCart() {
     const context = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2c$__cjs$29$__["useContext"])(CartContext);
-    if (!context) {
+    if (context === undefined) {
         throw new Error('useCart must be used within a CartProvider');
     }
     return context;

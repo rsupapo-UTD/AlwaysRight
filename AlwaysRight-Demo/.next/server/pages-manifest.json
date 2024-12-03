@@ -1,11 +1,13 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/orders": "pages/orders.js",
   "/": "pages/index.js",
   "/dashboard": "pages/dashboard.js",
   "/products": "pages/products.js",
-  "/products/[id]": "pages/products/[id].js",
+  "/orders": "pages/orders.js",
+  "/users": "pages/users.js",
   "/analytics": "pages/analytics.js",
-  "/login": "pages/login.js"
+  "/help": "pages/help.js",
+  "/settings": "pages/settings.js",
+  "/products/[id]": "pages/products/[id].js"
 }
