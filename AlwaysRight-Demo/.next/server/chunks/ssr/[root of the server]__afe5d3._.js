@@ -1052,7 +1052,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$mat
 ;
 ;
 // 添加模拟数据
-const mockDiscounts = [
+const initialDiscounts = [
     {
         id: '1',
         code: 'CS4347',
@@ -1114,27 +1114,18 @@ function DiscountsPage() {
         // 首次加载时初始化数据
         const initializeData = ()=>{
             try {
-                const savedDiscounts = localStorage.getItem('discounts');
-                if (!savedDiscounts || JSON.parse(savedDiscounts).length === 0) {
-                    // 如果没有保存的数据或数据为空数组，使用模拟数据
-                    console.log('Initializing with mock data');
-                    localStorage.setItem('discounts', JSON.stringify(mockDiscounts));
-                    setDiscounts(mockDiscounts);
-                } else {
-                    // 使用保存的数据
-                    console.log('Loading saved discounts');
-                    setDiscounts(JSON.parse(savedDiscounts));
-                }
+                // 强制使用新的初始数据
+                localStorage.setItem('discounts', JSON.stringify(initialDiscounts));
+                setDiscounts(initialDiscounts);
             } catch (error) {
                 console.error('Error loading discounts:', error);
-                // 如果出错，使用模拟数据
-                setDiscounts(mockDiscounts);
+                setDiscounts(initialDiscounts);
             } finally{
                 setLoading(false);
             }
         };
         initializeData();
-    }, []); // 空依赖数组，只在组件挂载时运行
+    }, []);
     // 添加加载状态的显示
     if (loading) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$layouts$2f$DashboardLayout$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1153,22 +1144,22 @@ function DiscountsPage() {
                     },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$CircularProgress$2f$CircularProgress$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CircularProgress$3e$__["CircularProgress"], {}, void 0, false, {
                         fileName: "[project]/src/pages/analytics.tsx",
-                        lineNumber: 151,
+                        lineNumber: 142,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/pages/analytics.tsx",
-                    lineNumber: 150,
+                    lineNumber: 141,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/pages/analytics.tsx",
-                lineNumber: 149,
+                lineNumber: 140,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/pages/analytics.tsx",
-            lineNumber: 148,
+            lineNumber: 139,
             columnNumber: 7
         }, this);
     }
@@ -1273,27 +1264,27 @@ function DiscountsPage() {
                             children: "Discount Management"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/analytics.tsx",
-                            lineNumber: 252,
+                            lineNumber: 243,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Button$2f$Button$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
                             variant: "contained",
                             startIcon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Add$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                 fileName: "[project]/src/pages/analytics.tsx",
-                                lineNumber: 257,
+                                lineNumber: 248,
                                 columnNumber: 24
                             }, void 0),
                             onClick: handleAddClick,
                             children: "Add Discount"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/analytics.tsx",
-                            lineNumber: 255,
+                            lineNumber: 246,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/analytics.tsx",
-                    lineNumber: 251,
+                    lineNumber: 242,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableContainer$2f$TableContainer$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableContainer$3e$__["TableContainer"], {
@@ -1307,60 +1298,60 @@ function DiscountsPage() {
                                             children: "Code"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/analytics.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 260,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
                                             children: "Type"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/analytics.tsx",
-                                            lineNumber: 270,
+                                            lineNumber: 261,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
                                             children: "Value"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/analytics.tsx",
-                                            lineNumber: 271,
+                                            lineNumber: 262,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
                                             children: "Period"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/analytics.tsx",
-                                            lineNumber: 272,
+                                            lineNumber: 263,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
                                             children: "Status"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/analytics.tsx",
-                                            lineNumber: 273,
+                                            lineNumber: 264,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
                                             children: "Usage"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/analytics.tsx",
-                                            lineNumber: 274,
+                                            lineNumber: 265,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
                                             children: "Actions"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/analytics.tsx",
-                                            lineNumber: 275,
+                                            lineNumber: 266,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/pages/analytics.tsx",
-                                    lineNumber: 268,
+                                    lineNumber: 259,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/analytics.tsx",
-                                lineNumber: 267,
+                                lineNumber: 258,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableBody$2f$TableBody$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableBody$3e$__["TableBody"], {
@@ -1370,21 +1361,21 @@ function DiscountsPage() {
                                                 children: discount.code
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/analytics.tsx",
-                                                lineNumber: 281,
+                                                lineNumber: 272,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
                                                 children: discount.type
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/analytics.tsx",
-                                                lineNumber: 282,
+                                                lineNumber: 273,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
                                                 children: discount.type === 'percentage' ? `${discount.value}%` : `$${discount.value}`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/analytics.tsx",
-                                                lineNumber: 283,
+                                                lineNumber: 274,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
@@ -1395,7 +1386,7 @@ function DiscountsPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/pages/analytics.tsx",
-                                                lineNumber: 286,
+                                                lineNumber: 277,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
@@ -1405,12 +1396,12 @@ function DiscountsPage() {
                                                     size: "small"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/analytics.tsx",
-                                                    lineNumber: 291,
+                                                    lineNumber: 282,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/analytics.tsx",
-                                                lineNumber: 290,
+                                                lineNumber: 281,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
@@ -1421,7 +1412,7 @@ function DiscountsPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/pages/analytics.tsx",
-                                                lineNumber: 297,
+                                                lineNumber: 288,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TableCell$2f$TableCell$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TableCell$3e$__["TableCell"], {
@@ -1434,12 +1425,12 @@ function DiscountsPage() {
                                                         },
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Edit$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                                             fileName: "[project]/src/pages/analytics.tsx",
-                                                            lineNumber: 306,
+                                                            lineNumber: 297,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/analytics.tsx",
-                                                        lineNumber: 301,
+                                                        lineNumber: 292,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$IconButton$2f$IconButton$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconButton$3e$__["IconButton"], {
@@ -1448,40 +1439,40 @@ function DiscountsPage() {
                                                         color: "error",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Delete$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                                             fileName: "[project]/src/pages/analytics.tsx",
-                                                            lineNumber: 313,
+                                                            lineNumber: 304,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/analytics.tsx",
-                                                        lineNumber: 308,
+                                                        lineNumber: 299,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/pages/analytics.tsx",
-                                                lineNumber: 300,
+                                                lineNumber: 291,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, discount.id, true, {
                                         fileName: "[project]/src/pages/analytics.tsx",
-                                        lineNumber: 280,
+                                        lineNumber: 271,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/analytics.tsx",
-                                lineNumber: 278,
+                                lineNumber: 269,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/pages/analytics.tsx",
-                        lineNumber: 266,
+                        lineNumber: 257,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/pages/analytics.tsx",
-                    lineNumber: 265,
+                    lineNumber: 256,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Dialog$2f$Dialog$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Dialog$3e$__["Dialog"], {
@@ -1494,7 +1485,7 @@ function DiscountsPage() {
                             children: editingDiscount ? 'Edit Discount' : 'Add New Discount'
                         }, void 0, false, {
                             fileName: "[project]/src/pages/analytics.tsx",
-                            lineNumber: 329,
+                            lineNumber: 320,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$DialogContent$2f$DialogContent$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__DialogContent$3e$__["DialogContent"], {
@@ -1514,7 +1505,7 @@ function DiscountsPage() {
                                             })
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/analytics.tsx",
-                                        lineNumber: 334,
+                                        lineNumber: 325,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$FormControl$2f$FormControl$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FormControl$3e$__["FormControl"], {
@@ -1524,7 +1515,7 @@ function DiscountsPage() {
                                                 children: "Discount Type"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/analytics.tsx",
-                                                lineNumber: 342,
+                                                lineNumber: 333,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Select$2f$Select$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Select$3e$__["Select"], {
@@ -1542,7 +1533,7 @@ function DiscountsPage() {
                                                         children: "Percentage"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/analytics.tsx",
-                                                        lineNumber: 350,
+                                                        lineNumber: 341,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$MenuItem$2f$MenuItem$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MenuItem$3e$__["MenuItem"], {
@@ -1550,19 +1541,19 @@ function DiscountsPage() {
                                                         children: "Fixed Amount"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/analytics.tsx",
-                                                        lineNumber: 351,
+                                                        lineNumber: 342,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/pages/analytics.tsx",
-                                                lineNumber: 343,
+                                                lineNumber: 334,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/analytics.tsx",
-                                        lineNumber: 341,
+                                        lineNumber: 332,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TextField$2f$TextField$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1576,7 +1567,7 @@ function DiscountsPage() {
                                             })
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/analytics.tsx",
-                                        lineNumber: 355,
+                                        lineNumber: 346,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TextField$2f$TextField$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1593,7 +1584,7 @@ function DiscountsPage() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/analytics.tsx",
-                                        lineNumber: 363,
+                                        lineNumber: 354,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TextField$2f$TextField$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1610,7 +1601,7 @@ function DiscountsPage() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/analytics.tsx",
-                                        lineNumber: 372,
+                                        lineNumber: 363,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TextField$2f$TextField$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1624,7 +1615,7 @@ function DiscountsPage() {
                                             })
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/analytics.tsx",
-                                        lineNumber: 381,
+                                        lineNumber: 372,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$TextField$2f$TextField$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1638,18 +1629,18 @@ function DiscountsPage() {
                                             })
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/analytics.tsx",
-                                        lineNumber: 389,
+                                        lineNumber: 380,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/analytics.tsx",
-                                lineNumber: 333,
+                                lineNumber: 324,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/analytics.tsx",
-                            lineNumber: 332,
+                            lineNumber: 323,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$DialogActions$2f$DialogActions$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__DialogActions$3e$__["DialogActions"], {
@@ -1659,7 +1650,7 @@ function DiscountsPage() {
                                     children: "Cancel"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/analytics.tsx",
-                                    lineNumber: 399,
+                                    lineNumber: 390,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Button$2f$Button$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -1668,30 +1659,30 @@ function DiscountsPage() {
                                     children: editingDiscount ? 'Update' : 'Create'
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/analytics.tsx",
-                                    lineNumber: 400,
+                                    lineNumber: 391,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/analytics.tsx",
-                            lineNumber: 398,
+                            lineNumber: 389,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/analytics.tsx",
-                    lineNumber: 323,
+                    lineNumber: 314,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/analytics.tsx",
-            lineNumber: 249,
+            lineNumber: 240,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/pages/analytics.tsx",
-        lineNumber: 248,
+        lineNumber: 239,
         columnNumber: 5
     }, this);
 }

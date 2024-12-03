@@ -38,10 +38,12 @@ import {
 import DashboardLayout from '../components/layouts/DashboardLayout';
 
 // 添加类型定义
+type DiscountType = 'percentage' | 'fixed';
+
 interface Discount {
   id: string;
   code: string;
-  type: 'percentage' | 'fixed';
+  type: DiscountType;
   value: number;
   startDate: string;
   endDate: string;
@@ -53,7 +55,7 @@ interface Discount {
 }
 
 // 添加模拟数据
-const mockDiscounts: Discount[] = [
+const initialDiscounts: Discount[] = [
   {
     id: '1',
     code: 'CS4347',
@@ -95,52 +97,41 @@ const mockDiscounts: Discount[] = [
   }
 ];
 
-type DiscountType = 'percentage' | 'fixed';
-
 export default function DiscountsPage() {
   // 将所有状态声明放在组件顶部
   const [discounts, setDiscounts] = useState<Discount[]>([]);
   const [openDialog, setOpenDialog] = useState(false);
   const [editingDiscount, setEditingDiscount] = useState<Discount | null>(null);
   const [loading, setLoading] = useState(true);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<Omit<Discount, 'id' | 'status'>>({
     code: '',
-    type: 'percentage' as const,
+    type: 'percentage',
     value: 0,
     startDate: '',
     endDate: '',
     minimumPurchase: 0,
     maxUses: 0,
     currentUses: 0,
-    applicableProducts: [] as string[]
+    applicableProducts: []
   });
 
   useEffect(() => {
     // 首次加载时初始化数据
     const initializeData = () => {
       try {
-        const savedDiscounts = localStorage.getItem('discounts');
-        if (!savedDiscounts || JSON.parse(savedDiscounts).length === 0) {
-          // 如果没有保存的数据或数据为空数组，使用模拟数据
-          console.log('Initializing with mock data');
-          localStorage.setItem('discounts', JSON.stringify(mockDiscounts));
-          setDiscounts(mockDiscounts);
-        } else {
-          // 使用保存的数据
-          console.log('Loading saved discounts');
-          setDiscounts(JSON.parse(savedDiscounts));
-        }
+        // 强制使用新的初始数据
+        localStorage.setItem('discounts', JSON.stringify(initialDiscounts));
+        setDiscounts(initialDiscounts);
       } catch (error) {
         console.error('Error loading discounts:', error);
-        // 如果出错，使用模拟数据
-        setDiscounts(mockDiscounts);
+        setDiscounts(initialDiscounts);
       } finally {
         setLoading(false);
       }
     };
 
     initializeData();
-  }, []); // 空依赖数组，只在组件挂载时运行
+  }, []);
 
   // 添加加载状态的显示
   if (loading) {
@@ -161,7 +152,7 @@ export default function DiscountsPage() {
     setEditingDiscount(null);
     setFormData({
       code: '',
-      type: 'percentage' as const,
+      type: 'percentage',
       value: 0,
       startDate: '',
       endDate: '',
@@ -207,7 +198,7 @@ export default function DiscountsPage() {
     setEditingDiscount(null);
     setFormData({
       code: '',
-      type: 'percentage' as const,
+      type: 'percentage',
       value: 0,
       startDate: '',
       endDate: '',
@@ -340,11 +331,11 @@ export default function DiscountsPage() {
               
               <FormControl fullWidth>
                 <InputLabel>Discount Type</InputLabel>
-                <Select<DiscountType>
+                <Select
                   value={formData.type}
                   label="Discount Type"
-                  onChange={(e: SelectChangeEvent<DiscountType>) => {
-                    setFormData({ ...formData, type: e.target.value });
+                  onChange={(e: SelectChangeEvent<'percentage' | 'fixed'>) => {
+                    setFormData({ ...formData, type: e.target.value as DiscountType });
                   }}
                 >
                   <MenuItem value="percentage">Percentage</MenuItem>
