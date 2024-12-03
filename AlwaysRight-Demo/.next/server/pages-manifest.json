@@ -1,11 +1,6 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
   "/dashboard": "pages/dashboard.js",
-  "/users": "pages/users.js",
-  "/analytics": "pages/analytics.js",
-  "/products": "pages/products.js",
-  "/orders": "pages/orders.js",
-  "/products/[id]": "pages/products/[id].js"
+  "/": "pages/index.js"
 }

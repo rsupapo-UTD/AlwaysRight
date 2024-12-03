@@ -1,7 +1,7 @@
 (globalThis.TURBOPACK = globalThis.TURBOPACK || []).push([
-    "static/chunks/src_pages_help_f84763._.js",
+    "static/chunks/src_pages_help_36621d._.js",
     {},
-    {"otherChunks":["static/chunks/[root of the server]__78c40d._.js","static/chunks/node_modules_next_807290._.js","static/chunks/node_modules_react_1cad9b._.js","static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js","static/chunks/node_modules_react-dom_f14d04._.js","static/chunks/node_modules_@mui_material_c5b01c._.js","static/chunks/node_modules_@mui_system_esm_6d2dca._.js","static/chunks/node_modules_ca0976._.js"],"runtimeModuleIds":["[project]/node_modules/next/dist/compiled/@next/react-refresh-utils/dist/runtime.js [client] (ecmascript)","[project]/node_modules/next/dist/client/next-dev-turbopack.js [client] (ecmascript)","[project]/src/pages/help (hmr-entry)"]}
+    {"otherChunks":["static/chunks/[root of the server]__b3d89d._.js","static/chunks/node_modules_next_807290._.js","static/chunks/node_modules_react_1cad9b._.js","static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js","static/chunks/node_modules_react-dom_f14d04._.js","static/chunks/node_modules_@mui_material_c5b01c._.js","static/chunks/node_modules_@mui_system_esm_6d2dca._.js","static/chunks/node_modules_ca0976._.js"],"runtimeModuleIds":["[project]/node_modules/next/dist/compiled/@next/react-refresh-utils/dist/runtime.js [client] (ecmascript)","[project]/node_modules/next/dist/client/next-dev-turbopack.js [client] (ecmascript)","[project]/src/pages/help (hmr-entry)"]}
 ]);
 (() => {
 if (!Array.isArray(globalThis.TURBOPACK)) {
@@ -1648,4 +1648,4 @@ chunksToRegister.forEach(registerChunk);
 })();
 
 
-//# sourceMappingURL=src_pages_help_f84763._.js.map
+//# sourceMappingURL=src_pages_help_36621d._.js.map

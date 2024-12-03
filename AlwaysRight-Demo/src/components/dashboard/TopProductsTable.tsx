@@ -2,59 +2,63 @@ import {
   Table,
   TableBody,
   TableCell,
+  TableContainer,
   TableHead,
   TableRow,
+  Paper,
   Box,
-  Typography,
-  LinearProgress
+  Typography
 } from '@mui/material';
-import { TopProduct } from '../../types/dashboard';
+
+interface TopProduct {
+  id: string;
+  name: string;
+  sales: number;
+  revenue: number;
+}
 
 interface TopProductsTableProps {
   products: TopProduct[];
 }
 
 export default function TopProductsTable({ products }: TopProductsTableProps) {
-  const maxRevenue = Math.max(...products.map(p => p.total_revenue));
-
   return (
-    <Table>
-      <TableHead>
-        <TableRow>
-          <TableCell>Product Name</TableCell>
-          <TableCell>Revenue</TableCell>
-          <TableCell>Performance</TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {products.map((product) => (
-          <TableRow key={product.ProductName}>
-            <TableCell>{product.ProductName}</TableCell>
-            <TableCell>${product.total_revenue.toLocaleString()}</TableCell>
-            <TableCell>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, width: '100%' }}>
-                <LinearProgress
-                  variant="determinate"
-                  value={(product.total_revenue / maxRevenue) * 100}
-                  sx={{ 
-                    width: '100%',
-                    height: 8,
-                    borderRadius: 4,
-                    backgroundColor: 'rgba(0,0,0,0.1)',
-                    '& .MuiLinearProgress-bar': {
-                      borderRadius: 4,
-                      backgroundColor: '#2563eb'
-                    }
-                  }}
-                />
-                <Typography variant="body2" color="text.secondary">
-                  {Math.round((product.total_revenue / maxRevenue) * 100)}%
-                </Typography>
-              </Box>
-            </TableCell>
+    <TableContainer>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Product</TableCell>
+            <TableCell align="right">Units Sold</TableCell>
+            <TableCell align="right">Revenue</TableCell>
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHead>
+        <TableBody>
+          {products.length > 0 ? (
+            products.map((product) => (
+              <TableRow key={product.id}>
+                <TableCell>
+                  <Typography variant="body2">{product.name}</Typography>
+                </TableCell>
+                <TableCell align="right">{product.sales}</TableCell>
+                <TableCell align="right">
+                  ${product.revenue.toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                  })}
+                </TableCell>
+              </TableRow>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={3} align="center">
+                <Typography variant="body2" color="text.secondary">
+                  No sales data available
+                </Typography>
+              </TableCell>
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 } 

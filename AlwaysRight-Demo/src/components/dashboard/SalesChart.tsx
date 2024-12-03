@@ -7,14 +7,10 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Legend,
-  ChartData,
-  ChartOptions
+  Legend
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { SalesData } from '../../types/dashboard';
 
-// 注册 ChartJS 组件
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -25,66 +21,43 @@ ChartJS.register(
   Legend
 );
 
-// 定义图表选项类型
-const chartOptions: ChartOptions<'line'> = {
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: {
-      position: 'top',
-      display: true
-    },
-    title: {
-      display: false
-    }
-  },
-  scales: {
-    x: {
-      grid: {
-        display: false
-      }
-    },
-    y: {
-      beginAtZero: true,
-      ticks: {
-        callback: function(value) {
-          return '$' + value.toLocaleString();
-        }
-      },
-      grid: {
-        borderDash: [2],
-        drawBorder: false,
-        color: 'rgba(0, 0, 0, 0.1)'
-      }
-    }
-  },
-  elements: {
-    line: {
-      tension: 0.4
-    },
-    point: {
-      radius: 4,
-      hitRadius: 10,
-      hoverRadius: 6
-    }
-  }
-} as ChartOptions<'line'>;
+interface SalesDataPoint {
+  date: string;
+  sales: number;
+}
 
 interface SalesChartProps {
-  data: SalesData;
+  data: SalesDataPoint[];
 }
 
 export default function SalesChart({ data }: SalesChartProps) {
+  const chartData = {
+    labels: data.map(point => point.date),
+    datasets: [
+      {
+        label: 'Daily Sales',
+        data: data.map(point => point.sales),
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1
+      }
+    ]
+  };
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top' as const,
+      },
+      title: {
+        display: false,
+      },
+    },
+  };
+
   return (
-    <Box sx={{ 
-      width: '100%', 
-      height: 'calc(100% - 40px)',
-      position: 'relative'
-    }}>
-      <Line
-        data={data}
-        options={chartOptions}
-      />
+    <Box sx={{ height: '300px' }}>
+      <Line options={options} data={chartData} />
     </Box>
   );
 } 
